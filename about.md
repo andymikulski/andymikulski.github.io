@@ -1,10 +1,8 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
-
-Some information about you!
 
 ![meeee]({{ site.avatar }})
 
@@ -12,6 +10,10 @@ Some information about you!
 
 A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
+### Useful Links
 
-[email@domain.com](mailto:email@domain.com)
+[Email Me](mailto:andy.mikulski+co@gmail.com)
+
+[Portfolio](http://www.andymikulski.com/)  (outdated)
+
+[Resume (PDF)]({{ site.baseurl }}/assets/AMikulski-Resume.pdf)
