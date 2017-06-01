@@ -172,17 +172,19 @@ img {
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 1.5em 0;
 //  border-bottom: 1px solid $lightGray;
 
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-direction: row;
 
 
   @include mobile {
     text-align: center;
+    flex-direction: column;
   }
 }
 
@@ -218,11 +220,20 @@ img {
   //font-family: $helveticaNeue;
   font-size: 28px;
   letter-spacing: 1px;
+  line-height: 1em;
 
   font-family: 'Averia Sans Libre', sans-serif;
   font-weight: 700;
 
   display: inline-block;
+
+  span {
+    display: block;
+    font-weight: 100;
+    font-size: 0.6em;
+    line-height: 1em;
+    margin-top: 0.35em;
+  }
 }
 
 .site-description {
@@ -243,7 +254,7 @@ nav {
 
   @include mobile {
     float: none;
-    margin-top: 9px;
+    margin: 2em auto 0.5em;
     display: block;
     font-size: 16px;
   }
@@ -299,10 +310,6 @@ nav {
     margin-bottom: 2em;
     max-width: 640px;
     border-radius: 0 0 10px 10px;
-  }
-
-  img + span {
-    margin-top: -1.5em;
   }
 
   .timestamp {
@@ -377,12 +384,17 @@ hr {
   height: 1px;
 }
 
-.post video {
+.post video,
+.post img {
   display: block;
   margin: 2em auto;
   max-width: 100%;
   width: auto;
   box-shadow: 0px 7px 11px rgba(0,0,0,0.3);
+
+  &.no-shadow {
+    box-shadow: none;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
