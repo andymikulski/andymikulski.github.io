@@ -7,7 +7,13 @@ layout: dev-default
     {% if post.blog contains 'dev' %}
       <article class="post">
 
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1><span class="date timestamp">{{ post.date | date: "%Y" }}</span>
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="date timestamp">
+          {{ post.date | date: "%Y" }}
+
+          {% for tech in post.tech %}<span>{{ tech }}</span>{% endfor %}
+
+        </div>
         <a href="{{ site.baseurl }}{{ post.url }}">
           <img src="{{ post.thumbnail }}" class="thumbnail" />
         </a>

@@ -309,8 +309,25 @@ nav {
   }
 
   .timestamp {
-    display: block;
+    display: flex;
+    align-items: center;
+
     margin: -0.25em 0 0.35em 0;
+    font-style: normal;
+
+    span {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      font-weight: 100;
+      padding-top: 0.1em;
+
+      &:before {
+        content: "•";
+        display: inline-block;
+        margin: 0 0.25em;
+        opacity: 0.3;
+      }
+    }
   }
 
   .read-more {

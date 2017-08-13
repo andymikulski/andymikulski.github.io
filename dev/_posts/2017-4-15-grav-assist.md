@@ -1,9 +1,12 @@
 ---
 layout: dev-post
 title: Project&#58; Gravity Assist
-permalink: /:categories/:title/
+permalink: /dev/gravity-assist/
 blog: dev
-categories: gravity-assist
+categories:
+  - gravity-assist
+tech:
+  - unity
 thumbnail: http://i.imgur.com/Y1Qy5Pph.jpg
 ---
 
