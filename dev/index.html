@@ -7,11 +7,10 @@ layout: dev-default
     {% if post.blog contains 'dev' %}
       <article class="post">
 
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1><span class="date timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
-
-        <div class="entry">
-          {{ post.excerpt }}
-        </div>
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1><span class="date timestamp">{{ post.date | date: "%Y" }}</span>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img src="{{ post.thumbnail }}" class="thumbnail" />
+        </a>
 
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>

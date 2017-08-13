@@ -298,6 +298,13 @@ nav {
     display: inline-block;
   }
 
+  .thumbnail {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin: 0 0 1em 0;
+  }
+
   video + p span,
   img + span {
     display: block;
@@ -361,9 +368,16 @@ footer {
 
 .post-meta {
   display: inline-block;
-  margin: 2em 0;
+  margin: 0;
   max-width: 100%;
   overflow: hidden;
+
+  .thumbnail {
+    max-width: 500px;
+    float: left;
+    margin: 0 3% 1em 0;
+    width: 34%;
+  }
 
   h1,
   .date {
