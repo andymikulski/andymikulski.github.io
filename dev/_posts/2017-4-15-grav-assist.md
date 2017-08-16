@@ -3,8 +3,8 @@ layout: dev-post
 title: Gravity Assist
 permalink: /dev/gravity-assist/
 blog: dev
-categories:
-  - gravity-assist
+project: gravity-assist
+isProject: true
 tech:
   - unity
 thumbnail: http://i.imgur.com/Y1Qy5Pph.jpg

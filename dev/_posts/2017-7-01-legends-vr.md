@@ -3,8 +3,8 @@ layout: dev-post
 title: LOTHT&#58; VR
 permalink: /dev/lotht/
 blog: dev
-categories:
-  - lotht
+project: lotht
+isProject: true
 tech:
   - Unity
   - VRTK

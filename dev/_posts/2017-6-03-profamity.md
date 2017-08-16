@@ -3,9 +3,8 @@ layout: dev-post
 title: Profamity
 permalink: /dev/profamity/
 blog: dev
-categories:
-  - profamity
-  - scripts
+project: profamity
+isProject: true
 tech:
   - Javascript
   - Node

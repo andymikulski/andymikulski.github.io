@@ -2,9 +2,29 @@
 layout: dev-default
 ---
 
+<div class="posts latest">
+  <h1>Latest Posts</h1>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.blog contains 'dev' and post.isProject == nil %}
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br />
+          <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+          <small>
+            Posted in <a href="{{ site.baseurl }}/dev/{{post.project}}">{{ post.projectName }}</a>
+          </small>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+<hr />
+
+<h1>Projects</h1>
 <div class="posts dev">
   {% for post in site.posts %}
-    {% if post.blog contains 'dev' %}
+    {% if post.blog contains 'dev' and post.isProject %}
       <article class="post">
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="date timestamp">

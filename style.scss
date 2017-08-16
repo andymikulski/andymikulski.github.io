@@ -425,7 +425,20 @@ footer {
   display: inline-block;
   margin: 0;
   max-width: 100%;
-  // overflow: hidden;
+
+  h1 {
+    line-height: 1em;
+  }
+
+  small {
+    display: block;
+    margin: 0;
+  }
+
+  small a {
+    color: $blue;
+    font-size: 0.75em;
+  }
 
   .thumbnail {
     max-width: 500px;
@@ -476,4 +489,29 @@ code {
   background: rgba(0, 0, 0, 0.05);
   padding: 0.1em 0.35em;
   border-radius: 3px;
+}
+
+.posts.latest {
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-shrink: 0;
+      flex-grow: 1;
+      margin-bottom: 1em;
+    }
+  }
+
+  small {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 0.5em;
+  }
 }

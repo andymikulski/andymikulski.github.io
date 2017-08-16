@@ -3,9 +3,8 @@ layout: dev-post
 title: MultiNES
 permalink: /dev/multines/
 blog: dev
-categories:
-  - multines
-  - nes6
+project: multines
+isProject: true
 tech:
   - node
   - socket.io

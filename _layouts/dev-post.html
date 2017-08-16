@@ -6,7 +6,14 @@ layout: dev-default
   <div class="post-meta">
     <img src="{{ page.thumbnail }}" class="thumbnail" />
 
-    <h1>{{ page.title }}</h1>
+    <h1>
+      {% unless page.isProject %}
+        <small>
+          <a href="{{ site.baseurl }}/dev/{{page.project}}">{{ page.projectName }}</a>
+        </small>
+      {% endunless %}
+      {{ page.title }}
+    </h1>
     <div class="date">
       {{ page.date | date: "%Y" }}
     </div>
@@ -14,6 +21,28 @@ layout: dev-default
   </div>
   <div class="entry">
     {{ content }}
+
+    {% capture hasRelatedPosts %}
+      {% for post in site.posts %}
+          {%if post.isProject == nil and post.blog contains 'dev' and post.project contains page.project %}
+          true
+          {%endif %}
+      {%endfor%}
+    {% endcapture %}
+
+    {%if page.isProject and hasRelatedPosts contains 'true' %}
+      <h1>DevBlog Posts</h1>
+      <ul>
+        {% for post in site.posts %}
+          {%if post.isProject == nil and post.blog contains 'dev' and post.project contains page.project %}
+            <li>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+            </li>
+          {%endif %}
+        {%endfor %}
+      </ul>
+    {%endif %}
   </div>
 
   {% include disqus.html %}
