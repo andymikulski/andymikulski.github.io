@@ -6,19 +6,21 @@ layout: dev-default
   {% for post in site.posts %}
     {% if post.blog contains 'dev' %}
       <article class="post">
-
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="date timestamp">
           {{ post.date | date: "%Y" }}
 
           {% for tech in post.tech %}<span>{{ tech }}</span>{% endfor %}
-
         </div>
-        <a href="{{ site.baseurl }}{{ post.url }}">
+
+        {% capture post_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
+        {% if post.redirect %}
+          {% assign post_url = post.redirect %}
+        {% endif %}
+
+        <a href="{{ post_url }}">
           <img src="{{ post.thumbnail }}" class="thumbnail" />
         </a>
-
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>
     {% endif %}
   {% endfor %}

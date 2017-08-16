@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: Project&#58; Gravity Assist
+title: Gravity Assist
 permalink: /dev/gravity-assist/
 blog: dev
 categories:

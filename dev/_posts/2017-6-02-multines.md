@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: Project&#58; MultiNES
+title: MultiNES
 permalink: /dev/multines/
 blog: dev
 categories:
