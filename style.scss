@@ -427,6 +427,10 @@ footer {
 
 .entry {
   display: block;
+
+  li {
+    margin-bottom: 0.5em;
+  }
 }
 
 .post-meta + hr {
