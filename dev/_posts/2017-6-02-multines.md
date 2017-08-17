@@ -16,7 +16,7 @@ thumbnail: http://i.imgur.com/iMrsbeH.png
 
 Users take turns playing classic NES games with each other in real time. Games are synced via a node server and web sockets.
 
-You can find the git repository for MultiNES [on github](https://github.com/andymikulski/multines). Want to try it? Check out the [beta website](https://multines.neocities.org/)!
+You can find the git repository for MultiNES [on GitHub](https://github.com/andymikulski/multines). Want to try it? Check out the [beta website](https://multines.neocities.org/)!
 
 
 <img src="http://i.imgur.com/iMrsbeH.jpg" height="500" />
