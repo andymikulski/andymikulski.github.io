@@ -16,14 +16,14 @@ A [gravity assist](https://en.wikipedia.org/wiki/Gravity_assist) is the use of a
 
 In this game, you pilot a spaceship through short bursts of fuel and the gravitational pulls of the planets and moons around you.
 
+<video src="https://i.imgur.com/5NLf0mm.mp4" loop controls></video>
+
 >_Technically_, the game is more based on the [Oberth effect](https://en.wikipedia.org/wiki/Oberth_effect) (powered flybys) than the slingshot effect used for a gravitational assist.
 
 #### Play It
 
 You can find a beta WebGL build of the game [here](https://developer.cloud.unity3d.com/share/WJPjJOJq4M/)!
 
-<video src="https://i.imgur.com/5NLf0mm.mp4" loop controls></video>
-<span>Preview of current state of development</span>
 
 # Project Details
 

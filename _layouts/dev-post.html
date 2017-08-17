@@ -18,23 +18,36 @@ layout: dev-default
       {{ page.date | date: "%Y" }}
     </div>
     <hr />
+    {% if page.inDev %}
+      <span class="in-dev">
+        This project is ongoing. Check out the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.
+      </span>
+    {% endif %}
   </div>
+
+  <hr />
+
   <div class="entry">
     {{ content }}
 
     {% capture hasRelatedPosts %}
       {% for post in site.posts %}
-          {%if post.isProject == nil and post.blog contains 'dev' and post.project contains page.project %}
+          {% if post.isProject == nil
+            and post.blog contains 'dev'
+            and post.project contains page.project %}
           true
           {%endif %}
       {%endfor%}
     {% endcapture %}
 
     {%if page.isProject and hasRelatedPosts contains 'true' %}
-      <h1>DevBlog Posts</h1>
+      <h1 id="devblog">DevBlog Posts</h1>
       <ul>
         {% for post in site.posts %}
-          {%if post.isProject == nil and post.blog contains 'dev' and post.project contains page.project %}
+          {% if post.isProject == nil
+            and post.blog contains 'dev'
+            and post.project contains page.project
+          %}
             <li>
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
               <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>

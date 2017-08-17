@@ -283,6 +283,13 @@ nav {
 // .main
 //
 
+
+.in-dev {
+  font-size: 0.75em;
+  font-style: italic;
+  display: inline-block;
+}
+
 .posts.dev {
     display: flex;
     flex-direction: row;
@@ -388,7 +395,7 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
+    font-size: 0.9em;
     font-style: italic;
   }
 
@@ -420,6 +427,11 @@ footer {
 
 .entry {
   display: block;
+}
+
+.post-meta + hr {
+  margin: 2em auto 0.75em;
+  padding: 0;
 }
 
 .post-meta {
@@ -516,3 +528,4 @@ code {
     font-size: 0.5em;
   }
 }
+

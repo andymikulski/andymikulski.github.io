@@ -8,6 +8,7 @@ isProject: true
 tech:
   - Unity
   - VRTK
+inDev: true
 thumbnail: http://i.imgur.com/faJHzER.jpg
 ---
 
