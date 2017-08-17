@@ -8,18 +8,16 @@ isProject: true
 tech:
   - Javascript
   - Node
-thumbnail: https://github.com/andymikulski/profamity/raw/master/profamity.jpg
+thumbnail: http://i.imgur.com/vnHrBlQ.png
 ---
 
 # Profanity linter
 
 Node-based CLI tool which finds variations of profane words within a set of given files and throws errors accordingly. Useful for preventing debug statements and unprofessional comments from being committed to git!
 
-<img style="max-width: 600px;" src="http://i.imgur.com/vnHrBlQ.png" />
-
-# Use it
-
 You can find the git repository for profamity [on GitHub](https://github.com/andymikulski/profamity)!
+
+<img style="max-width: 600px;" src="http://i.imgur.com/vnHrBlQ.png" />
 
 ---
 

@@ -39,11 +39,6 @@ You can find the git repository for MultiNES [on GitHub](https://github.com/andy
 - [not using any auth doesn't really work - no way to tie into chatroom etc]
 - [no two player support, even though nes6 can do it]
 
-#### In the future...
-
-- [spend time actually, y'know, planning the thing]
-
-
 # Screenshots
 
 ![MultiNES](http://i.imgur.com/iMrsbeH.jpg)
