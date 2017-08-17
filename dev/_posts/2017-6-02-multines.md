@@ -12,13 +12,12 @@ tech:
 thumbnail: http://i.imgur.com/iMrsbeH.jpg
 ---
 
-# Concept
+# Multiplayer NES on the web.
 
-Multiplayer NES on the web.
+Users take turns playing classic NES games with each other in real time. Games are synced via a node server and web sockets.
 
-#### But, why?
-
-Fun challenge!
+<video src="https://i.imgur.com/OWe3xBX.mp4" loop controls></video>
+<span>Early sync test. You can see that one gets ahead of the other after some time.</span>
 
 # View Source
 
@@ -57,3 +56,7 @@ You can find the beta website [here](https://multines.neocities.org/)!
 # Screenshots
 
 ![MultiNES](http://i.imgur.com/iMrsbeH.jpg)
+<span>Working prototype!</span>
+
+<img src="http://i.imgur.com/WIxBPI1.jpg" />
+<span>Sometimes, game memory states are not correctly communicated to the client on startup.</span>
