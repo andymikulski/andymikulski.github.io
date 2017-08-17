@@ -22,7 +22,7 @@ In this game, you pilot a spaceship through short bursts of fuel and the gravita
 
 You can find a beta WebGL build of the game [here](https://developer.cloud.unity3d.com/share/WJPjJOJq4M/)!
 
-<img src="http://i.imgur.com/dVi9lJF.jpg" style="max-width: 800px; width: 100%;" />
+<video src="https://i.imgur.com/5NLf0mm.mp4" loop controls></video>
 <span>Preview of current state of development</span>
 
 # Project Details
@@ -51,6 +51,9 @@ You can find a beta WebGL build of the game [here](https://developer.cloud.unity
 - [mobile-friendly design/assets]
 
 # Behind the Scenes
+
+https://imgur.com/a/i9LUp
+
 
 <img src="http://i.imgur.com/UF9FHkb.jpg" />
 <span>Initial version of the title screen. Not much ends up changing!</span>
