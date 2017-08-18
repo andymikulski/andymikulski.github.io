@@ -206,6 +206,12 @@ img {
 }
 
 .site-info {
+  img {
+    height: 3em;
+    margin-right: 1em;
+    margin-bottom: -0.1em;
+  }
+
   @include mobile {
     float: none;
     display: block;
@@ -233,6 +239,7 @@ img {
     font-size: 0.6em;
     line-height: 1em;
     margin-top: 0.35em;
+    letter-spacing: 0;
   }
 }
 
