@@ -20,7 +20,7 @@ You can find the git repository for MultiNES [on GitHub](https://github.com/andy
 
 
 <img src="http://i.imgur.com/iMrsbeH.jpg" height="500" />
-<span>Users can enter the queue to play next, or chat from the audience.</span>
+<label>Users can enter the queue to play next, or chat from the audience.</label>
 
 # About
 
@@ -30,7 +30,7 @@ You can find the git repository for MultiNES [on GitHub](https://github.com/andy
 - [kinda buggy, needs more server-side work]
 
 <video src="https://i.imgur.com/OWe3xBX.mp4" loop controls></video>
-<span>Early sync test. You can see that one gets ahead of the other after some time.</span>
+<label>Early sync test. You can see that one gets ahead of the other after some time.</label>
 
 # Postmortem
 
@@ -42,7 +42,7 @@ You can find the git repository for MultiNES [on GitHub](https://github.com/andy
 # Screenshots
 
 ![MultiNES](http://i.imgur.com/iMrsbeH.jpg)
-<span>Working prototype!</span>
+<label>Working prototype!</label>
 
 <img src="http://i.imgur.com/WIxBPI1.jpg" />
-<span>Sometimes, game memory states are not correctly communicated to the client on startup.</span>
+<label>Sometimes, game memory states are not correctly communicated to the client on startup.</label>

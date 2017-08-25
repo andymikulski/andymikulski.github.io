@@ -56,19 +56,19 @@ https://imgur.com/a/i9LUp
 
 
 <img src="http://i.imgur.com/UF9FHkb.jpg" />
-<span>Initial version of the title screen. Not much ends up changing!</span>
+<label>Initial version of the title screen. Not much ends up changing!</label>
 
 <video src="https://i.imgur.com/C7V1QIC.mp4" loop controls></video>
-<span>Early mechanics testing.<br />Demonstrates gravity, dragging the map/following the ship, and&nbsp;a&nbsp;test&nbsp;aesthetic.</span>
+<label>Early mechanics testing.<br />Demonstrates gravity, dragging the map/following the ship, and&nbsp;a&nbsp;test&nbsp;aesthetic.</label>
 
 <video src="https://i.imgur.com/kx6z3Qz.mp4" loop controls></video>
-<span>Another early gravity test. Here, suns grew larger with each consumed star.</span>
+<label>Another early gravity test. Here, suns grew larger with each consumed star.</label>
 
 <video src="https://i.imgur.com/ckeyjOo.mp4" loop controls></video>
-<span>Fun bug! Each ship that hits the sun spawns another, but does&nbsp;not&nbsp;get&nbsp;destroyed.</span>
+<label>Fun bug! Each ship that hits the sun spawns another, but does&nbsp;not&nbsp;get&nbsp;destroyed.</label>
 
 <video src="https://i.imgur.com/Bx2W9jW.mp4" loop controls></video>
-<span>In-game tool to help level design. Ships fire off in several directions to easily map possible level solutions.</span>
+<label>In-game tool to help level design. Ships fire off in several directions to easily map possible level solutions.</label>
 
 <video src="https://i.imgur.com/Y1Qy5Pp.mp4" loop controls></video>
-<span>Really ramping up the explosions.</span>
+<label>Really ramping up the explosions.</label>
