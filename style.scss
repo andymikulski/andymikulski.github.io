@@ -497,13 +497,29 @@ hr {
 .post video,
 .post img {
   display: block;
-  margin: 2em auto;
+  margin: 2em auto 0;
   max-width: 100%;
   width: auto;
   box-shadow: 0px 3px 4px rgba(0,0,0, 0.15);
 
   &.no-shadow {
     box-shadow: none;
+  }
+
+  & + label {
+    text-align: center;
+    background: #f1f1f1;
+    margin: 1em 0;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    position: relative;
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    max-width: 70vw;
+    line-height: 1.6em;
+    color: rgba(100,100,100,0.98);
   }
 }
 
@@ -544,3 +560,11 @@ code {
   }
 }
 
+
+label {
+  text-align: center;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
