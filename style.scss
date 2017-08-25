@@ -308,7 +308,15 @@ nav {
     justify-content: space-between;
 
     margin-bottom: 3em;
+
+    // max-width: 1040px;
+    // margin: 0 auto;
 }
+
+.posts.dev > .post.nes6 .thumbnail {
+  object-position: 50% calc(50% + 38px);
+}
+
 
 .posts.dev > .post {
   flex-grow: 0;
@@ -320,7 +328,7 @@ nav {
 
   .thumbnail {
     object-fit: cover;
-    height: 300px;
+    height: 250px;
   }
 
   h1 {
@@ -567,5 +575,31 @@ label {
   img {
     display: block;
     margin: 0 auto;
+  }
+}
+
+.source-links li {
+  list-style: none;
+}
+
+
+.source-links li:not(.in-dev) {
+  display: inline-block;
+
+  &:before {
+    content: "•";
+    display: inline-block;
+    margin: 0 0.25em;
+    opacity: 0.3;
+  }
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+
+  a {
+    font-size: 0.875em;
   }
 }

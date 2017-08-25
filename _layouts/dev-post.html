@@ -18,11 +18,23 @@ layout: dev-default
       {{ page.date | date: "%Y" }}
     </div>
     <hr />
-    {% if page.inDev %}
-      <span class="in-dev">
-        This project is ongoing. Check out the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.
-      </span>
-    {% endif %}
+    <ul class="source-links">
+      {% if page.github %}
+        <li>
+          <a href="{{ page.github }}">View Source on Github</a>
+        </li>
+      {% endif %}
+      {% if page.demo %}
+        <li>
+          <a href="{{ page.demo }}">Try the Demo</a>
+        </li>
+      {% endif %}
+      {% if page.inDev %}
+        <li class="in-dev">
+          This project is ongoing. Check out the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.
+        </li>
+      {% endif %}
+    </ul>
   </div>
 
   <hr />
