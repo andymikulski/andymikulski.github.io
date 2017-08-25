@@ -42,8 +42,14 @@ Users take turns playing classic NES games with each other in real time. Games a
 
 # Screenshots
 
-![MultiNES](http://i.imgur.com/iMrsbeH.jpg)
-<label>Working prototype!</label>
+<div class="screenshots">
+	<div>
+		<img src="http://i.imgur.com/iMrsbeH.jpg" />
+		<label>Working prototype!</label>
+	</div>
 
-<img src="http://i.imgur.com/WIxBPI1.jpg" />
-<label>Sometimes, game memory states are not correctly communicated to the client on startup.</label>
+	<div>
+		<img src="http://i.imgur.com/WIxBPI1.jpg" />
+		<label>Sometimes, game memory states are not correctly communicated to the client on startup.</label>
+	</div>
+</div>

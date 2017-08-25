@@ -8,6 +8,7 @@ isProject: true
 tech:
   - unity
 thumbnail: http://i.imgur.com/UF9FHkb.jpg
+demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 ---
 
 # Concept
@@ -20,16 +21,6 @@ In this game, you pilot a spaceship through short bursts of fuel and the gravita
 
 >_Technically_, the game is more based on the [Oberth effect](https://en.wikipedia.org/wiki/Oberth_effect) (powered flybys) than the slingshot effect used for a gravitational assist.
 
-#### Play It
-
-You can find a beta WebGL build of the game [here](https://developer.cloud.unity3d.com/share/WJPjJOJq4M/)!
-
-
-# Project Details
-
-- **Development time (to date)** ~2 Months
-- **Engine** Unity 5.5
-- **Team** Solo
 
 # About
 
@@ -54,21 +45,33 @@ You can find a beta WebGL build of the game [here](https://developer.cloud.unity
 
 https://imgur.com/a/i9LUp
 
+<div class="screenshots">
+	<div>
+		<img src="http://i.imgur.com/UF9FHkb.jpg" />
+		<label>Initial version of the title screen. Not much ends up changing!</label>
+	</div>
 
-<img src="http://i.imgur.com/UF9FHkb.jpg" />
-<label>Initial version of the title screen. Not much ends up changing!</label>
+	<div>
+		<video src="https://i.imgur.com/C7V1QIC.mp4" loop controls></video>
+		<label>Early mechanics testing.<br />Demonstrates gravity, dragging the map/following the ship, and&nbsp;a&nbsp;test&nbsp;aesthetic.</label>
+	</div>
+	<div>
+		<video src="https://i.imgur.com/kx6z3Qz.mp4" loop controls></video>
+		<label>Another early gravity test. Here, suns grew larger with each consumed star.</label>
+	</div>
 
-<video src="https://i.imgur.com/C7V1QIC.mp4" loop controls></video>
-<label>Early mechanics testing.<br />Demonstrates gravity, dragging the map/following the ship, and&nbsp;a&nbsp;test&nbsp;aesthetic.</label>
+	<div>
+		<video src="https://i.imgur.com/ckeyjOo.mp4" loop controls></video>
+		<label>Fun bug! Each ship that hits the sun spawns another, but does&nbsp;not&nbsp;get&nbsp;destroyed.</label>
+	</div>
 
-<video src="https://i.imgur.com/kx6z3Qz.mp4" loop controls></video>
-<label>Another early gravity test. Here, suns grew larger with each consumed star.</label>
+	<div>
+		<video src="https://i.imgur.com/Bx2W9jW.mp4" loop controls></video>
+		<label>In-game tool to help level design. Ships fire off in several directions to easily map possible level solutions.</label>
+	</div>
 
-<video src="https://i.imgur.com/ckeyjOo.mp4" loop controls></video>
-<label>Fun bug! Each ship that hits the sun spawns another, but does&nbsp;not&nbsp;get&nbsp;destroyed.</label>
-
-<video src="https://i.imgur.com/Bx2W9jW.mp4" loop controls></video>
-<label>In-game tool to help level design. Ships fire off in several directions to easily map possible level solutions.</label>
-
-<video src="https://i.imgur.com/Y1Qy5Pp.mp4" loop controls></video>
-<label>Really ramping up the explosions.</label>
+	<div>
+		<video src="https://i.imgur.com/Y1Qy5Pp.mp4" loop controls></video>
+		<label>Really ramping up the explosions.</label>
+	</div>
+</div>

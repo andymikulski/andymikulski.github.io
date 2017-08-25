@@ -603,3 +603,27 @@ label {
     font-size: 0.875em;
   }
 }
+
+
+.screenshots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  & > div {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 38vw;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+}

@@ -45,4 +45,6 @@ Check out a quick proof of concept walkthrough on Twitch [here](https://www.twit
 
 # Screenshots
 
-![LOTHT](http://i.imgur.com/faJHzER.jpg)
+<div class="screenshots">
+	<div><img src="http://i.imgur.com/faJHzER.jpg" /></div>
+</div>

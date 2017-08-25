@@ -42,7 +42,3 @@ Pretty simple!
 # Name Origin
 
 <iframe style="display: block; margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/hpigjnKl7nI" frameborder="0" allowfullscreen></iframe>
-
-# Screenshots
-
-<img src="http://i.imgur.com/l5a48i0.jpg" />
