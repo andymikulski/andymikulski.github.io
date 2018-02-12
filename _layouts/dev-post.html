@@ -4,20 +4,24 @@ layout: dev-default
 
 <article class="post post-container">
   <div class="post-meta">
-    <img src="{{ page.thumbnail }}" class="thumbnail" />
+    <a href="{{ page.thumbnail }}" target="_blank"><img src="{{ page.thumbnail }}" class="thumbnail" /></a>
 
     <h1>
-      {% unless page.isProject %}
-        <small>
-          <a href="{{ site.baseurl }}/dev/{{page.project}}">{{ page.projectName }}</a>
-        </small>
-      {% endunless %}
       {{ page.title }}
     </h1>
     <div class="date">
-      {{ page.date | date: "%Y" }}
+      {{ page.date | date: "%B %e, %Y" }}
     </div>
+    
+    {% unless page.isProject %}
+      <small>
+        <a href="{{ site.baseurl }}/dev/{{page.project}}">{{ page.projectName }}</a>
+      </small>
+    {% endunless %}
+
+    {% if page.github != nil and page.demo != nil and page.inDev != nil %}
     <hr />
+    {% endif %}
     <ul class="source-links">
       {% if page.github %}
         <li>
@@ -42,6 +46,8 @@ layout: dev-default
   <div class="entry">
     {{ content }}
 
+    <hr />
+
     {% capture hasRelatedPosts %}
       {% for post in site.posts %}
           {% if post.isProject == nil
@@ -63,6 +69,7 @@ layout: dev-default
             <li>
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
               <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+              <div>{{ post.description }}</div>
             </li>
           {%endif %}
         {%endfor %}

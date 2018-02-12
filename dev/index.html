@@ -2,26 +2,22 @@
 layout: dev-default
 ---
 
-<span class="notice">
-<h1>Under Construction</h1>
-<p>This section is currently undergoing maintenance and refurbishing, please pardon any filler/missing text! Check back soon!</p>
-</span>
-
 <div class="posts latest">
   <h1>Latest Posts</h1>
-  <ul>
+  <ul class="post-list">
     {% for post in site.posts %}
       {% if post.blog contains 'dev' and post.isProject == nil %}
         <li>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br />
-          <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
-          <small>
-            Posted in <a href="{{ site.baseurl }}/dev/{{post.project}}">{{ post.projectName }}</a>
-          </small>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+          <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
+         {{ post.title }}</a>
+          <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+          <span class="description">{{ post.description }}</span>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
+  <small><a href="{{ site.baseurl }}/dev/list/">See all posts</a></small>
 </div>
 
 <hr />

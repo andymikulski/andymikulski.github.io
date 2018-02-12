@@ -11,7 +11,7 @@ tech:
   - nes6
 thumbnail: http://i.imgur.com/iMrsbeH.png
 github: https://github.com/andymikulski/multines
-demo: https://multines.neocities.org/
+# demo: https://multines.neocities.org/
 inDev: true
 ---
 

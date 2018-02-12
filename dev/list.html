@@ -1,0 +1,20 @@
+---
+layout: dev-default
+---
+
+<div class="posts latest">
+  <h1>All Dev Posts</h1>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.blog contains 'dev' and post.isProject == nil %}
+        <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+          <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
+         {{ post.title }}</a>
+          <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+          <span class="description">{{ post.description }}</span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

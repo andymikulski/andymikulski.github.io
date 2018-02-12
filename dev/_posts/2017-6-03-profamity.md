@@ -1,10 +1,10 @@
 ---
 layout: dev-post
 title: Profamity
+description: Command-line tool used to detect profanity in text files.
 permalink: /dev/profamity/
 blog: dev
 project: profamity
-isProject: true
 tech:
   - Javascript
   - Node
