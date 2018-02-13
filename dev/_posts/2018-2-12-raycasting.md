@@ -24,7 +24,11 @@ If you search for [ray cast](https://www.google.com/search?q=ray+cast) you'll fi
 
 Say you're building an espionage game, and the goal is to get from point A to point B without alerting any guards. A key mechanic of the game is finding hiding places, and ensuring guards don't see you.
 
-A naïve approach would be to check a radius around each NPC and determine if the player is hidden via a box, camo, or a disguise. This would work for a while, though after adding several new items or mechanics, maintaining how NPCs determine player visibility could become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. Note that it's not impossible, but you quickly step into sticky territory.
+A naïve approach would be to check a radius around each NPC and determine if the player is hidden from the NPC somehow (in a box, maybe). This approach would generally work, though after adding several new items or mechanics, maintaining how NPCs determine player visibility would become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. This is merely scratching the surface of problems with this approach. Consider: 
+
+- What if there is an obstacle between the player and the NPC? Does the NPC open fire? What if the obstacle is another NPC?
+- What if you'd like to add reflective surfaces as a feature, which NPCs could use to spot the player?
+- How would you efficiently identify the closest/furthest thing the NPC can see?
 
 #### Enter Ray Casting
 
@@ -43,15 +47,6 @@ The approach is simple: emit a [ray](https://en.wikipedia.org/wiki/Line_(geometr
 Now players can sneak behind NPCs with lifelike stealth! With ray casting, NPCs become quite flexible. Perhaps you'd like an enemy with intentional blind spots, or maybe you'd like to change an NPC's field of view during the game. We also can tap into the distance a ray has travelled. 
 
 Let's say NPCs can see about 10 meters ahead of them before their vision starts failing, and completely falls off after 15m. Your player crosses a NPC's path about 12m away. With ray casting, your NPC can notice something at the edge of its field of view, use the distance to adjust its perception ("it's probably nothing" vs "hey that looked like..!"), and respond accordingly. 
-
-#### "Yeah but you could do that the other way, too."
-
-Yep, you absolutely could make the above feature work using the `use-the-radius-around-the-NPC` approach. But, what happens when...
-
-- ...there is an obstacle between the player and the NPC? Does the NPC open fire? What if the obstacle is another NPC?
-- ...you'd like to add mirrored surfaces as a feature?
-- ...you have many entities in immediate proximity to NPCs? Do they look over each one and react accordingly? How does it decide?
-- ...you want to quickly identify what the closest/furthest thing the NPC can see?
 
 #### But wait, there's more!
 
