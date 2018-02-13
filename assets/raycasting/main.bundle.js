@@ -3095,14 +3095,14 @@ class DDATestApp {
         this.turnAngle = 0;
         this.playerPos = [4, 9];
         this.fov = 90;
-        this.rayCount = 3;
+        this.rayOverlapCount = 3;
         this.raysPerDegree = 0.5;
         this.fps = 0;
         const gui = new dat_gui_1.default.GUI();
         gui.add(this, 'highQuality').listen();
         gui.add(this, 'fov', 1, 360).step(1).listen();
-        gui.add(this, 'raysPerDegree', 0.1, 2).step(0.1).listen();
-        gui.add(this, 'rayCount', 0, 20).step(1).listen();
+        gui.add(this, 'raysPerDegree', 0.1, 100).step(0.1).listen();
+        gui.add(this, 'rayOverlapCount', 0, 20).step(1).listen();
         gui.add(this, 'lightDist', 0, 100).step(1).listen();
         gui.add(this, 'fps').listen();
         // gui.add(this, 'playerPos');
@@ -3136,7 +3136,7 @@ class DDATestApp {
         window.addEventListener('keydown', (evt) => {
             let nextX;
             let nextY;
-            console.log(evt.which);
+            // console.log(evt.which);
             switch (evt.which) {
                 case 81:// Q
                     this.highQuality = !this.highQuality;
@@ -3253,7 +3253,7 @@ class DDATestApp {
         for (let curAngle = -halfAngle; curAngle < halfAngle; curAngle += this.raysPerDegree) {
             this.ray(this.playerPos, startAngle + curAngle);
         }
-        this.dotMan.add(this.cellSize, this.playerPos.map(Math.round), 'green');
+        this.dotMan.add(this.cellSize, this.playerPos.map(Math.round).map(x => x - 0.5), 'green');
         this.pipeline.update();
     }
     degToRad(deg) {
@@ -3265,6 +3265,20 @@ class DDATestApp {
     dist(pt1, pt2) {
         return Math.sqrt(Math.pow(pt2[0] - pt1[0], 2) + Math.pow(pt2[1] - pt1[1], 2));
     }
+    cos(angle) {
+        if (this.cos.hasOwnProperty(angle)) {
+            return this.cos[angle];
+        }
+        this.cos[angle] = Math.cos(angle);
+        return this.cos[angle];
+    }
+    sin(angle) {
+        if (this.sin.hasOwnProperty(angle)) {
+            return this.sin[angle];
+        }
+        this.sin[angle] = Math.sin(angle);
+        return this.sin[angle];
+    }
     ray(startPt, angle) {
         // const key = `${startPt.join(',')},${angle}`;
         // if (this.rayCache[key]){
@@ -3272,8 +3286,8 @@ class DDATestApp {
         //     })
         // }
         angle = this.degToRad(angle);
-        let dx = Math.cos(angle);
-        let dy = Math.sin(angle);
+        let dx = this.cos(angle);
+        let dy = this.sin(angle);
         let currentX = startPt[0];
         let currentY = startPt[1];
         let hasHit = false;
@@ -3315,7 +3329,8 @@ class DDATestApp {
                 // // return key;
                 // continue;
             }
-            if (!this.visited[key] || this.visited[key] < this.rayCount) {
+            // this.dotMan.add(1, [currentX, currentY], `rgba(255, 255, 255, ${lightIntensity})`);
+            if (!this.visited[key] || this.visited[key] < this.rayOverlapCount) {
                 if (!this.highQuality) {
                     // low quality = only one beam can hit this
                     this.visited[key] = (this.visited[key] || 0) + 1;

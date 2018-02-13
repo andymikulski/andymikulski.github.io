@@ -30,12 +30,15 @@ A naïve approach would be to check a radius around each guard and determine if 
 
 The approach is simple: emit a [ray](https://en.wikipedia.org/wiki/Line_(geometry)#Ray) for every angle of the guard's field of view, and use what those rays collide with to determine what the guard can or can't see. If a ray hits something it can't pass through, such as a wall, it stops. Is your player hiding behind a wall, or inside a box, or just around the corner? If the guard's rays cant hit the player, the guard can't see the player.
 
-<img src="https://i.imgur.com/kF0luuS.png" />
-<label>Here, four rays are emitted from the guard's perspective. The guard knows where a handful of obstacles are, but there is not a ton of information for the guard to process.</label>
+<img src="https://i.imgur.com/LWG1FNd.png" />
+<label>Here, we see a guard, its field of view, and four rays. The rays tell the guard that walls exist, and how far away they are. This would be an example of a guard with terrible vision. There are a lot of blind spots!</label>
 
-<img src="https://i.imgur.com/RB8MQ8i.png" />
-<img src="https://i.imgur.com/FZaxamm.png" />
-<label>As the number of rays increases, the collision data gains higher resolution. The guard now has much better understanding of the area and much more accurate vision.</label>
+<img src="https://i.imgur.com/NnMKjnT.png" />
+<label>With more rays comes more information about the environment, which is great. As rays travel, they spread apart at farther distances, creating large blind spots with distance. The guard can handle most things immediately around it, but has trouble accurately spotting things further away.</label>
+
+
+<img src="https://i.imgur.com/skGJ31r.png" />
+<label>As we 'fill' the field of view with rays, the collision data gains higher resolution, even for further distances. The guard now has much better understanding of the area and much more accurate vision.</label>
 
 
 
@@ -57,7 +60,9 @@ The end result is more realistic enemies and more dynamic gameplay, simply by ch
 
 ## Visualizing Ray Casts
 
-A common use case for ray casting is to simulate shadows. Makes sense, light acts in a similar way - a ray of light will travel until it hits something, emitting light onto the surfaces around it, sometimes bouncing around a little. _Note this is a very simplistic model of light, but it's close enough for our needs. For a deep dive into physical rendering, I suggest checking out [Computer Graphics: Principles and Practice](https://smile.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528)_
+A common use case for ray casting is to simulate shadows. Makes sense, light acts in a similar way - a ray of light will travel until it hits something, emitting light onto the surfaces around it, sometimes bouncing around a little.
+
+>Note this is a very simplistic model of light, but it's close enough for our needs. For a deep dive into physical rendering, I suggest checking out [Computer&nbsp;Graphics:&nbsp;Principles&nbsp;and&nbsp;Practice](https://smile.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528).
 
 In our demonstration, we'll use a grid-based renderer, which simplifies things even further. Allowing our rays to affect their environment is relatively straight-forward: for each 'step' the ray takes while moving, tell the engine to draw a white square with opacity based on the ray's current distance from the emitter. This gives us the visual effect of light diminishing as it travels further away, achieving a lightbulb or flashlight effect:
 
@@ -66,7 +71,9 @@ In our demonstration, we'll use a grid-based renderer, which simplifies things e
 
 #### Messing with Physics
 
-An interesting piece of using this ray-based lighting approach in a tiled environment means that multiple rays can affect the same tile, and we can control how many rays can combine on one tile. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
+The use of this ray-based lighting approach in a tiled environment has a few inte  
+
+multiple rays can affect the same tile, and we can control how many rays can combine on one tile. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
 
 <img src="https://i.imgur.com/TEdjJwP.png" />
 <label>Tiles lit via the first ray they come into contact with.</label>
