@@ -3141,10 +3141,11 @@ class DDATestApp {
         const gui = new dat_gui_1.default.GUI();
         gui.add(this, 'highQuality').listen();
         gui.add(this, 'fov', 1, 360).step(1).listen();
-        gui.add(this, 'raysPerDegree', 0.1, 100).step(0.1).listen();
+        // gui.add(this, 'raysPerDegree', 0.1, 100).step(0.1).listen();
         gui.add(this, 'rayOverlapCount', 0, 20).step(1).listen();
         gui.add(this, 'lightDist', 0, 100).step(1).listen();
-        gui.add(this, 'fps').listen();
+        gui.add(this, 'setRandomWalls');
+        // gui.add(this, 'fps').listen();
         // gui.add(this, 'playerPos');
         let mouseWaiting = false;
         let mouseX = 100;
@@ -3231,13 +3232,20 @@ class DDATestApp {
             }
             requestAnimationFrame(this.render.bind(this));
         });
+        this.setRandomWalls();
+        this.render();
+        // this.drawLine([1, 3], [19, 8]);
+        // this.dotMan.add(cellSize, [1, 3]);
+        // this.dotMan.add(cellSize, [19, 8]);
+    }
+    setRandomWalls() {
         this.knownWalls = {};
         this.wallPoints = {};
         const buildWall = (start, end) => {
             const wall = this.getLinePoints(start, end);
             wall.forEach(pt => this.wallPoints[pt.join(',')] = true);
         };
-        for (var i = 0; i < this.gridSize % 3; i += 1) {
+        for (var i = 0; i < this.gridSize / 8; i += 1) {
             const mode = Math.floor(Math.random() * 2);
             if (mode === 0) {
                 const x = Math.floor(Math.random() * (this.gridSize));
@@ -3269,9 +3277,6 @@ class DDATestApp {
             }
         }
         this.render();
-        // this.drawLine([1, 3], [19, 8]);
-        // this.dotMan.add(cellSize, [1, 3]);
-        // this.dotMan.add(cellSize, [19, 8]);
     }
     render() {
         this.dotMan.clear();
@@ -3447,7 +3452,7 @@ class DDATestApp {
 }
 exports.DDATestApp = DDATestApp;
 document.body.innerHTML = '';
-const app = new DDATestApp(8, 50);
+const app = new DDATestApp(5, 75);
 
 
 /***/ })
