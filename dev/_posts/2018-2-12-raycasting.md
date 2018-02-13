@@ -24,37 +24,55 @@ If you search for [ray cast](https://www.google.com/search?q=ray+cast) you'll fi
 
 Say you're building an espionage game, and the goal is to get from point A to point B without alerting any guards. A key mechanic of the game is finding hiding places, and ensuring guards don't see you.
 
-A naïve approach would be to check a radius around each guard and determine if the player is hidden via a box, camo, or a disguise. This would work for a while, though after adding several new items or mechanics, maintaining how guards determine player visibility could become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind guards. Note that it's not impossible, but you quickly step into sticky territory.
+A naïve approach would be to check a radius around each NPC and determine if the player is hidden via a box, camo, or a disguise. This would work for a while, though after adding several new items or mechanics, maintaining how NPCs determine player visibility could become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. Note that it's not impossible, but you quickly step into sticky territory.
 
 #### Enter Ray Casting
 
-The approach is simple: emit a [ray](https://en.wikipedia.org/wiki/Line_(geometry)#Ray) for every angle of the guard's field of view, and use what those rays collide with to determine what the guard can or can't see. If a ray hits something it can't pass through, such as a wall, it stops. Is your player hiding behind a wall, or inside a box, or just around the corner? If the guard's rays cant hit the player, the guard can't see the player.
+The approach is simple: emit a [ray](https://en.wikipedia.org/wiki/Line_(geometry)#Ray) for every angle of the NPC's field of view, and use what those rays collide with to determine what the NPC can or can't see. If a ray hits something it can't pass through, such as a wall, it stops. Is your player hiding behind a wall, or inside a box, or just around the corner? If the NPC's rays cant hit the player, the NPC can't see the player.
 
 <img src="https://i.imgur.com/LWG1FNd.png" />
-<label>Here, we see a guard, its field of view, and four rays. The rays tell the guard that walls exist, and how far away they are. This would be an example of a guard with terrible vision. There are a lot of blind spots!</label>
+<label>Here, we see a NPC, its field of view, and four rays. The rays tell the NPC that walls exist, and how far away they are. This would be an example of a NPC with terrible vision. There are a lot of blind spots!</label>
 
 <img src="https://i.imgur.com/NnMKjnT.png" />
-<label>With more rays comes more information about the environment, which is great. As rays travel, they spread apart at farther distances, creating large blind spots with distance. The guard can handle most things immediately around it, but has trouble accurately spotting things further away.</label>
+<label>With more rays comes more information about the environment, which is great. As rays travel, they spread apart at farther distances, creating large blind spots with distance. The NPC can handle most things immediately around it, but has trouble accurately spotting things further away.</label>
 
 
 <img src="https://i.imgur.com/skGJ31r.png" />
-<label>As we 'fill' the field of view with rays, the collision data gains higher resolution, even for further distances. The guard now has much better understanding of the area and much more accurate vision.</label>
+<label>As we 'fill' the field of view with rays, the collision data gains higher resolution, even for further distances. The NPC now has much better understanding of the area and much more accurate vision.</label>
+
+Now players can sneak behind NPCs with lifelike stealth! With ray casting, NPCs become quite flexible. Perhaps you'd like an enemy with intentional blind spots, or maybe you'd like to change an NPC's field of view during the game. We also can tap into the distance a ray has travelled. 
+
+Let's say NPCs can see about 10 meters ahead of them before their vision starts failing, and completely falls off after 15m. Your player crosses a NPC's path about 12m away. With ray casting, your NPC can notice something at the edge of its field of view, use the distance to adjust its perception ("it's probably nothing" vs "hey that looked like..!"), and respond accordingly. 
+
+#### "Yeah but you could do that the other way, too."
+
+Yep, you absolutely could make the above feature work using the `use-the-radius-around-the-NPC` approach. But, what happens when...
+
+- ...there is an obstacle between the player and the NPC? Does the NPC open fire? What if the obstacle is another NPC?
+- ...you'd like to add mirrored surfaces as a feature?
+- ...you have many entities in immediate proximity to NPCs? Do they look over each one and react accordingly? How does it decide?
+- ...you want to quickly identify what the closest/furthest thing the NPC can see?
+
+#### But wait, there's more!
+
+The examples so far have been framed around vision and sight, but ray casting is useful far beyond determining visibility. Take projectiles, for instance. A bullet relates quite closely to a ray we would cast. Both travel in a straight line from an origin, both stop after hitting obstacles (maybe bouncing a little), and so on. The biggest difference is that bullets take some time to travel through space, where our casted rays move through space instantaneously.
+
+> You could use instant rays for high-velocity weapons like railguns or sniper rifles, whose projectiles require seemingly no time to travel through the air.
+
+The benefit of using rays in this context is, again, the ability to tap into the distance the ray has travelled. A low-hanging idea is to use the distance travelled to reduce how much damage the bullet does.
 
 
 
-Now players can stalk guards or sneak past them with lifelike stealth! With ray casting, guards become quite flexible. Without the need to maintain lists of possible obstructions or special cases if the guard encounters a player in a certain state, adding behiavors to guards becomes much more dynamic. The ability to tap into the distance the ray has travelled is invaluable.
 
-Let's say guards can see about 10 meters ahead of them before their vision starts failing them. Your player crosses a guard's path about 12m away. With ray casting, your guard can notice something at the edge of its field of view and investigate accordingly. Another example, perhaps a guard sees the player and fires a ray-casted bullet. The bullet could do less damage based on how far it's travelled, which is trivial until we want the bullets to ricochet or change direction. There are an endless number of uses for information that ray casting provides.
+<!-- Is your user in a box? NPCs would see it as exactly that: a box. This sounds basic, but imagine this: a NPC enters a room with 3-4 boxes, one of which your player is inside. The NPC, unaware of any box hijinks, simply sees the boxes and moves on to the next room. Riveting, I know. Stay with me.
 
-<!-- Is your user in a box? Guards would see it as exactly that: a box. This sounds basic, but imagine this: a guard enters a room with 3-4 boxes, one of which your player is inside. The guard, unaware of any box hijinks, simply sees the boxes and moves on to the next room. Riveting, I know. Stay with me.
+Later, your player ambushes a NPC or two after hiding in some boxes, and the NPCs have now learned to not trust boxes. Now, when NPCs see a box, they could react appropriately. Maybe they check and open each box, or maybe they simply open fire on it. Suddenly, NPCs react dynamically to their environment, even if they have not seen a player nearby recently. 
 
-Later, your player ambushes a guard or two after hiding in some boxes, and the guards have now learned to not trust boxes. Now, when guards see a box, they could react appropriately. Maybe they check and open each box, or maybe they simply open fire on it. Suddenly, guards react dynamically to their environment, even if they have not seen a player nearby recently. 
-
-The end result is more realistic enemies and more dynamic gameplay, simply by changing how your guards perceive their environment. Not to mention the performance gains of seeing what's immediately in the guard's area, versus maintaining lists of boxes, obstructions, interactables, and determining what the guard is near and can interact with.
+The end result is more realistic enemies and more dynamic gameplay, simply by changing how your NPCs perceive their environment. Not to mention the performance gains of seeing what's immediately in the NPC's area, versus maintaining lists of boxes, obstructions, interactables, and determining what the NPC is near and can interact with.
 -->
-
+<!-- 
 > #### B-b-but you could still do that with the radius approach from above!
-> Yep, you absolutely could make the above feature work using the simple `use-the-radius-around-the-guard` approach. But, what happens if there is something between a box and a guard? Does the guard shoot the box anyway? Do you attempt to determine if anything is in the way? Ray casting offers a performant and intuitive way of handling these line of sight issues, on top of its other affordances.
+> Yep, you absolutely could make the above feature work using the simple `use-the-radius-around-the-NPC` approach. But, what happens if there is something between a box and a NPC? Does the NPC shoot the box anyway? Do you attempt to determine if anything is in the way? Ray casting offers a performant and intuitive way of handling these line of sight issues, on top of its other affordances. -->
 
 ---
 
@@ -64,16 +82,14 @@ A common use case for ray casting is to simulate shadows. Makes sense, light act
 
 >Note this is a very simplistic light model, but it's close enough for our needs. For a deep dive into physical rendering, I suggest checking out [Computer&nbsp;Graphics:&nbsp;Principles&nbsp;and&nbsp;Practice](https://smile.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528).
 
-In our demonstration, we'll use a grid-based renderer, which simplifies things even further. Allowing our rays to affect their environment is relatively straight-forward: for each 'step' the ray takes while moving, tell the engine to draw a white square with opacity based on the ray's current distance from the emitter. This gives us the visual effect of light diminishing as it travels further away, achieving a lightbulb or flashlight effect:
+Allowing our rays to affect their environment is relatively straight-forward: for each 'step' the ray takes while moving, tell the engine to draw a white pixel (or a white tile, in this case of this demonstration). The white pixel has its opacity based on the ray's current distance from the emitter, giving the visual effect of light diminishing as it travels further away:
 
 <img src="https://i.imgur.com/q11eWPP.png" />
 <label>As light travels further from the green dot, it appropriately lights up the underlying tile.</label>
 
 #### Messing with Physics
 
-The use of this ray-based lighting approach in a tiled environment has a few inte  
-
-multiple rays can affect the same tile, and we can control how many rays can combine on one tile. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
+The use of this ray-based lighting approach in a tiled environment has a few interesting ramifications. Simply put, there are more rays than available tiles, so several rays travel over the same tile. As a result, we can control how many rays can affect a tile's lighting, which ends up with some interesting results. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
 
 <img src="https://i.imgur.com/TEdjJwP.png" />
 <label>Tiles lit via the first ray they come into contact with.</label>
@@ -87,7 +103,14 @@ With multiple rays of light intersecting, we are presented with much more accura
 
 ---
 
-# Demo
+# [Demo](/assets/raycasting)
+
+This demonstrates a few of the concepts listed above: ray casting, ray layering, identifying (and remembering) obstacles within the player's field of view. Play around with the settings in the control panel to get a sense of how the rays interact.
 
 <iframe src="/assets/raycasting"></iframe>
 <label>WASD or Arrow Keys to move, mouse to aim</label>
+
+
+---
+
+Thank you for taking the time to read this! If you have any questions, comments, or suggestions, please shoot me an [email](mailto:andy.mikulski+dev@gmail.com).
