@@ -62,7 +62,7 @@ The end result is more realistic enemies and more dynamic gameplay, simply by ch
 
 A common use case for ray casting is to simulate shadows. Makes sense, light acts in a similar way - a ray of light will travel until it hits something, emitting light onto the surfaces around it, sometimes bouncing around a little.
 
->Note this is a very simplistic model of light, but it's close enough for our needs. For a deep dive into physical rendering, I suggest checking out [Computer&nbsp;Graphics:&nbsp;Principles&nbsp;and&nbsp;Practice](https://smile.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528).
+>Note this is a very simplistic light model, but it's close enough for our needs. For a deep dive into physical rendering, I suggest checking out [Computer&nbsp;Graphics:&nbsp;Principles&nbsp;and&nbsp;Practice](https://smile.amazon.com/Computer-Graphics-Principles-Practice-3rd/dp/0321399528).
 
 In our demonstration, we'll use a grid-based renderer, which simplifies things even further. Allowing our rays to affect their environment is relatively straight-forward: for each 'step' the ray takes while moving, tell the engine to draw a white square with opacity based on the ray's current distance from the emitter. This gives us the visual effect of light diminishing as it travels further away, achieving a lightbulb or flashlight effect:
 
@@ -83,7 +83,7 @@ While we are given a pretty accurate representation of the player's line of sigh
 <img src="https://i.imgur.com/PVS4Xs8.png" />
 <label>Tiles lit via every ray they come into contact with.</label>
 
-With multiple rays of light intersecting, we are presented with much more accurate shadows. Greater realism is achieved through the layering of light and shadow, and even the illusion of antialiasing gives a sense of gradation between light and dark. The ability to model physics in a simplified environment affords a lot of neat features and possibilities. One could implement light reflection based on collision angles, or diffraction based on the material of obstacle the ray hits, etc.
+With multiple rays of light intersecting, we are presented with much more accurate shadows. Greater realism is achieved through the layering of light, and even the illusion of antialiasing gives a sense of gradation between light and dark. The ability to model physics in a simplified environment affords a lot of neat features and possibilities. One could implement light reflection based on collision angles, or diffraction based on the material of obstacle the ray hits, etc.
 
 ---
 

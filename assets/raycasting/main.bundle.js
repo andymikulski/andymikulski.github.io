@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,8 +73,37 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const CanvasRenderer_1 = __webpack_require__(3);
-const QuadTree_1 = __webpack_require__(4);
+class LinkedNode {
+    constructor(data = null) {
+        this.data = data;
+    }
+    push(item) {
+        if (this.data !== null && this.nextNode) {
+            return this.nextNode.push(item);
+        }
+        else {
+            this.nextNode = new LinkedNode(item);
+        }
+    }
+    hasNext() {
+        return !!this.nextNode;
+    }
+    next() {
+        return this.nextNode;
+    }
+}
+exports.default = LinkedNode;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const CanvasRenderer_1 = __webpack_require__(4);
+const QuadTree_1 = __webpack_require__(5);
 class RenderingPipeline {
     constructor() {
         this.renderers = [];
@@ -135,13 +164,13 @@ exports.default = RenderingPipeline;
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const vcr_1 = __webpack_require__(7);
+const vcr_1 = __webpack_require__(8);
 ;
 class DotManager {
     constructor(size, cellSize) {
@@ -151,7 +180,8 @@ class DotManager {
         this.renderer = new vcr_1.default(size, size);
     }
     clear() {
-        this.pool = this.pool.concat(this.active);
+        Array.prototype.push.apply(this.pool, this.active);
+        // this.pool = this.pool.concat(this.active);
         this.active = [];
     }
     add(size, coords, style) {
@@ -170,10 +200,14 @@ class DotManager {
         const ctx = this.renderer.getContext();
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         const resizeFactor = 1;
-        this.active.forEach((dot) => {
+        let i = this.active.length - 1;
+        let dot;
+        while (i >= 0) {
+            dot = this.active[i];
             ctx.fillStyle = dot.STYLE;
             ctx.fillRect(dot.COORDS[0] * this.cellSize, dot.COORDS[1] * this.cellSize, dot.SIZE / resizeFactor, dot.SIZE / resizeFactor);
-        });
+            i -= 1;
+        }
         toContext.drawImage(this.renderer.getCanvas(), 0, 0);
     }
 }
@@ -181,7 +215,7 @@ exports.DotManager = DotManager;
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2688,7 +2722,7 @@ var index = {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2736,14 +2770,14 @@ exports.default = CanvasRenderer;
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const emitter_1 = __webpack_require__(6);
-const coord_utils_1 = __webpack_require__(5);
+const emitter_1 = __webpack_require__(7);
+const coord_utils_1 = __webpack_require__(6);
 class Rect {
     constructor(xPoint, yPoint, width, height) {
         this.xPoint = xPoint;
@@ -2936,7 +2970,7 @@ exports.default = QuadTree;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2953,7 +2987,7 @@ function getRadiusCoords(xCenter, yCenter, radius) {
                 if ((x - xCenter) * (x - xCenter) + (y - yCenter) * (y - yCenter) <= r2) {
                     const xSym = xCenter - (x - xCenter);
                     const ySym = yCenter - (y - yCenter);
-                    points = points.concat([
+                    Array.prototype.push.apply(points, [
                         [x, y],
                         [x, ySym],
                         [xSym, y],
@@ -2970,7 +3004,7 @@ exports.getRadiusCoords = getRadiusCoords;
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2999,7 +3033,7 @@ exports.default = Emitter;
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3058,15 +3092,16 @@ exports.default = VirtualCanvasRenderer;
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const dat_gui_1 = __webpack_require__(2);
-const dot_1 = __webpack_require__(1);
-const RenderingPipeline_1 = __webpack_require__(0);
+const dat_gui_1 = __webpack_require__(3);
+const dot_1 = __webpack_require__(2);
+const RenderingPipeline_1 = __webpack_require__(1);
+const LinkedNode_1 = __webpack_require__(0);
 class DDATestApp {
     constructor(cellSize = 10, gridSize = 15) {
         this.cellSize = cellSize;
@@ -3085,6 +3120,11 @@ class DDATestApp {
         this.pipeline.addRenderer(this.dotMan);
         this.lightDist = 30;
         this.rayCache = {};
+        console.time('rays');
+        for (let curAngle = -360; curAngle < 360; curAngle += 0.5) {
+            this.buildRayList(curAngle);
+        }
+        console.timeEnd('rays');
         // let t = 0;
         // setInterval(() => {
         //     this.lightDist = 5 + Math.abs(Math.cos(t) * 15);
@@ -3121,7 +3161,8 @@ class DDATestApp {
         const tickMouse = () => {
             var angle = Math.atan2(mouseY - this.playerPos[1], mouseX - this.playerPos[0]);
             angle = angle * (180 / Math.PI);
-            this.turnAngle = angle;
+            // By rounding the angle, we can account for what direction rays will be shot in
+            this.turnAngle = Math.round(angle);
             // this.render();
             mouseWaiting = false;
             requestAnimationFrame(tickMouse.bind(this));
@@ -3196,7 +3237,7 @@ class DDATestApp {
             const wall = this.getLinePoints(start, end);
             wall.forEach(pt => this.wallPoints[pt.join(',')] = true);
         };
-        for (var i = 0; i < 15; i += 1) {
+        for (var i = 0; i < this.gridSize % 3; i += 1) {
             const mode = Math.floor(Math.random() * 2);
             if (mode === 0) {
                 const x = Math.floor(Math.random() * (this.gridSize));
@@ -3279,57 +3320,56 @@ class DDATestApp {
         this.sin[angle] = Math.sin(angle);
         return this.sin[angle];
     }
-    ray(startPt, angle) {
-        // const key = `${startPt.join(',')},${angle}`;
-        // if (this.rayCache[key]){
-        //     this.rayCache[key].forEach(pt => {
-        //     })
-        // }
-        angle = this.degToRad(angle);
+    buildRayList(angleDegrees) {
+        let rayList;
+        const angle = this.degToRad(angleDegrees);
         let dx = this.cos(angle);
         let dy = this.sin(angle);
-        let currentX = startPt[0];
-        let currentY = startPt[1];
-        let hasHit = false;
-        let lastHit = startPt;
-        let targetDist = this.lightDist;
-        let t = 0;
-        let bounceCount = 0;
-        let lightIntensity = 1;
-        //  this.dist(lastHit, [currentX, currentY]) <= targetDist
-        while (this.isOnMap(currentX, currentY) && lightIntensity >= 0.05) {
+        let currentX = 0;
+        let currentY = 0;
+        let dataToWrite;
+        while (((currentX >= -this.gridSize && currentX <= this.gridSize) && (currentY >= -this.gridSize && currentY <= this.gridSize))) {
             currentX += dx;
             currentY += dy;
-            const dispX = Math.round(currentX);
-            const dispY = Math.round(currentY);
-            const key = `${dispX},${dispY}`;
-            const distance = this.dist(startPt, [currentX, currentY]);
-            lightIntensity = (0.90 - (distance / this.lightDist)); // * (bounceCount > 0 ? bounceCount * 0.5 : 1);
+            dataToWrite = {
+                currentX,
+                currentY,
+                distance: this.dist([0, 0], [currentX, currentY]),
+            };
+            if (!rayList) {
+                rayList = new LinkedNode_1.default(dataToWrite);
+            }
+            else {
+                rayList.push(dataToWrite);
+            }
+        }
+        if (!rayList) {
+            throw new Error(`${currentX}, ${currentY}`);
+        }
+        this.rayCache[angleDegrees] = rayList;
+        return rayList;
+    }
+    ray(startPt, angleDegrees) {
+        let currentX;
+        let currentY;
+        let lightIntensity = 1;
+        let hasHit = false;
+        let step = this.rayCache[angleDegrees];
+        let dispX;
+        let dispY;
+        let key;
+        while (step && lightIntensity >= 0.05) {
+            currentX = startPt[0] + step.data.currentX;
+            currentY = startPt[1] + step.data.currentY;
+            lightIntensity = (0.90 - (step.data.distance / this.lightDist));
+            dispX = Math.round(currentX);
+            dispY = Math.round(currentY);
+            key = `${dispX},${dispY}`;
             if (this.wallPoints[key]) {
                 this.dotMan.add(this.cellSize, [dispX, dispY], `rgba(255, 100, 100, ${lightIntensity})`);
                 this.knownWalls[key] = [dispX, dispY];
                 return;
-                // targetDist *= 0.4;
-                // targetDist -= this.dist(lastHit, [currentX, currentY]);
-                // lastHit = [currentX, currentY];
-                // bounceCount += 1;
-                // let incidentAngle = (Math.PI / 2) - Math.atan(dy / dx);
-                // dy = Math.sin(incidentAngle);
-                // dx = Math.cos(incidentAngle);
-                // dx = (dx * Math.cos(incidentAngle)) + (dy * Math.sin(incidentAngle));
-                // dy = (dx * Math.sin(incidentAngle)) - (dy * Math.cos(incidentAngle));
-                // continue;
-                // // if (dx < dy) {
-                // //     dx *= -1; //Math.cos(30);
-                // // } else if (dy > dx) {
-                // //     dy *= -1; //Math.cos(30);
-                // // } else {
-                // //     return;
-                // // }
-                // // return key;
-                // continue;
             }
-            // this.dotMan.add(1, [currentX, currentY], `rgba(255, 255, 255, ${lightIntensity})`);
             if (!this.visited[key] || this.visited[key] < this.rayOverlapCount) {
                 if (!this.highQuality) {
                     // low quality = only one beam can hit this
@@ -3337,12 +3377,36 @@ class DDATestApp {
                 }
                 else {
                     // high quality = multiple beams = lower the intensity
-                    // console.log('ok', lightIntensity, lightIntensity >> 2);
                     lightIntensity = lightIntensity / 2;
                 }
                 this.dotMan.add(this.cellSize, [dispX, dispY], `rgba(255, 255, 255, ${lightIntensity})`);
             }
+            step = step.next();
         }
+        // while (this.isOnMap(currentX, currentY) && lightIntensity >= 0.05) {
+        //     currentX += dx;
+        //     currentY += dy;
+        //     const dispX = Math.round(currentX);
+        //     const dispY = Math.round(currentY);
+        //     const key = `${dispX},${dispY}`;
+        //     const distance = this.dist(startPt, [currentX, currentY]);
+        //     lightIntensity = (0.90 - (distance / this.lightDist)); // * (bounceCount > 0 ? bounceCount * 0.5 : 1);
+        //     if (this.wallPoints[key]) {
+        //         this.dotMan.add(this.cellSize, [dispX, dispY], `rgba(255, 100, 100, ${lightIntensity})`);
+        //         this.knownWalls[key] = [dispX, dispY];
+        //         return;
+        //     }
+        //     if (!this.visited[key] || this.visited[key] < this.rayOverlapCount) {
+        //         if (!this.highQuality) {
+        //             // low quality = only one beam can hit this
+        //             this.visited[key] = (this.visited[key] || 0) + 1;
+        //         } else {
+        //             // high quality = multiple beams = lower the intensity
+        //             lightIntensity = lightIntensity / 2;
+        //         }
+        //         this.dotMan.add(this.cellSize, [dispX, dispY], `rgba(255, 255, 255, ${lightIntensity})`);
+        //     }
+        // }
     }
     getLinePoints(pt1, pt2) {
         // calculate dx , dy
@@ -3383,7 +3447,7 @@ class DDATestApp {
 }
 exports.DDATestApp = DDATestApp;
 document.body.innerHTML = '';
-const app = new DDATestApp(8, 200);
+const app = new DDATestApp(8, 50);
 
 
 /***/ })
