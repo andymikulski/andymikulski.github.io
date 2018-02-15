@@ -11,7 +11,7 @@ layout: dev-default
             <a href="{{ site.baseurl }}{{ post.url }}">
           <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
          {{ post.title }}</a>
-          <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+          <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
           <span class="description">{{ post.description }}</span>
         </li>
       {% endif %}
