@@ -84,7 +84,7 @@ Allowing our rays to affect their environment is relatively straight-forward: fo
 
 #### Messing with Physics
 
-The use of this ray-based lighting approach in a tiled environment has a few interesting ramifications. Simply put, there are more rays than available tiles, so several rays travel over the same tile. As a result, we can control how many rays can affect a tile's lighting, which ends up with some interesting results. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
+The use of this ray-based lighting approach in a tiled environment has an interesting ramification. Simply put, there are more rays than available tiles, so several rays travel over the same tile. As a result, we can control how many rays can affect a tile's lighting, which ends up with some interesting results. Examine this screenshot where tiles are only allowed to be lit with one ray of light each:
 
 <img src="https://i.imgur.com/TEdjJwP.png" />
 <label>Tiles lit via the first ray they come into contact with.</label>
