@@ -37,5 +37,8 @@
     </div>
 
     {% include analytics.html %}
+
+  <script>Array.prototype.slice.call(document.body.querySelectorAll('.fast')).map(el=>el.playbackRate = el.defaultPlaybackRate = 2)</script>    
+  <script>Array.prototype.slice.call(document.body.querySelectorAll('.slow')).map(el=>el.playbackRate = el.defaultPlaybackRate = 0.85)</script>    
   </body>
 </html>

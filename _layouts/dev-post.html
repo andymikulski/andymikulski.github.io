@@ -13,9 +13,9 @@ layout: dev-default
       {{ page.date | date: "%B %e, %Y" }}
     </div>
     
-    {% unless page.isProject %}
+    {% unless page.isProject or page.project == nil %}
       <small>
-        <a href="{{ site.baseurl }}/dev/{{page.project}}">{{ page.projectName }}</a>
+        Posted in the <a href="{{ site.baseurl }}/dev/{{page.project}}">{{ page.projectName }}</a> project.
       </small>
     {% endunless %}
 

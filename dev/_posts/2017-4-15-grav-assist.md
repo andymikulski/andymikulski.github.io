@@ -6,7 +6,8 @@ blog: dev
 project: gravity-assist
 isProject: true
 tech:
-  - unity
+  - Unity
+  - C#
 thumbnail: http://i.imgur.com/UF9FHkb.jpg
 demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 ---
@@ -56,7 +57,7 @@ https://imgur.com/a/i9LUp
 		<label>Early mechanics testing.<br />Demonstrates gravity, dragging the map/following the ship, and&nbsp;a&nbsp;test&nbsp;aesthetic.</label>
 	</div>
 	<div>
-		<video src="https://i.imgur.com/kx6z3Qz.mp4" loop controls></video>
+		<video class="fast" src="https://i.imgur.com/kx6z3Qz.mp4" loop controls></video>
 		<label>Another early gravity test. Here, suns grew larger with each consumed star.</label>
 	</div>
 

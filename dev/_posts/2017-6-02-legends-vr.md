@@ -7,6 +7,7 @@ project: lotht
 isProject: true
 tech:
   - Unity
+  - C#
   - VRTK
 inDev: true
 thumbnail: http://i.imgur.com/G9RjuA1.jpg
