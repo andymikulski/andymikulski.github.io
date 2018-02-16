@@ -1,10 +1,10 @@
 ---
 layout: dev-post
 title: "Facing Challenges: Sweeping in 3D"
-permalink: /dev/multines/netplay
+permalink: /dev/3dms/facing-challenges
 blog: dev
 project: 3dms
-projectName: 3D MineSweeper
+projectName: 3D Minesweeper
 description: "Exploring a core concept of 3D Minesweeper to prevent user overload."
 thumbnail: http://i.imgur.com/4mj7E2V.png
 ---
@@ -18,7 +18,7 @@ A major issue learned while playtesting [3DMS](/dev/3dms) was players had an iss
 
 In the above video, we can see that visual isolation greatly helps the player focus on the immediate playing area. The issue, though, is the neighboring contexts. A block with a `6` count on the edge of a context means the player must switch between two (or more) contexts in order to determine the information they need to make a move. This not only makes for boring gameplay, but the game is also inherently difficult. Boring + difficult = no good.
 
->Note: When I say 'context', I'm speaking about the adjacent area surrounding a node. A neighboring context would be the group of nodes if a neighboring node were selected.
+>When I refer to 'contexts', I'm speaking about the immediately adjacent area surrounding a node. A "neighboring context" would be the surrounding nodes of a neighboring point. Essentially, each possible 'section' is considered a context.
 
 ### Face-ing the problem
 
