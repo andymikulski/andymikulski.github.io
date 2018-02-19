@@ -677,3 +677,22 @@ iframe {
   height: 50vh;
   width: 100%;
 }
+
+.devblog-list {
+  margin: 0;
+  padding: 0;
+
+  .post-meta.mini {
+    width: 100%;
+
+    .thumbnail {
+      width: 25%;
+    }
+    .timestamp {
+      color: #bbb;
+      display: block;
+      margin-bottom: 1em;
+      font-size: 0.8em;
+    }
+  }
+}

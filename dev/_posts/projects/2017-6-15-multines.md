@@ -15,7 +15,7 @@ github: https://github.com/andymikulski/multines
 inDev: true
 ---
 
-# Multiplayer NES on the web.
+# Multiplayer NES for the web.
 
 Users take turns playing classic NES games with each other in real time. Games are synced via a node server and web sockets.
 
@@ -30,8 +30,9 @@ Users take turns playing classic NES games with each other in real time. Games a
 - [uses socket.io to transfer ROM data, inputs, stats, etc]
 - [kinda buggy, needs more server-side work]
 
-<video src="https://i.imgur.com/OWe3xBX.mp4" loop controls></video>
-<label>Early sync test. You can see that one gets ahead of the other after some time.</label>
+
+<img src="https://i.imgur.com/lpH2z8m.png" />
+<label>Later sync test utilizing a variant on lockstep frames. Everything's in sync, even RNG's!</label>
 
 # Postmortem
 
@@ -43,11 +44,6 @@ Users take turns playing classic NES games with each other in real time. Games a
 # Screenshots
 
 <div class="screenshots">
-	<div>
-		<img src="http://i.imgur.com/iMrsbeH.jpg" />
-		<label>Working prototype!</label>
-	</div>
-
 	<div>
 		<img src="http://i.imgur.com/WIxBPI1.jpg" />
 		<label>Sometimes, game memory states are not correctly communicated to the client on startup.</label>

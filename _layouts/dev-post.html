@@ -10,7 +10,11 @@ layout: dev-default
       {{ page.title }}
     </h1>
     <div class="date">
-      {{ page.date | date: "%B %e, %Y" }}
+      {% if page.isProject %}
+        {{ page.date | date: "%Y" }}
+      {% else %}
+        {{ page.date | date: "%B %e, %Y" }}
+      {% endif %}
     </div>
     
     {% unless page.isProject or page.project == nil %}
@@ -60,13 +64,18 @@ layout: dev-default
 
     {%if page.isProject and hasRelatedPosts contains 'true' %}
       <h1 id="devblog">DevBlog Posts</h1>
-      <ul>
+      <ul class="devblog-list">
         {% for post in site.posts %}
           {% if post.isProject == nil
             and post.blog contains 'dev'
             and post.project contains page.project
           %}
-            <li>
+            <li class="post-meta mini"> 
+              {% if post.thumbnail %}
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <img src="{{ post.thumbnail }}" class="thumbnail" />
+              </a>
+              {% endif %}
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
               <span class="timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
               <div>{{ post.description }}</div>

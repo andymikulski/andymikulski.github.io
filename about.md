@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-![meeee]({{ site.avatar }})
+![Yep, this is all you need to know.]({{ site.avatar }})
 
 
 ### Useful Links

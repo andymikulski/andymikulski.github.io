@@ -1,11 +1,11 @@
 ---
 layout: dev-post
-title: "Facing Challenges: Sweeping in 3D"
+title: "Facing Challenges: Overloaded Users"
 permalink: /dev/3dms/facing-challenges
 blog: dev
 project: 3dms
 projectName: 3D Minesweeper
-description: "Exploring a core concept of 3D Minesweeper to prevent user overload."
+description: "Exploring a core concept of 3D Minesweeper to prevent overwhelming players with information."
 thumbnail: http://i.imgur.com/4mj7E2V.png
 ---
 
