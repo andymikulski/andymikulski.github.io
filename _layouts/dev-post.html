@@ -2,6 +2,17 @@
 layout: dev-default
 ---
 
+
+{% capture hasRelatedPosts %}
+{% for post in site.posts %}
+    {% if post.isProject == nil
+      and post.blog contains 'dev'
+      and post.project contains page.project %}
+    true
+    {%endif %}
+{%endfor%}
+{% endcapture %}
+
 <article class="post post-container">
   <div class="post-meta">
     <a href="{{ page.thumbnail }}" target="_blank"><img src="{{ page.thumbnail }}" class="thumbnail" /></a>
@@ -39,7 +50,7 @@ layout: dev-default
       {% endif %}
       {% if page.inDev %}
         <li class="in-dev">
-          This project is ongoing. Check out the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.
+          This project is ongoing, check back for more updates soon! {% if hasRelatedPosts contains 'true' %}You can also visit the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.{% endif %}
         </li>
       {% endif %}
     </ul>
@@ -52,15 +63,6 @@ layout: dev-default
 
     <hr />
 
-    {% capture hasRelatedPosts %}
-      {% for post in site.posts %}
-          {% if post.isProject == nil
-            and post.blog contains 'dev'
-            and post.project contains page.project %}
-          true
-          {%endif %}
-      {%endfor%}
-    {% endcapture %}
 
     {%if page.isProject and hasRelatedPosts contains 'true' %}
       <h1 id="devblog">DevBlog Posts</h1>
