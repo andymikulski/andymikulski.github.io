@@ -103,9 +103,4 @@ With multiple rays of light intersecting, we are presented with much more accura
 This demonstrates a few of the concepts listed above: ray casting, ray layering, identifying (and remembering) obstacles within the player's field of view. Play around with the settings in the control panel to get a sense of how the rays interact.
 
 <iframe src="/assets/raycasting"></iframe>
-<label>WASD or Arrow Keys to move, mouse to aim</label>
-
-
----
-
-Thank you for taking the time to read this! If you have any questions, comments, or suggestions, please shoot me an [email](mailto:andy.mikulski+dev@gmail.com).
+<label>WASD or Arrow Keys to move, mouse to aim. Fiddle with the settings in the top right to see how the light changes!</label>
