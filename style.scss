@@ -535,6 +535,7 @@ hr {
 
 .post video,
 .post img,
+// .post script,
 iframe {
   display: block;
   margin: 2em auto 0;
@@ -545,6 +546,7 @@ iframe {
   &.no-shadow {
     box-shadow: none;
   }
+
 
   & + label,
   & + p > label {
@@ -565,6 +567,26 @@ iframe {
     color: rgba(100,100,100,0.99);
     z-index: 0;
   }
+}
+
+script + label,
+script + p > label {
+  // text-align: center;
+  background: rgba(241, 241, 241, 0.4);
+  border: 1px solid rgba(241, 241, 241, 0.9);
+  margin: 0.5em 0;
+  display: inline-block;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+  padding: 0.3em 0.8em;
+  border-radius: 2px;
+  font-size: 0.875em;
+  width: 90%;
+  max-width: 700px;
+  line-height: 1.6em;
+  color: rgba(100,100,100,0.99);
+  z-index: 0;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
