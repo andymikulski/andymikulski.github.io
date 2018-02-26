@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: "Quick Look: Breadth-first Waves"
+title: "Breadth-first Waves"
 permalink: /dev/waves
 blog: dev
 description: "Using the breadth-first search algorithm to imitate travelling sound waves."
