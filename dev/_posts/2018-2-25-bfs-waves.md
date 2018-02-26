@@ -58,7 +58,7 @@ Applying BFS to sound waves gives us a neat mechanic to play with. As players ca
 
 Taking our simplified wave model further, we can apply the idea of acoustic absorption. Essentially, as waves hit or pass through certain materials, we can alter their 'physical properties' accordingly. For instance, say you'd like glass to slightly 'muffle' the sound:
 
-<video src="https://i.imgur.com/7cwX3Mn.mp4" loop controls autoPlay></video>
+<video class="slow" src="https://i.imgur.com/7cwX3Mn.mp4" loop controls autoPlay></video>
 
 Here, the 'glass' block simply diminishes the wave strength by an arbitrary amount as it passes through. The result is the sound wave ultimately does not travel very far, though it _does_ still pass through - NPCs near the window would still hear something. This is a simple example, but there's a huge amount of flexibility in these 'sound materials.' Properties such as reflection, amplification, and diffraction are trivial to implement.
 
