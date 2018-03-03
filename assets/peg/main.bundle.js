@@ -2725,7 +2725,7 @@ class PegSolitaire {
         assetMan.loadAssets();
         document.body.appendChild(this.pipeline.getCanvas());
         this.startBGMusic();
-        this.startGame();
+        this.gotoSplashScreen();
     }
     registerCommonServices() {
         Provider_1.ServiceProvider.register(Provider_1.Service.RNG, RNG_1.default('silly string'));
