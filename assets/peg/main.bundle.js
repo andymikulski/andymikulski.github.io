@@ -674,7 +674,9 @@ class GameBoard extends Emitter_1.default {
     checkWinLoseConditions() {
         let isGameOver = this.pegs.length === 1;
         if (!isGameOver) {
-            const playerHasMoves = !!this.pegs.find((p) => { return this.getPossibleMoves(p).length !== 0; });
+            const playerHasMoves = !!this.pegs
+                .filter((p) => p instanceof Peg_1.default)
+                .find((p) => { return this.getPossibleMoves(p).length !== 0; });
             isGameOver = !playerHasMoves;
         }
         if (isGameOver) {
