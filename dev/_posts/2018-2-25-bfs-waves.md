@@ -8,7 +8,7 @@ tech:
   - algorithms
   - javascript
 thumbnail: https://i.imgur.com/Aqb6Ul2.png
-# demo: /assets/raycasting
+demo: /assets/waves
 # github: https://github.com/andymikulski/marching-squares
 ---
 
@@ -66,21 +66,11 @@ Here, the 'glass' block simply diminishes the wave strength by an arbitrary amou
 
 ### Waving Goodbye
 
-We examined how the breadth-first search algorithm mimics travel patterns of physical waves. We looked at applying waves as a game mechanic, and potential features and extensions to that mechanic. Sound waves are an easy application, but this mechanic could be applied in a number of ways. Hopefully this gives you a few thoughts and ideas to play with on your own! 
+We examined how the breadth-first search algorithm mimics travel patterns of physical waves. We looked at applying waves as a game mechanic, and potential features and extensions to that mechanic. Sound waves are an easy application, but this mechanic could be applied in a number of ways. Hopefully this gives you a few thoughts and ideas to play with on your own!
 
 ---
 
-> A demonstration is coming soon. Check back soon!
+# [Demo]({{ page.demo }})
 
-
-
-
-<!--  
----
-
-# [Demo](/assets/raycasting)
-
-This demonstrates a few of the concepts listed above: ray casting, ray layering, identifying (and remembering) obstacles within the player's field of view. Play around with the settings in the control panel to get a sense of how the rays interact.
-
-<iframe src="/assets/raycasting"></iframe>
-<label>WASD or Arrow Keys to move, mouse to aim. Fiddle with the settings in the top right to see how the light changes!</label> -->
+<iframe src="{{ page.demo }}"></iframe>
+<label>WASD keys to move, Space to create sound wave.</label>

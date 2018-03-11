@@ -24,7 +24,7 @@ If you search for [ray cast](https://www.google.com/search?q=ray+cast) you'll fi
 
 Say you're building an espionage game, and the goal is to get from point A to point B without alerting any guards. A key mechanic of the game is finding hiding places, and ensuring guards don't see you.
 
-A naïve approach would be to check a radius around each NPC and determine if the player is hidden from the NPC somehow (in a box, maybe). This approach would generally work, though after adding several new items or mechanics, maintaining how NPCs determine player visibility would become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. This is merely scratching the surface of problems with this approach. Consider: 
+A naïve approach would be to check a radius around each NPC and determine if the player is hidden from the NPC somehow (in a box, maybe). This approach would generally work, though after adding several new items or mechanics, maintaining how NPCs determine player visibility would become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. This is merely scratching the surface of problems with this approach. Consider:
 
 - What if there is an obstacle between the player and the NPC? Does the NPC open fire? What if the obstacle is another NPC?
 - What if you'd like to add reflective surfaces as a feature, which NPCs could use to spot the player?
@@ -44,9 +44,9 @@ The approach is simple: emit a [ray](https://en.wikipedia.org/wiki/Line_(geometr
 <img src="https://i.imgur.com/skGJ31r.png" />
 <label>As we 'fill' the field of view with rays, the collision data gains higher resolution, even for further distances. The NPC now has much better understanding of the area and much more accurate vision.</label>
 
-Now players can sneak behind NPCs with lifelike stealth! With ray casting, NPCs become quite flexible. Perhaps you'd like an enemy with intentional blind spots, or maybe you'd like to change an NPC's field of view during the game. We also can tap into the distance a ray has travelled. 
+Now players can sneak behind NPCs with lifelike stealth! With ray casting, NPCs become quite flexible. Perhaps you'd like an enemy with intentional blind spots, or maybe you'd like to change an NPC's field of view during the game. We also can tap into the distance a ray has travelled.
 
-Let's say NPCs can see about 10 meters ahead of them before their vision starts failing, and completely falls off after 15m. Your player crosses a NPC's path about 12m away. With ray casting, your NPC can notice something at the edge of its field of view, use the distance to adjust its perception ("it's probably nothing" vs "hey that looked like..!"), and respond accordingly. 
+Let's say NPCs can see about 10 meters ahead of them before their vision starts failing, and completely falls off after 15m. Your player crosses a NPC's path about 12m away. With ray casting, your NPC can notice something at the edge of its field of view, use the distance to adjust its perception ("it's probably nothing" vs "hey that looked like..!"), and respond accordingly.
 
 #### But wait, there's more!
 
@@ -61,11 +61,11 @@ The benefit of using rays in this context is, again, the ability to tap into the
 
 <!-- Is your user in a box? NPCs would see it as exactly that: a box. This sounds basic, but imagine this: a NPC enters a room with 3-4 boxes, one of which your player is inside. The NPC, unaware of any box hijinks, simply sees the boxes and moves on to the next room. Riveting, I know. Stay with me.
 
-Later, your player ambushes a NPC or two after hiding in some boxes, and the NPCs have now learned to not trust boxes. Now, when NPCs see a box, they could react appropriately. Maybe they check and open each box, or maybe they simply open fire on it. Suddenly, NPCs react dynamically to their environment, even if they have not seen a player nearby recently. 
+Later, your player ambushes a NPC or two after hiding in some boxes, and the NPCs have now learned to not trust boxes. Now, when NPCs see a box, they could react appropriately. Maybe they check and open each box, or maybe they simply open fire on it. Suddenly, NPCs react dynamically to their environment, even if they have not seen a player nearby recently.
 
 The end result is more realistic enemies and more dynamic gameplay, simply by changing how your NPCs perceive their environment. Not to mention the performance gains of seeing what's immediately in the NPC's area, versus maintaining lists of boxes, obstructions, interactables, and determining what the NPC is near and can interact with.
 -->
-<!-- 
+<!--
 > #### B-b-but you could still do that with the radius approach from above!
 > Yep, you absolutely could make the above feature work using the simple `use-the-radius-around-the-NPC` approach. But, what happens if there is something between a box and a NPC? Does the NPC shoot the box anyway? Do you attempt to determine if anything is in the way? Ray casting offers a performant and intuitive way of handling these line of sight issues, on top of its other affordances. -->
 
@@ -98,9 +98,9 @@ With multiple rays of light intersecting, we are presented with much more accura
 
 ---
 
-# [Demo](/assets/raycasting)
+# [Demo]({{ page.demo }})
 
 This demonstrates a few of the concepts listed above: ray casting, ray layering, identifying (and remembering) obstacles within the player's field of view. Play around with the settings in the control panel to get a sense of how the rays interact.
 
-<iframe src="/assets/raycasting"></iframe>
+<iframe src="{{ page.demo }}"></iframe>
 <label>WASD or Arrow Keys to move, mouse to aim. Fiddle with the settings in the top right to see how the light changes!</label>

@@ -1327,19 +1327,19 @@ const LevelData = [
     {
         seed: 'getting bigger',
         board: TriangleBoard_1.default,
-        slots: [[4, 0]],
+        slots: [[2, 0], [4, 4]],
         count: 5,
         percentExplosive: 0,
         percentStrong: 0,
         percentRealStrong: 0,
     },
     {
-        seed: 'double peg',
+        seed: 'double peg!!',
         board: SquareBoard_1.default,
-        slots: [[2, 2], [3, 3]],
-        count: 6,
+        slots: [[1, 1], [3, 3]],
+        count: 5,
         percentExplosive: 0,
-        percentStrong: 0.075,
+        percentStrong: 0.08,
         percentRealStrong: 0,
     },
     {
@@ -1914,7 +1914,6 @@ class ElementEventHandler {
     }
     createEventHandler(type) {
         return (evt) => {
-            evt.preventDefault();
             this.flaggedEvents[type] = evt;
             this.hasFlags = true;
         };
@@ -2819,7 +2818,7 @@ class PegSolitaire {
             this.splash.detach();
             this.pipeline.removeRenderer(this.splash);
         }
-        this.currentLevel = 0;
+        this.currentLevel = 6;
         this.levelScore = 0;
         this.totalScore = 0;
         this.totalSlots = 0;
@@ -2899,7 +2898,14 @@ class PegSolitaire {
             this.onPlayerScore(ScoreManager_1.default.EXPLODING_JUMP);
         });
         this.gameBoard.once(GameBoard_1.GAME_EVENTS.PEG_JUMPED, () => {
-            this.gameTimer.enable();
+            if (!this.gameTimer.isEnabled) {
+                this.gameTimer.enable();
+            }
+        });
+        this.gameBoard.once(GameBoard_1.GAME_EVENTS.PEG_EXPLODED, () => {
+            if (!this.gameTimer.isEnabled) {
+                this.gameTimer.enable();
+            }
         });
     }
     onPlayerScore(amount) {
