@@ -1914,6 +1914,7 @@ class ElementEventHandler {
     }
     createEventHandler(type) {
         return (evt) => {
+            evt.preventDefault();
             this.flaggedEvents[type] = evt;
             this.hasFlags = true;
         };
@@ -2818,7 +2819,7 @@ class PegSolitaire {
             this.splash.detach();
             this.pipeline.removeRenderer(this.splash);
         }
-        this.currentLevel = 6;
+        this.currentLevel = 0;
         this.levelScore = 0;
         this.totalScore = 0;
         this.totalSlots = 0;

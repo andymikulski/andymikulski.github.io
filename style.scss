@@ -440,14 +440,7 @@ nav {
     margin-left: 0.5em;
   }
 
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 0.9em;
-    font-style: italic;
-  }
+
 
   .comments {
     margin-top: 10px;
@@ -477,6 +470,10 @@ footer {
 
 .entry {
   display: block;
+
+  & > blockquote {
+    margin: 0;
+  }
 
   li {
     margin-bottom: 0.5em;
@@ -569,6 +566,8 @@ iframe {
   }
 }
 
+a + label,
+a + p + label,
 script + label,
 script + p > label {
   // text-align: center;
@@ -728,4 +727,16 @@ iframe {
 .post-desc {
   font-size: 0.9em;
   margin: 0.5em 0 2em;
+}
+
+blockquote {
+  margin: 1.8em .8em;
+  // border-left: 2px solid $gray;
+  padding: 0.1em 1em;
+  color: $gray;
+  font-size: 0.9em;
+  font-style: italic;
+
+  background: #fafafa;
+  border: 2px dotted #eee;
 }

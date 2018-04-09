@@ -21,7 +21,7 @@ layout: dev-default
       {{ page.title }}
     </h1>
 
-    
+
     <div class="date">
       {% if page.isProject %}
         {{ page.date | date: "%Y" }}
@@ -29,7 +29,7 @@ layout: dev-default
         {{ page.date | date: "%B %e, %Y" }}
       {% endif %}
     </div>
-    
+
     {% if page.description != nil %}
       <div class="post-desc">
         {{ page.description }}
@@ -48,7 +48,7 @@ layout: dev-default
     <ul class="source-links">
       {% if page.github %}
         <li>
-          <a href="{{ page.github }}">View Source on Github</a>
+          <a href="{{ page.github }}" target="_blank">View Source on Github</a>
         </li>
       {% endif %}
       {% if page.demo %}
@@ -80,7 +80,7 @@ layout: dev-default
             and post.blog contains 'dev'
             and post.project contains page.project
           %}
-            <li class="post-meta mini"> 
+            <li class="post-meta mini">
               {% if post.thumbnail %}
               <a href="{{ site.baseurl }}{{ post.url }}">
                 <img src="{{ post.thumbnail }}" class="thumbnail" />
@@ -98,3 +98,10 @@ layout: dev-default
 
   {% include disqus.html %}
 </article>
+
+
+<footer>
+  <blockquote>
+    Thank you for taking the time to read this post!<br /> If you have a questions, comments, or suggestions, please <a href="mailto:andy@mkl.ski">contact me!</a>
+  </blockquote>
+</footer>
