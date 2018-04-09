@@ -1375,7 +1375,8 @@ class App {
         let nextY = this.player.position[1];
         let nextCell = this.levelMan.getLevelCoords(nextX, nextY);
         switch (evt.which) {
-            case 32: {
+            case 13: {
+                evt.preventDefault();
                 const wave = new SoundWave_1.default(this.levelMan, this.entityMan, {
                     origin: [].concat(this.player.position),
                     source: [].concat(this.player.position),
@@ -1386,6 +1387,7 @@ class App {
                 return;
             }
             case 68: {
+                evt.preventDefault();
                 nextX += 1;
                 nextCell = this.levelMan.getLevelCoords(nextX, nextY);
                 if (nextCell.impassible) {
@@ -1398,6 +1400,7 @@ class App {
                 break;
             }
             case 65: {
+                evt.preventDefault();
                 nextX -= 1;
                 nextCell = this.levelMan.getLevelCoords(nextX, nextY);
                 if (nextCell.impassible) {
@@ -1410,6 +1413,7 @@ class App {
                 break;
             }
             case 83: {
+                evt.preventDefault();
                 nextY += 1;
                 nextCell = this.levelMan.getLevelCoords(nextX, nextY);
                 if (nextCell.impassible) {
@@ -1422,6 +1426,7 @@ class App {
                 break;
             }
             case 87: {
+                evt.preventDefault();
                 nextY -= 1;
                 nextCell = this.levelMan.getLevelCoords(nextX, nextY);
                 if (nextCell.impassible) {

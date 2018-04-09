@@ -73,4 +73,4 @@ We examined how the breadth-first search algorithm mimics travel patterns of phy
 # [Demo]({{ page.demo }})
 
 <iframe src="{{ page.demo }}"></iframe>
-<label>WASD keys to move, Space to create sound wave.</label>
+<label>WASD keys to move, ENTER to create sound wave.</label>
