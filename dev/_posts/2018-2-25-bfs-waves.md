@@ -12,7 +12,7 @@ demo: /assets/waves
 # github: https://github.com/andymikulski/marching-squares
 ---
 
-<video src="https://i.imgur.com/TsYJOpZ.mp4" class="fast" loop controls autoPlay></video>
+<video src="https://i.imgur.com/TsYJOpZ.mp4" class="fast" loop controls ></video>
 <label>A simple demonstration. When the player does something to make a sound, that 'sound' travels through space similar to physical sound waves.</label>
 
 ### A Brief Search Review
@@ -21,12 +21,12 @@ Two particularly simple algorithms used to search a 2D space include the [depth-
 
 The **depth-first search** starts at a point and begins traversing the graph. The algorithm tracks one path, advancing it until the target is reached or there are no movement options available. If there are no movement options, the search backs up the path until there is a neighboring node for the path to traverse. Eventually, it will traverse the entire graph, finding the destination in the process. The path, however, is quite long and windy:
 
-<video src="https://i.imgur.com/2hw5PCk.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/2hw5PCk.mp4" loop controls ></video>
 <label>Depth-first search. The direction the path prefers when travelling is implementation-dependent.</label>
 
 The **breadth-first search** also starts at a point and begins traversing the graph. However, unlike DFS, this algorithm tracks multiple paths, incrementally advancing each until a path reaches the destination. This will return the shortest path between two points, which is great! It will also spend a lot of time looking in the wrong places, which is suboptimal for a search algorithm.
 
-<video src="https://i.imgur.com/BClRjMN.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/BClRjMN.mp4" loop controls ></video>
 <label>Breadth-first search. Note how the plane is 'flooded' as the algorithm searches for its target.</label>
 
 Neither of these algorithms are super great for searching the graph, since they're inefficient, and DFS doesn't even guarantee a short path. However, the BFS algorithm traverses the graph in a way that _looks_ how a physical wave would move.
@@ -51,14 +51,14 @@ I know it's hard to tell, but those are actually two different gifs! They look s
 
 Applying BFS to sound waves gives us a neat mechanic to play with. As players cause a ruckus, the sounds of their actions can travel semi-realistically and alert NPCs in the area. This adds a nice touch of realism to the AI; if a sound wave hits an NPC, the NPC can react based on the strength and/or direction of that wave. They could investigate what they heard, recognize the sound as gunfire and alert others, etc.
 
-<video src="https://i.imgur.com/XUjzv7z.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/XUjzv7z.mp4" loop controls ></video>
 <label>As a player walks, their steps create noise in a small radius. When a button is pressed, a larger 'explosion' happens and the sound wave travels further.</label>
 
 ### Sound materials
 
 Taking our simplified wave model further, we can apply the idea of acoustic absorption. Essentially, as waves hit or pass through certain materials, we can alter their 'physical properties' accordingly. For instance, say you'd like glass to slightly 'muffle' the sound:
 
-<video class="slow" src="https://i.imgur.com/7cwX3Mn.mp4" loop controls autoPlay></video>
+<video class="slow" src="https://i.imgur.com/7cwX3Mn.mp4" loop controls ></video>
 
 Here, the 'glass' block simply diminishes the wave strength by an arbitrary amount as it passes through. The result is the sound wave ultimately does not travel very far, though it _does_ still pass through - NPCs near the window would still hear something. This is a simple example, but there's a huge amount of flexibility in these 'sound materials.' Properties such as reflection, amplification, and diffraction are trivial to implement.
 

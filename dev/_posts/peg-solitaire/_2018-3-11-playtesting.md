@@ -15,7 +15,7 @@ thumbnail: https://i.imgur.com/b4pPGjJl.jpg
   - initial play test player's had a hard time figuring out what was what
     - yellow was used for an empty space, but the player thought colors denoted something important
 
-<video src="https://i.imgur.com/nDd7BFZ.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/nDd7BFZ.mp4" loop controls ></video>
 <label>Original art style. An early playtest revealed that players didn't know what the yellow dots represented. They are later changed to something a bit more 'empty'.</label>
 
 - lead to checkers combo

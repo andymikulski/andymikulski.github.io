@@ -20,7 +20,7 @@ github: https://github.com/andymikulski/peg-solitaire
 >**Concept** [Peg Solitaire](https://en.wikipedia.org/wiki/Peg_solitaire)-style game which players must jump over pegs to clear the game board.
 
 
-<video src="https://i.imgur.com/o0O3sdv.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/o0O3sdv.mp4" loop controls ></video>
 
 ### About
 
@@ -39,13 +39,13 @@ Given the time constraint of three days, and self-assigning the task of building
 
 Outside of the standard peg solitaire rules outlined above and the 'peg jump' mechanic, I added a handful of secondary mechanics to the game. These mechanics work with helping/hindering board clearing and affording the user more points, which in turn leads the user to play differently than they might play normal peg solitaire.
 
-<video src="https://i.imgur.com/RS1zw7p.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/RS1zw7p.mp4" loop controls ></video>
 <label><b>Strong pegs.</b> Some pegs require multiple jumps to be removed from the board. This affects gameplay in that players now have a greater challenge in clearing the board, but also a greater opportunity for points.</label>
 
-<video src="https://i.imgur.com/deKBRQU.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/deKBRQU.mp4" loop controls ></video>
 <label><b>Exploding pegs.</b> When a user jumps an explosive peg, the immediate surrounding area is (mostly) destroyed. Strong pegs take 1 damage. This mechanic aids in clearing the board, but at about half the value of clearing the area 'manually'.</label>
 
-<video src="https://i.imgur.com/SJ1gcoB.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/SJ1gcoB.mp4" loop controls ></video>
 <label><b>Checkers bonus.</b> Using the same selected peg for multiple jumps results in a point bonus for each consecutive jump made with that peg. I'd consider this more of a tertiary mechanic as it's not super integral to the game, but keeps things interesting for point-centric players.</label>
 
 ---
@@ -60,7 +60,7 @@ The `VCR` (or **V**irtual **C**anvas **R**enderer) is a primary component in the
 
 Another component in the system, the `RenderingPipeline`, handles printing each game object to the main output canvas. Each game object simply passes the image of their VCR to the pipeline's rendering context with appropriate positioning, reducing draw calls while keeping the stage as up to date as possible.
 
-<video src="https://i.imgur.com/xraNtsC.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/xraNtsC.mp4" loop controls ></video>
 <label>Here, each square represents a separate game object entity, responsible for updating its opacity in sync with the game clock. Each entity has its own VCR which renders off-screen when updated, but prints to the pipeline's context when called to do so.</label>
 
 An interesting feature of using VCR's in this manner is that it's quite trivial to set up a cached render (or a [flyweight](https://en.wikipedia.org/wiki/Flyweight_pattern)-esque pattern). For instance, the Peg game objects all pretty much look the same, so there's no need to redraw each one individually on each frame. By using a shared/static VCR, the visual display for each peg is rendered once and then simply re-printed during the draw call. This optimization was actually a huge boon to performance early on in development.

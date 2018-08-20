@@ -18,7 +18,7 @@ This weekend's project was learning how to ray cast in 2D space, and effectively
 
 If you search for [ray cast](https://www.google.com/search?q=ray+cast) you'll find the [Ray cast](http://www.imdb.com/title/tt0350258/fullcredits), which I think is pretty funny. Unfortunately, there is little to no overlap between Jamie Foxx and [actual ray casting](https://en.wikipedia.org/wiki/Ray_casting). I understand if you stop reading at this point, but here's an enticing gif to give you a gist of what ray casting can do:
 
-<video src="https://i.imgur.com/nk4JX2i.mp4" loop controls autoPlay></video>
+<video src="https://i.imgur.com/nk4JX2i.mp4" loop controls ></video>
 
 ##### The Ray Who Cast Me
 
