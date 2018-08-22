@@ -8,7 +8,7 @@ isProject: true
 tech:
   - TypeScript
 inDev: true
-thumbnail: http://i.imgur.com/G9RjuA1.jpg
+thumbnail: http://i.imgur.com/G9RjuA1l.jpg
 ---
 
 # Value-based scheduling system

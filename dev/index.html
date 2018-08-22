@@ -6,7 +6,7 @@ layout: dev-default
   <h1>Latest Posts</h1>
   <ul class="post-list">
     {% for post in site.posts %}
-      {% if post.blog contains 'dev' and post.isProject == nil %}
+      {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
         <li>
             <a href="{{ site.baseurl }}{{ post.url }}">
           <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
@@ -25,7 +25,7 @@ layout: dev-default
 <h1>Projects</h1>
 <div class="posts dev">
   {% for post in site.posts %}
-    {% if post.blog contains 'dev' and post.isProject %}
+    {% if post.blog contains 'dev' and post.isProject and post.isPasswordProtected != true %}
       <article class="post {{ post.slug }}">
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="date timestamp">

@@ -9,7 +9,7 @@ tech:
   - javascript
   - react
   - redux
-thumbnail: http://i.imgur.com/FK6ZHpM.png
+thumbnail: http://i.imgur.com/FK6ZHpMl.png
 ---
 
 # Freelance Work

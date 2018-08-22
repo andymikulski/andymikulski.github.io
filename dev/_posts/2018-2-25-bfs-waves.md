@@ -7,7 +7,7 @@ description: "Using the breadth-first search algorithm to imitate travelling sou
 tech:
   - algorithms
   - javascript
-thumbnail: https://i.imgur.com/Aqb6Ul2.png
+thumbnail: https://i.imgur.com/Aqb6Ul2l.png
 demo: /assets/waves
 # github: https://github.com/andymikulski/marching-squares
 ---
@@ -42,7 +42,7 @@ A neat affordance of the BFS algorithm is it mimics how physical [waves](https:/
 <img src="https://i.imgur.com/6YH8jFn.gif" height="300" />
 <label>Wave diffraction and the BFS algorithm both behave similarly when passing through slits by 'fanning out' the wave on the other side. <a href="https://en.wikipedia.org/wiki/Diffraction_formalism" target="_blank">Image via Wikipedia</a>.</label>
 
-<img src="https://imgur.com/AX81PTW.gif" />
+<video src="https://i.imgur.com/AX81PTW.mp4" loop controls ></video>
 <label>BFS 'waves' diffract in a similar manner when passing through a slit.</label>
 
 I know it's hard to tell, but those are actually two different gifs! They look so similar, it's hard to distinguish the two.

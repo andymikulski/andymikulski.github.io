@@ -8,7 +8,7 @@ isProject: true
 tech:
   - Unity
   - C#
-thumbnail: http://i.imgur.com/UF9FHkb.jpg
+thumbnail: http://i.imgur.com/UF9FHkbh.jpg
 demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 ---
 
@@ -21,7 +21,7 @@ demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 
 A [gravity assist](https://en.wikipedia.org/wiki/Gravity_assist) is the use of a celestial body's gravitational field to alter a spacecraft's speed/path. In this game, you use gravity assists to navigate across a stretch of space, hopefully without exploding!
 
-<video src="https://i.imgur.com/5NLf0mm.mp4" loop autoPlay controls></video>
+<video src="https://i.imgur.com/5NLf0mm.mp4" loop controls></video>
 
 # About
 
@@ -33,7 +33,7 @@ After years of my brother offering his idea, I eventually dug into Unity, and kn
 
 ### In the Beginning...
 
-<video src="https://i.imgur.com/Rr269u7.mp4" loop autoPlay controls></video>
+<video src="https://i.imgur.com/Rr269u7.mp4" loop controls></video>
 <label>An early multi-body gravity test. The red wireframes are the area of influence for that body's gravity. Eventually, the use of 3D space was dropped to 2D, simplifying the simulation.</label>
 
 An early design decision I made was to utilize 2D space and view the game from a 'flat' perspective. This eliminated a lot of daunting design questions, such as "how does a camera show the space while the player is orbiting a planet?" It also enabled physics simulations to be much simpler.
@@ -46,7 +46,7 @@ After playtesting the basic concept, I added a slow motion effect while the play
 
 The level design utilizes 'moons' (orbiting bodies) in a few places, which leads to interesting timed jump events. Admittedly, this mechanic could have been explored a bit further.
 
-<video src="https://i.imgur.com/6HMYWRt.mp4" loop autoPlay controls></video>
+<video src="https://i.imgur.com/6HMYWRt.mp4" loop controls></video>
 <label>Early style test demonstrating mechanics such as directional thrust, camera tracking, and particle emitters!</label>
 
 ### Where It Landed
@@ -65,7 +65,7 @@ In the future, if I ever revisit this game, I'd like to work towards a mobile ve
 		<img src="http://i.imgur.com/UF9FHkb.jpg" />
 		<label>Initial version of the title screen. Not much ends up changing!</label>
 	</div>
-	
+
 	<div>
 		<video src="https://i.imgur.com/Bx2W9jW.mp4" loop controls></video>
 		<label>In-game tool to help level design. Ships fire off in several directions to easily map possible level solutions. Ultimately, it didn't really help much.</label>

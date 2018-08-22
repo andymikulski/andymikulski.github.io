@@ -10,7 +10,7 @@ tech:
   - C#
   - VRTK
 inDev: true
-thumbnail: http://i.imgur.com/G9RjuA1.jpg
+thumbnail: http://i.imgur.com/G9RjuA1h.jpg
 ---
 
 >**Development time (to date)** ~20 hours
@@ -35,7 +35,7 @@ As my first adventure into VR, I was interested in exploring an idea that, simpl
 
 In the Temple Run, two players must run through a series of rooms containing puzzles. As a player enters a room, they must then solve that room's puzzle to move on. If they make it to the prize and out in time, they win a bunch of stuff. There are some other factors, but that's the gist of what you need to know for this game adaptation.
 
-<video class="slow" src="https://i.imgur.com/T07jvut.mp4" loop autoPlay controls></video>
+<video class="slow" src="https://i.imgur.com/T07jvut.mp4" loop controls></video>
 <label><a href="http://legends.wikia.com/wiki/The_Chamber_of_the_Sacred_Markers" target="_blank">Chamber of the Sacred markers</a>, using donuts as props. Here, players must arrange donuts on a wall to match a random sequence on the opposite wall.</label>
 
 Room-scale VR is a perfect medium for this type of game; small rectangular rooms, lots of grabbing stuff and walking around, not much artifical locomotion is necessary. The prototype (shown below) managed to capture a sliver of the total game, but that sliver shows a huge amount of promise.
@@ -44,7 +44,7 @@ Room-scale VR is a perfect medium for this type of game; small rectangular rooms
 
 A key piece of this project is the desire to recreate the _game show experience_, not just simply create a series of puzzle rooms. A few key UX choices were in order to ensure a 'game show' feeling: studio lighting, game music is played via speakers, etc. Ideally, we could get an appearance by Kirk Fogg, but that's a stretch.
 
-<video class="slow" src="https://i.imgur.com/amJaSWV.mp4" loop autoPlay controls></video>
+<video class="slow" src="https://i.imgur.com/amJaSWV.mp4" loop controls></video>
 <label>In this short clip, you can see the use of 'stage lights' in the direction of the camera crews and audience members, as well as strategically placed spotlights. Small details such as this really enhance the feeling you're on the show.</label>
 
 

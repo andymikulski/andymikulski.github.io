@@ -7,7 +7,8 @@ layout: dev-default
 {% for post in site.posts %}
     {% if post.isProject == nil
       and post.blog contains 'dev'
-      and post.project contains page.project %}
+      and post.project contains page.project
+      and post.url != page.url %}
     true
     {%endif %}
 {%endfor%}
@@ -72,13 +73,14 @@ layout: dev-default
     <hr />
 
 
-    {%if page.isProject and hasRelatedPosts contains 'true' %}
-      <h1 id="devblog">DevBlog Posts</h1>
+    {%if page.project != nil and hasRelatedPosts contains 'true' %}
+      <h1 id="devblog">Related Posts</h1>
       <ul class="devblog-list">
         {% for post in site.posts %}
           {% if post.isProject == nil
             and post.blog contains 'dev'
             and post.project contains page.project
+            and post.url != page.url
           %}
             <li class="post-meta mini">
               {% if post.thumbnail %}
@@ -102,6 +104,6 @@ layout: dev-default
 
 <footer>
   <blockquote>
-    Thank you for taking the time to read this post!<br /> If you have a questions, comments, or suggestions, please <a href="mailto:andy@mkl.ski">contact me!</a>
+    Thank you for taking the time to read this post!<br /> If you have questions, comments, or suggestions, please <a href="mailto:andy@mkl.ski">contact me!</a>
   </blockquote>
 </footer>

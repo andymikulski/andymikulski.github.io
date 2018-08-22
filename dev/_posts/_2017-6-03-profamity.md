@@ -8,7 +8,7 @@ project: profamity
 tech:
   - Javascript
   - Node
-thumbnail: http://i.imgur.com/vnHrBlQ.png
+thumbnail: http://i.imgur.com/vnHrBlQl.png
 github: https://github.com/andymikulski/profamity
 ---
 

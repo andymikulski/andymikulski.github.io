@@ -38,7 +38,20 @@
 
     {% include analytics.html %}
 
-  <script>Array.prototype.slice.call(document.body.querySelectorAll('.fast')).map(el=>el.playbackRate = el.defaultPlaybackRate = 2)</script>    
-  <script>Array.prototype.slice.call(document.body.querySelectorAll('.slow')).map(el=>el.playbackRate = el.defaultPlaybackRate = 0.85)</script>    
+  <script>Array.prototype.slice.call(document.body.querySelectorAll('.fast')).map(el=>el.playbackRate = el.defaultPlaybackRate = 2)</script>
+  <script>Array.prototype.slice.call(document.body.querySelectorAll('.slow')).map(el=>el.playbackRate = el.defaultPlaybackRate = 0.85)</script>
+
+  <script>
+    // (function(){
+    //   Array.prototype.slice.call(document.querySelectorAll('p img, ul img')).forEach(element => {
+    //     const link = document.createElement('a');
+    //     link.href = element.src;
+    //     // link.target = '_blank';
+    //     element.parentElement.insertBefore(link, element);
+    //     link.appendChild(element);
+    //     // link.appendChild(element);
+    //   });
+    // }());
+  </script>
   </body>
 </html>

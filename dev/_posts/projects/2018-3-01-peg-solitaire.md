@@ -8,7 +8,7 @@ isProject: true
 inDev: false
 tech:
   - TypeScript
-thumbnail: http://i.imgur.com/gL5lM7J.jpg
+thumbnail: http://i.imgur.com/gL5lM7Jh.jpg
 demo: /assets/peg/
 github: https://github.com/andymikulski/peg-solitaire
 ---
@@ -20,7 +20,7 @@ github: https://github.com/andymikulski/peg-solitaire
 >**Concept** [Peg Solitaire](https://en.wikipedia.org/wiki/Peg_solitaire)-style game which players must jump over pegs to clear the game board.
 
 
-<video src="https://i.imgur.com/o0O3sdv.mp4" loop controls ></video>
+<video poster="https://i.imgur.com/o0O3sdvh.png" preload="none" src="https://i.imgur.com/o0O3sdv.mp4" loop controls ></video>
 
 ### About
 
@@ -116,15 +116,15 @@ button.addEventListener('click', function(){
 
 <div class="screenshots">
 	<div>
-		<img style="height: 400px; width: auto; margin: 0 auto;" src="http://i.imgur.com/lcupcb5.jpg" />
-		<label>Early development. Notice there's no checkers bonus, and the 'quake' efect when pegs explode is not yet present.</label>
+		<img style="height: 400px; width: auto; margin: 0 auto;" src="http://i.imgur.com/lcupcb5h.jpg" />
+		<label>Sample gameplay screenshot, demonstrating a few twists such as explosive pegs and strong pegs.</label>
 	</div>
 	<div>
-		<video height="400" src="https://i.imgur.com/gs1Kf7X.mp4" loop autoPlay controls></video>
-		<label>Early development. Notice there's no checkers bonus, and the 'quake' efect when pegs explode is not yet present.</label>
+		<video height="400" src="https://i.imgur.com/gs1Kf7X.mp4" loop controls></video>
+		<label>Recording of early development. Notice there's no checkers bonus or  'quake' efect yet implemented - this was during the playtesting phase before moving onto effects and polish.</label>
 	</div>
 	<div>
-		<video height="400" src="https://i.imgur.com/aACsdJH.mp4" loop autoPlay controls></video>
+		<video height="400" src="https://i.imgur.com/aACsdJH.mp4" loop controls></video>
 		<label>The initial style was a little ambiguous for players. Specifically, the yellow styling for empty slots didn't look like an empty slot. This was fixed after some playtests.</label>
 	</div>
 </div>

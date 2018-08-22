@@ -9,7 +9,7 @@ tech:
   - node
   - websockets
   - nes6
-thumbnail: http://i.imgur.com/iMrsbeH.png
+thumbnail: http://i.imgur.com/iMrsbeHh.png
 github: https://github.com/andymikulski/multines
 # demo: https://multines.neocities.org/
 inDev: true
@@ -25,7 +25,7 @@ inDev: true
 
 Users take turns playing classic NES games with each other in real time. A Node server handles creating lobbies, handling player joins/leaves, accepting client connections via WebSockets. Players' games are kept in sync using a frame lockstep method.
 
-<img src="https://i.imgur.com/lpH2z8m.png" />
+<img src="https://i.imgur.com/lpH2z8mh.png" />
 <label>All four games are in sync with each other and the server instance. No gamestates are transmitted, just game inputs using ensured delivery.</label>
 
 My first attempt at MultiNES was the realization of a simple idea I had: if each person ran their own emulator instance, one could simply communicate the input events and keep all emulators in sync! In terms of code, it's simple to capture inputs, fire them over a websocket, and sync gamestates every few seconds so all connected users stay in sync. It was an experiment that sounded like fun, so I dove into it.
@@ -49,7 +49,7 @@ After a handful of (local) multiplayer tests, I continued to build the MultiNES 
  - A chatroom for players and the audience to hang out while watching the game.
  - A queue for players to take turns 'sharing the controller.'
 
-<img src="http://i.imgur.com/iMrsbeH.jpg" height="500" />
+<img src="http://i.imgur.com/iMrsbeHh.jpg" height="500" />
 <label>Users can enter the queue to play next, or chat from the audience.</label>
 
 The site consisted of a Node server serving a simple React SPA. An IRC chat is embedded in the page, and there are a handful of buttons for FAQs and getting in line to play. The glory is the playing the emulator; extra features weren't worth the MVP.

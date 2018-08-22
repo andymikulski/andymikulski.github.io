@@ -6,14 +6,14 @@ blog: dev
 project: 3dms
 projectName: 3D Minesweeper
 description: "Exploring a core concept of 3D Minesweeper to prevent overwhelming players with information."
-thumbnail: http://i.imgur.com/4mj7E2V.png
+thumbnail: http://i.imgur.com/4mj7E2Vl.png
 ---
 
 # Facing Challenges: Tackling User Overload in 3DMS
 
 A major issue learned while playtesting [3DMS](/dev/3dms) was players had an issue mentally connecting all the attached nodes when examining a region. For instance, the a square node at the center of a 3x3x3 grid has **26** node connections. This is a _lot_ to expect the user to manage, especially when considering the amount of information the player must remember regarding the neighboring contexts, as well.
 
-<video src="https://i.imgur.com/Jls6jp7.mp4" height="500" loop autoPlay controls></video>
+<video src="https://i.imgur.com/Jls6jp7.mp4" height="500" loop controls></video>
 <label>This visually demonstrates the 'adjacent' nodes for the current selection.</label>
 
 In the above video, we can see that visual isolation greatly helps the player focus on the immediate playing area. The issue, though, is the neighboring contexts. A block with a `6` count on the edge of a context means the player must switch between two (or more) contexts in order to determine the information they need to make a move. This not only makes for boring gameplay, but the game is also inherently difficult. Boring + difficult = no good.
@@ -30,7 +30,7 @@ After kicking around a few options, I decided to explore an idea surrounding the
 
 Here, we see a [dodecahedron](https://en.wikipedia.org/wiki/Dodecahedron) (12-sided 3D solid) surrounded by other dodecs. What's happening here is the central node spawns new nodes based on the _normals of each of its faces_. Basically, it finds where each face is looking, and then spawns a node there. This is how connections are created and visually established by the player.
 
-<video class="fast" src="https://i.imgur.com/jEIMW7o.mp4" height="500" loop autoPlay controls></video>
+<video class="fast" src="https://i.imgur.com/jEIMW7o.mp4" height="500" loop controls></video>
 <label>Each node face is looking at one of the neighbors of that node. Here, connections to the central node are highlighted orange.</label>
 
 The above video is an example testing the approach around a single node using dodecahedrons. A few things are immediately apparent, the greatest of which is that this idea simply doesn't work. While it sounds reasonable on paper, in reality the player is bombarded with information they must _actively ignore_, which surprisingly takes a lot of energy. It's also difficult for players to visually map where each face leads. That's not even considering what the game looks like _without_ these helper connections:
@@ -41,7 +41,7 @@ The above video is an example testing the approach around a single node using do
 
 Going further, if we apply the idea to other [Platonic solids](https://en.wikipedia.org/wiki/Platonic_solid), the results only lead to strange playing field layouts and further player confusion. Observe this field of octahedra:
 
-<video class="fast" src="https://i.imgur.com/WnVvk85.mp4" height="500" loop autoPlay controls></video>
+<video class="fast" src="https://i.imgur.com/WnVvk85.mp4" height="500" loop controls></video>
 
 While visually it seems a bit clearer, that's simply due to the fact there are fewer elements on screen. It's very difficult to determine which nodes are connected, even with the connection nodes highlighted.
 
