@@ -7,7 +7,7 @@ description: "Using Voronoi-like partitions to create a shape-shifting splitscre
 tech:
   - algorithms
   - javascript
-thumbnail: https://i.imgur.com/q0Pevavl.png
+thumbnail: https://i.imgur.com/q0Pevav.png
 demo: /assets/splitscreen
 ---
 
