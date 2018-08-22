@@ -37,7 +37,7 @@ A large majority of the terrain generation is driven through [Perlin Noise](http
 
 # Terrain Mesh Generation
 
-The `WorldController` class handles rendering chunks of the world using [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes) based on the perlin noise values produced from `WonderPark.WorldBuilding.Utils.GenerateHeight`. Essentially, the generated noise serves as a heightmap across the world. The marching cubes algorithm is performed for each chunk, checking against the height/noise values provided by our perlin-based height functions, and generating a mesh accordingly.
+The `WorldController` class handles rendering chunks of the world using [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes) based on the perlin noise values produced from the perlin noise values. Essentially, the generated noise serves as a heightmap across the world. The marching cubes algorithm is performed for each chunk, checking against the height/noise values provided by our perlin-based height functions, and generating a mesh accordingly.
 
 >Note: Most code almost entirely regards the world as a flat 2D space seen from above. That is, a world space position of Vector3(5, 20, 34) would translate to Vector2(5, 34) in a majority of terrain-gen code. This allows a majority of the world-generating calculations to be handled with simpler 2D math, however limits terrain to not include caves or overhanging ledges.
 
