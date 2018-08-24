@@ -17,7 +17,7 @@ thumbnail: https://i.imgur.com/iSG9yJGl.png
 
 # AI Agents for Park Guests
 
-<video src="https://i.imgur.com/s4OkAqu.mp4" loop controls ></video>
+<video preload="none" poster="https://i.imgur.com/s4OkAquh.png" src="https://i.imgur.com/s4OkAqu.mp4" loop controls ></video>
 <label>_Very_ early AI agent test. Here, a few hundred agents randomly spawn into the world and make their way towards one of four goals (one for each edge). No pathfinding is calculated outside of the initial flow field calculations.</label>
 
 After the park has determined the and created the [paths](/dev/serenity-forge/paths-n-plots/), the next step is to produce AI agents which traverse that path and walk about the world. Using the same `flow field` technique used for finding paths, we calculate the flow fields for the individual paths, and create agents which simply reference those flow fields to know which direction to be travelling.
