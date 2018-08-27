@@ -17,18 +17,17 @@ thumbnail: https://i.imgur.com/3eSgyTKl.jpg
 
 # Foliage
 
-A foliage manager is responsible for determining placement of trees/blades of grass on various sections of terrain. By 'default,' grass and trees are spawned sporadically throughout the world, though invalid plots also plant thick forests of trees, as seen here:
-
-# -- insert screenshot of trees + grass distribution --
+One desired landscape feature was to have general foliage such as blades of grass and trees. The `FoliageManager` is responsible for determining placement of trees/blades of grass on various sections of terrain. By 'default,' grass and trees are spawned sporadically throughout the world, though invalid plots also plant thick forests of trees (discussed below). A majority of the foliage placement derives from the Poisson-Disc algorithm.
 
 #### Foliage Distribution
 
-The FoliageManager uses a [Poisson-Disc](https://www.jasondavies.com/poisson-disc/) algorithm to generate a list of points inside a given rect which are mostly uniform. Here's this example from wikipedia:
-
 ![Poisson-Disc example output](https://i.imgur.com/B4fyuyu.jpg)
+<label>Poisson-Disc example via [Wikipedia](https://en.wikipedia.org/wiki/Supersampling#Poisson_disc).</label>
 
 
-At the beginning of the game, a set of several poisson-disc results are calculated, and when planting trees or grass across the world the algorithm results are already stored. The Poisson values can be reused across chunks/sections, as they merely provide a 2D distribution and do not interact with terrain height or anything of that nature. By caching a handful of different sets of results, we eliminate the chance that a user will recognize the same pattern being repeated for placed grass/trees.
+The FoliageManager uses a [Poisson-Disc](https://www.jasondavies.com/poisson-disc/) algorithm to generate a list of points inside a given rect which are mostly uniform, and then places foliage prefabs into the world based on those calculated positions.
+
+On game load, a set of several poisson-disc results are calculated, and when planting trees or grass the algorithm simple references those stored results. The Poisson values can be reused across chunks/sections, as they merely provide a 2D distribution and do not interact with terrain height or anything of that nature. By caching a handful of different sets of results, we eliminate the chance that a user will recognize the same pattern being repeated for placed grass/trees.
 
 
 ##### Trees

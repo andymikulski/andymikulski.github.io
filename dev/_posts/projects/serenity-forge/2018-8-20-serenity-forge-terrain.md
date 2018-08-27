@@ -35,9 +35,7 @@ An important note is that since the terrain generation essentially treats the pe
 
 The water is a very simple trick - a plane is fixed to move with the camera but remains at a constant "sea level." This value is later referenced in code to quickly determine if a location is underwater or not. The plane's shader is responsible for handling the stylized water reflection and general look, so it's essentially set-and-forget.
 
-
-# - insert pool party here -
-
+<!-- # - insert pool party here - -->
 
 ##### Mountains
 
@@ -65,7 +63,7 @@ Note that this would not be possible if our terrain was not driven by Perlin val
 ![Early chunk smoothing attempt](https://i.imgur.com/hw7R7xdh.png)
 <label>This early iteration shows the main problem which lead to a system rewrite: smoothing terrain across chunks proved difficult, as edge vertices between chunks would not align. This image shows an attempt at 'stitching' chunk vertices together, without success.</label>
 
->An interesting thing to note is that marching cubes creates a mesh with duplicate vertices, and the mesh must be "welded" (or converted to share verticies) in order for smoothing to look good. Welding the mesh also allows for normal sharing, which gives a "smoother" look to the landscape's lighting and shader effects. Shown here is the 'default' output compared to after sharing vertices.
+>An interesting thing to note is that marching cubes creates a mesh with duplicate vertices, and the mesh must be "welded" (or converted to share vertices) in order for smoothing to look good. Welding the mesh also allows for normal sharing, which gives a "smoother" look to the landscape's lighting and shader effects. Shown here is the 'default' output compared to after sharing vertices.
 >![Duplicate vs shared vertices](https://i.imgur.com/mEtPUgz.png)
 
 

@@ -33,8 +33,7 @@ Each step in the path planning process is outlined below.
 
 Four portals are placed on the edge of the given section, one for each side. A portal will aim to never be too close to another, though is not placed if the chosen piece of land has water or mountains.
 
-# -- insert aligned portals screenshot --
-
+> These portals are also useful in that they can later be used to transfer guests to different park sections, they provide a logical spawn point for new AI agents, etc.
 
 #### 2. Generate Flow Fields
 
@@ -45,8 +44,8 @@ The `FlowFieldManager` class handles both generating flow fields for sections an
 
 By the end of this process, four flow fields are generated, each one leading to a different section portal.
 
-![Example flow field](https://i.imgur.com/lNeCLdV.jpg)
-<label>A visual representation of a generated flow field. After an agent is spawned into the world, it simply checks against this field to determine which direction it should be facing, and moves forward. The agent will reach its destination from (almost) anywhere within the flow field.</label>
+<a href="https://i.imgur.com/lNeCLdV.png" target="_blank" rel="noopener">![Example flow field](https://i.imgur.com/0DDJJMd.png)</a> <!-- lNeCLdV -->
+<label>A visual representation of a generated flow field. After an agent is spawned into the world, it simply checks against this field to determine which direction it should be facing, and moves forward. The agent will reach its destination from (almost) anywhere within the flow field. [Click](https://i.imgur.com/lNeCLdV.png) for a larger example.</label>
 
 
 #### 3. Simulate Flow Field Agent

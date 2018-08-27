@@ -17,12 +17,12 @@ thumbnail: https://i.imgur.com/iSG9yJGl.png
 
 # AI Agents for Park Guests
 
-<video preload="none" poster="https://i.imgur.com/s4OkAquh.png" src="https://i.imgur.com/s4OkAqu.mp4" loop controls ></video>
-<label>_Very_ early AI agent test. Here, a few hundred agents randomly spawn into the world and make their way towards one of four goals (one for each edge). No pathfinding is calculated outside of the initial flow field calculations.</label>
-
 After the park has determined the and created the [paths](/dev/serenity-forge/paths-n-plots/), the next step is to produce AI agents which traverse that path and walk about the world. Using the same `flow field` technique used for finding paths, we calculate the flow fields for the individual paths, and create agents which simply reference those flow fields to know which direction to be travelling.
 
 For the most part, flow fields offer a lot of utility for little overhead, and added a really neat enhancement to the game world. Below, I will discuss how we use flow fields in tandem with the world paths, and dip a little into adding a bit of 'intelligence' to crowds.
+
+<video preload="none" poster="https://i.imgur.com/s4OkAquh.png" src="https://i.imgur.com/s4OkAqu.mp4" loop controls ></video>
+<label>_Very_ early AI agent test. Here, a few hundred agents randomly spawn into the world and make their way towards one of four goals (one for each edge). No pathfinding is calculated outside of the initial flow field calculations.</label>
 
 #### Flow fields at a glance
 
@@ -31,25 +31,25 @@ Flow fields (or "vector fields") can be imagined as an array of arrows pointing 
 ![Flow field example](https://i.imgur.com/G58gHS2l.png)
 <label>Image from Leif Erkenbrach's <a href="http://leifnode.com/2013/12/flow-field-pathfinding/" target="_blank">Flow Field Pathfinding</a> blog post.</label>
 
-This approach allows us to quickly calculate a handful of fields, and then simply reference them from the AI agents. Individual AI agents do not need to worry about finding a path; if they are on the flow field, they have a direction to travel. This approach starts to slow down when adding rigidbodies or any sort of 'group' interaction, mentioned below.
+This approach allows us to quickly calculate a handful of fields, and then simply reference them from the AI agents. Individual AI agents do not need to worry about finding a path; if they are on the flow field, they have a direction to travel. This approach starts to slow down when adding rigidbodies or any sort of 'group' interaction, discussed further below.
 
 
-## Path-Only Fields
+## Flow fields for Paths
 
-After getting the path layouts for the world, another set of flow fields are generated, only allowing traversal on the path:
+After getting the path layouts for the world, another set of flow fields are generated, only allowing traversal on the path. The idea is to ensure that all travel plans are on the path, however this approach has some issues:
 
 <img src="https://i.imgur.com/jZQl63bh.png" height="550px" alt="Path-only flow field" />
 
-An obvious issue shown here is that the fields sometimes direct guests towards the edge of the walkways. This makes sense, as the flow fields find the shortest path for agents to traverse. However, this produces undesirable results: it looks unrealistic, agents can actually fall _off_ of the path, and when combined with some of the grouping/slowing AI causes issues like conga lines and traffic jams. One explored solution was to simply change the `cost` of the flow fields such that edges of paths are to be avoided when possible, though ultimately was not a perfect solve.
+One issue shown here is where the field sometimes directs guests towards the edge of the walkway. This makes logical sense, as the flow fields find the shortest path for agents to traverse, and technically one side of the path can be closer than the other. However, this produces undesirable results: it looks unrealistic, agents can actually fall _off_ of the path, and when combined with some of the grouping/slowing AI causes issues like conga lines and traffic jams. One explored solution was to simply change the `cost` of the flow fields such that edges of paths are to be avoided when possible, though ultimately was not a perfect solve.
 
 <video preload="none" poster="https://i.imgur.com/Q0bGYydh.png" src="https://i.imgur.com/Q0bGYyd.mp4" loop controls ></video>
 <label>Conga line! This is due to the agents falling off the path, and not knowing how to handle someone in front of them who is consistently slow.</label>
 
-
+At this point, there is enough data processed for AI agents to start traversing the world. The remaining goal is to make the crowds look _somewhat_ realistic.
 
 ### Grouping and Stopping Behavior
 
-The "grouping and stopping" behavior is the key to both the current system's flaws and its potential to be really, really neat. One key aspect explored was having agents detect obstacles in front of them, and slowing down their movement accordingly. This, combined with adding RigidBody components to agents, created somewhat realistic grouping and 'following' behavior.
+The "grouping and stopping" behavior is the key to both the current system's flaws and its potential to be really, really neat. By applying Rigidbody components to each agent, crowds begin to form and mildly-realistic grouping starts to take place. Another key feature explored was having agents detect obstacles in front of them, and slowing down their movement accordingly. This, combined with the Rigidbody components, creates somewhat realistic grouping and 'following' behavior, and looks like a real-life crowd!
 
 In the below example, AI agents turn red as their speed is reduced (due to someone slowing down in front of them). The blue lines indicate the distance each agent checks ahead of them to determine if they should increase/decrease their speed. The green agents are explained further below.
 
