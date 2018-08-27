@@ -1,17 +1,16 @@
 ---
 layout: dev-post
-title: Serenity Forge
+title: Work from Serenity Forge
 permalink: /dev/serenity-forge/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
-isPasswordProtected: true
 isProject: true
 inDev: false
 tech:
   - Unity
   - C#
-thumbnail: https://i.imgur.com/oDrfHzZl.jpg
+thumbnail: https://i.imgur.com/oDrfHzZh.jpg
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work
 ---
@@ -35,7 +34,7 @@ A touchscreen adaptation of the hit boardgame [Catan](https://en.wikipedia.org/w
 I was responsible for implementing a designed UI, adding gameplay features and animations (e.g. rolling dice on the board, card UI animations), and general QA/polish. You can read more about my contributions [here.](/dev/serenity-forge/catan/)
 
 
-# Theme Park Sim (Unannounced)
+# Theme Park Sim (Cancelled)
 
 [![Catan](https://i.imgur.com/v9cVqxDl.jpg)](/dev/serenity-forge/terrain/)
 

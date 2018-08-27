@@ -5,7 +5,7 @@ permalink: /dev/serenity-forge/paths-n-plots/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
-isPasswordProtected: true
+isNestedPost: true
 inDev: false
 tech:
   - Unity
