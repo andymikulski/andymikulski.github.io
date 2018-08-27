@@ -11,6 +11,7 @@ tech:
   - Unity
   - C#
 thumbnail: https://i.imgur.com/iSG9yJGl.png
+description: "Utilizing flow fields as a means for pathfinding to support hundreds of agents at a time."
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work
 ---

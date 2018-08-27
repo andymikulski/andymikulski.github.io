@@ -11,6 +11,7 @@ tech:
   - Unity
   - C#
 thumbnail: https://i.imgur.com/v9cVqxDl.png
+description: "Generating a 3D terrain utilizing layered Perlin Noise and Marching Cubes."
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work
 ---

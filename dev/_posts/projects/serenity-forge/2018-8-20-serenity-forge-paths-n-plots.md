@@ -11,6 +11,7 @@ tech:
   - Unity
   - C#
 thumbnail: https://i.imgur.com/cBnJohul.jpg
+description: "Finding decent looking pathways across varying terrain using flow fields."
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work
 ---

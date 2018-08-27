@@ -10,6 +10,7 @@ inDev: false
 tech:
   - Unity
   - C#
+description: "Highlighting some work on UI interactions and juice for a digital version of the popular board game."
 thumbnail: https://i.imgur.com/oDrfHzZl.jpg
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work
