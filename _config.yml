@@ -15,7 +15,6 @@ avatar: https://avatars1.githubusercontent.com/u/2767162?v=3&s=460
 # Flags below are optional
 #
 
-include: [".htaccess", ".htpasswd"]
 
 # Includes an icon in the footer for each username you enter
 footer-links:

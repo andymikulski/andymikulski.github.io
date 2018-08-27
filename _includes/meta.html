@@ -3,8 +3,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
+    {% if page.isPasswordProtected != nil %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+
     {% if page.thumbnail %}
-    <meta property="og:image" content="{{ page.thumbnail }}" /> 
+    <meta property="og:image" content="{{ page.thumbnail }}" />
     {% endif %}
 
     {% if page.description %}
