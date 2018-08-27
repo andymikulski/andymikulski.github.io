@@ -17,7 +17,7 @@ thumbnail: https://i.imgur.com/oDrfHzZl.jpg
 ---
 
 
-[Serenity Forge](https://serenityforge.com/) is a small indie game studio based out of Boulder, CO, specializing in visually stunning aesthetics ([The King's Bird](https://store.steampowered.com/app/812550/The_Kings_Bird/), for example).
+[Serenity Forge](https://serenityforge.com/) is a small indie game studio based out of Boulder, CO, specializing in visually stunning aesthetics, such as [The King's Bird](https://store.steampowered.com/app/812550/The_Kings_Bird/) for example.
 
 
 In 2018, I spent a short time working for Serenity Forge as a Gameplay Engineer, primarily responsible for principal code design, implementing gameplay features, QA, and general bugfixing. Beyond the usual developer duties, I also served as an 'internal developer advocate,' working to streamline internal processes and ensuring engineers follow proper standards, perform code reviews, etc.
