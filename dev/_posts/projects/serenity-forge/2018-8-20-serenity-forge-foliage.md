@@ -10,7 +10,7 @@ inDev: false
 tech:
   - Unity
   - C#
-thumbnail: https://i.imgur.com/3eSgyTKl.jpg
+thumbnail: https://i.imgur.com/3eSgyTK.jpg
 description: "Using the Poisson-Disc algorithm to place grass and trees into a virtual world."
 # demo: /assets/peg/
 # github: https://github.com/andymikulski/work-work

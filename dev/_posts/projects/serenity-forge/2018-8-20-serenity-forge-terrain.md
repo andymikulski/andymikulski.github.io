@@ -57,7 +57,7 @@ In code, the final height for any given terrain is the combination of the above 
 
 ![Smoothing example](https://i.imgur.com/BQOJTY2.png)
 
-After the chunk has been marched, a pass is done across all of its vertices, setting the `y` position according to the genereated height for that world point. This essentially smooths out the topography of the terrain mesh while utilizing the verticess created by marching cubes.
+After the chunk has been marched, a pass is done across all of its vertices, setting the `y` position according to the generated height for that world point. This essentially smooths out the topography of the terrain mesh while utilizing the verticess created by marching cubes.
 
 Note that this would not be possible if our terrain was not driven by Perlin values - smoothing chunk edges becomes a challenge on its own without the affordance of the 2D noise values. In earlier attempts at terrain smoothing, it was found that smoothing terrain cross chunks became quite an issue:
 
