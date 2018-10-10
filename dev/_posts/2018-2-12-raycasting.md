@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: "Weekend Project: Ray Casting"
+title: "Ray Casting"
 permalink: /dev/raycasting
 blog: dev
 description: "Determining line of sight and messing with light beams in the process."

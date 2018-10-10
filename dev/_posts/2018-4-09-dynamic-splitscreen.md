@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: "Weekend Project: Dynamic Splitscreen"
+title: "Dynamic Splitscreen"
 permalink: /dev/splitscreen
 blog: dev
 description: "Using Voronoi-like partitions to create a shape-shifting splitscreen mechanic."

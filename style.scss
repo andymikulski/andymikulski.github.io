@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 14px/1.6 $helvetica;
   color: $darkGray;
 }
 
@@ -331,7 +331,7 @@ nav {
 }
 
 .description {
-  font-size: 0.75em;
+  font-size: 0.825em;
   display: block;
   margin: 1em 0 0;
   line-height: 1.5em;
@@ -557,7 +557,7 @@ iframe {
     position: relative;
     padding: 0.3em 0.8em;
     border-radius: 2px;
-    font-size: 0.875em;
+    font-size: 0.95em;
     width: 90%;
     max-width: 700px;
     line-height: 1.6em;
@@ -580,7 +580,7 @@ script + p > label {
   position: relative;
   padding: 0.3em 0.8em;
   border-radius: 2px;
-  font-size: 0.875em;
+  font-size: 0.95em;
   width: 90%;
   max-width: 700px;
   line-height: 1.6em;
@@ -623,7 +623,7 @@ code {
   small {
     display: block;
     margin-top: 0.5em;
-    font-size: 0.5em;
+    font-size: 0.75em;
   }
 }
 
