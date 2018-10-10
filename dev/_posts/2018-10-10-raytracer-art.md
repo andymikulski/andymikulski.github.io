@@ -7,11 +7,11 @@ description: "Short examination of an inaccurate ray tracer as a source of gener
 thumbnail: https://i.imgur.com/jUeqh4Uh.png
 ---
 
-One of my favorite things about programming is the accidental and emergent behavior that shows up as you're working a problem. In video games, this usually amounts to a bug with gameplay mechanics and a funny post on Twitter. When working on visual code such as shaders, though, you stumble into a new territory: generative art.
+One of my favorite things about game programming is the accidental and emergent behavior that shows up as you're working a problem. With mechanics, this usually amounts to an unexpected bug and a funny post on Twitter. When working on visual code such as shaders, though, you stumble into a new territory: accidental generative art.
 
 The term "generative art" typically reminds me of [Processing](https://processing.org/), a language and set of software used to programmatically create visual designs using primitive shapes, textures, etc. In this article, though, I'll be briefly examining a broken/inaccurate ray tracer as the source of our art - no `for` loops with repeating geometric shapes here.
 
-First, let's take a quick look at how ray tracing actually works, and how it ties into our "art."
+In this post, I'll examine a handful of renderings I produced while working on a ray tracer of my own. I plan to post a technical overview of my renderer (with demo) in the near future. For now, let's take a quick look at how ray tracing actually works, and how it ties into our "art."
 
 ---
 
@@ -22,7 +22,7 @@ First, let's take a quick look at how ray tracing actually works, and how it tie
 
 Ray tracing - not to be confused with [casting](/dev/raycasting) - is a method for rendering 3D scenes with realistic lighting and shadows. Essentially, it is a simplified model of how light travels through space, and how our eyes see those rays.
 
-Consider a ray of light travelling from the sun: the sun emits the ray, it travels through space to Earth, maybe it hits a few surfaces before eventually landing in your eyeball. That is essentially how we see - light bounces around and eventually lands in our eye. Ray tracing is a model of the same idea, but in reverse: instead of rays emitting from the sun, they emit from our eyes.
+Consider a ray of light travelling from the sun: the sun emits the ray, it travels through space to Earth, maybe it hits a few surfaces before eventually landing in your eyeball. That is essentially how we see - light bounces around and eventually lands in our eye. Ray tracing is a model of the same idea, but in reverse: instead of rays emitting from the sun, they emit from our eyes (or, our cameras, in this case).
 
 <img src="https://i.imgur.com/yXEmWkL.jpg" />
 <label>As the 'camera' sends out rays, an image is constructed based on what the rays hit, and the color of the material(s) hit by the ray. Image via [Wikipedia](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)).</label>
@@ -68,4 +68,4 @@ One interesting thought is that due to the fact these were created as the engine
 
 ## Conclusion
 
-This was just a brief look at some stills from my time working on a ray tracer for fun. Examining the stills to an artistic degree provokes insight and thought into how light and color works all around us. It also puts a new spin on the old adage of "it's not a bug, it's a feature!" In the near future, I plan to make another post regarding the deeper technical details of the engine (web workers!), so stay tuned for that.
+This was just a brief look at some stills from my time working on a ray tracer for fun. Examining the stills to an artistic degree provokes thought into how light and color works all around us, while putting a new spin on the old adage of "it's not a bug, it's a feature!" In the near future, I plan to make another post regarding the deeper technical details of the engine (web workers!), so stay tuned for that.
