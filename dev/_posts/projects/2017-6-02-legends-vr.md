@@ -26,7 +26,7 @@ An **unofficial** virtual reality recreation of the [temple run](https://www.you
 Check out a quick proof of concept walkthrough on Twitch [here](https://www.twitch.tv/videos/158444071):
 
 <iframe style="display: block; margin: 0 auto; width: 100%;" src="https://player.twitch.tv/?video=v158444071&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="480" width="620"></iframe>
-<label>A quick <a href="https://www.twitch.tv/videos/158444071" target="_blank">stream</a> of the proof of concept walkthrough.</label>
+<label>A quick <a href="https://www.twitch.tv/videos/158444071" target="_blank">stream</a> of the proof of concept walk-through.</label>
 
 As my first adventure into VR, I was interested in exploring an idea that, simply, would be really cool to check out. Since I'm perpetually attempting to relive in my childhood, I decided to play with the idea of recreating [Legends of the Hidden Temple](https://en.wikipedia.org/wiki/Legends_of_the_Hidden_Temple), specifically the final challenge of running through the temple.
 
@@ -50,7 +50,7 @@ A key piece of this project is the desire to recreate the _game show experience_
 
 ### About the Prototype
 
-The prototype is built using Unity and the [Virtual Reality Toolkit](https://vrtoolkit.readme.io/). The neat thing is the ability to target multiple devices from Vives to Daydreams, and many of the VRTK components can build on eachother quite well.
+The prototype is built using Unity and the [Virtual Reality Toolkit](https://vrtoolkit.readme.io/). The neat thing is the ability to target multiple devices from Vives to Daydreams, and many of the VRTK components can build on each other quite well.
 
 For the temple layout, the [Legends Wikia](http://legends.wikia.com) offered an immense amount of material to research through. From temple layouts to individual rooms, it has been indispensable in finding "first hand" information while rebuilding the layout.
 
@@ -69,12 +69,12 @@ Temple Layout XV features a handful of obstacles that simply don't work well in 
 
 ## Current Status
 
-This project has been slow going, however is still underway. No release dates or milestones have been decided, and for the most part the project is on the backburner for the team. Check back soon for updates and blog posts!
+This project has been slow going, however is still underway. No release dates or milestones have been decided, and for the most part the project is on the back burner for the team. Check back soon for updates and blog posts!
 
-## Team
+<!-- ## Team
 
 The team working towards developing this consists of a few friends from [RIT](https://rit.edu/):
 
 - Myself, developer
 - [Sean Vickery](https://www.linkedin.com/in/seanvickery), artist
-- [Alex Rainone](https://twitter.com/alexrain1), artist
+- [Alex Rainone](https://twitter.com/alexrain1), artist -->

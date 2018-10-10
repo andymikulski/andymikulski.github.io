@@ -52,7 +52,7 @@ Outside of the standard peg solitaire rules outlined above and the 'peg jump' me
 
 ### Engine
 
-The 'engine' for the game was written from scratch in TypeScript, which was a fun challenge to tackle. I wanted to build the entire experience within canvas, simply more as a challenge to myself than anything. Prior to this game, I had done a bit of canvas work (see: demos from other blog posts), so I felt prepared for the most part. At the end of the project, the only third-party package used in the code was for a psuedo random number generator, which was pretty cool.
+The 'engine' for the game was written from scratch in TypeScript, which was a fun challenge to tackle. I wanted to build the entire experience within canvas, simply more as a challenge to myself than anything. Prior to this game, I had done a bit of canvas work (see: demos from other blog posts), so I felt prepared for the most part. At the end of the project, the only third-party package used in the code was for a psuedo-random number generator, which was pretty cool.
 
 #### VCR's and the Rendering Pipeline
 
@@ -121,7 +121,7 @@ button.addEventListener('click', function(){
 	</div>
 	<div>
 		<video height="400" src="https://i.imgur.com/gs1Kf7X.mp4" loop controls></video>
-		<label>Recording of early development. Notice there's no checkers bonus or  'quake' efect yet implemented - this was during the playtesting phase before moving onto effects and polish.</label>
+		<label>Recording of early development. Notice there's no checkers bonus or  'quake' effect yet implemented - this was during the playtesting phase before moving onto effects and polish.</label>
 	</div>
 	<div>
 		<video height="400" src="https://i.imgur.com/aACsdJH.mp4" loop controls></video>

@@ -18,7 +18,7 @@ description: "Finding decent looking pathways across varying terrain using flow 
 
 # World pathway planning
 
-After generating the base terrain, paths must be placed through the world leading park guests from one section of the park to another. Guests don't really need to do much other than wander, so there is not much complexity there. The real challenge is in generating decent-looking pathways through the world which don't look "robotic." Using some flow fields, I was able to achive some decent path layouts running through the world.
+After generating the base terrain, paths must be placed through the world leading park guests from one section of the park to another. Guests don't really need to do much other than wander, so there is not much complexity there. The real challenge is in generating decent-looking pathways through the world which don't look "robotic." Using some flow fields, I was able to achieve some decent path layouts running through the world.
 
 ---
 
@@ -72,7 +72,7 @@ Plot creation ties directly into section path planning. After the proper paths h
 
 The image below demonstrates what the 2D representation of the section looks like after placing paths and identifying a handful of plots (indicated by varying colors):
 
-<img src="https://i.imgur.com/DulwZin.jpg" height="500" alt="Plots found after determing path placement" />
+<img src="https://i.imgur.com/DulwZin.jpg" height="500" alt="Plots found after determining path placement" />
 
 Once plots are found, grids are spawned in world space accordingly, to denote to the player that those areas are for placing rides:
 
@@ -85,7 +85,7 @@ This general discovery approach works pretty well, though as with all procedural
 <img src="https://i.imgur.com/CUNyyoW.jpg" height="500" />
 <label>For design purposes, we wanted control over plots so they looked a bit more contained and 'natural,' as if a human had designed the layout. This plot is an example of a generally fine, but incorrect plot layout.</label>
 
-Beyond unexpected shapes, occassionally a plot would not have enough area to actually be built on. In order to use a bit of math on whether not a plot was buildable, the plots are converted from their 2D map/array representation into appropriate `Polygon` classes. The Polygon class handles calculating a shape's perimeter distance, its area, etc. This allowed us to simply filter out plots that were too small to be built on.
+Beyond unexpected shapes, occasionally a plot would not have enough area to actually be built on. In order to use a bit of math on whether not a plot was buildable, the plots are converted from their 2D map/array representation into appropriate `Polygon` classes. The Polygon class handles calculating a shape's perimeter distance, its area, etc. This allowed us to simply filter out plots that were too small to be built on.
 
 In order to determine how "strange" the polygon shape was, I relied on using some formulas that are actually used to determine the [degree of gerrymandering in a given political district](https://en.wikipedia.org/wiki/Polsby-Popper_Test), which I thought was pretty neat. The following graphic gives a quick visual summary of how the Polsby-Popper formula can be used in our situation:
 

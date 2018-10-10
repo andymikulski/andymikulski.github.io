@@ -25,7 +25,7 @@ A [gravity assist](https://en.wikipedia.org/wiki/Gravity_assist) is the use of a
 
 # About
 
-As a child, I'd ask my brother Rick for game ideas. A particular idea stuck with him for several years, and when I'd ask for inspiration - he'd mention the "space game." He described the game as a ship using gravity wells and celesital bodies to navigate an area. I was unconvinced it'd be fun, citing level design issues and the pace the game would need to take to feel smooth.
+As a child, I'd ask my brother Rick for game ideas. A particular idea stuck with him for several years, and when I'd ask for inspiration - he'd mention the "space game." He described the game as a ship using gravity wells and celestial bodies to navigate an area. I was unconvinced it'd be fun, citing level design issues and the pace the game would need to take to feel smooth.
 
 After years of my brother offering his idea, I eventually dug into Unity, and knew my first game had to be the space game. The concept was generally simple, and I needed a project to learn Unity on, so I trekked forth.
 

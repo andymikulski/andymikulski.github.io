@@ -41,13 +41,13 @@ After getting the Poisson arrangement determined, some prefabs are spawned in wo
 
 ##### Grass
 
-Grass placement operates similar to tree placement, though requires a bit of mesh combining in order to achieve stable framerates. Each chunk's grass blades are combined into a single mesh after being placed, which allows us to display many thousand blades of grass without a noticable drop in FPS.
+Grass placement operates similar to tree placement, though requires a bit of mesh combining in order to achieve stable frame rates. Each chunk's grass blades are combined into a single mesh after being placed, which allows us to display many thousand blades of grass without a noticeable drop in FPS.
 
 <video src="https://i.imgur.com/ZNjLrRY.mp4" loop controls ></video>
 <label>Way more grass than we need. This was an earlier test to see how many blades we could render before hitting performance issues. On PC, it clocked in around 300k+ individual blades. On Switch, it was... far fewer.</label>
 
 ![Shadowed grass](https://i.imgur.com/3eSgyTK.jpg)
-<label>Grass with altered mesh sizes and shadows! Looks neat, but costs a lot of frames on the Switch. You can also notice some anamolies in the grass which were later corrected.</label>
+<label>Grass with altered mesh sizes and shadows! Looks neat, but costs a lot of frames on the Switch. You can also notice some anomalies in the grass which were later corrected.</label>
 
 Perlin noise drives a majority of the 'real-world' grass placement, as well as general scaling of grass (blades near the edge of a patch of grass will be shorter than in the center). For the most part, each section maybe has about ~10k blades of grass at any given time, so filtering via noise values has been great for performance.
 

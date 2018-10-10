@@ -20,14 +20,14 @@ description: "Generating a 3D terrain utilizing layered Perlin Noise and Marchin
 
 In order to obtain an "infinite" landscape, a large majority of the terrain generation is driven through [Perlin Noise](https://en.wikipedia.org/wiki/Perlin_noise), and some procedural path generation using some [flow fields](https://en.wikipedia.org/wiki/Vector_field). A `GameSeed` class allows us to recreate a game's environment, paths, etc by altering the internal random number generator's seed value when the game first starts.
 
-The world-building class handles rendering chunks of the world using [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes) based on generated perlin values. Essentially, the generated noise serves as a heightmap across the world. The marching cubes algorithm is performed for each chunk, checking against the height/noise values provided by our perlin-based height functions, and generating a mesh accordingly.
+The world-building class handles rendering chunks of the world using [Marching Cubes](https://en.wikipedia.org/wiki/Marching_cubes) based on generated Perlin values. Essentially, the generated noise serves as a heightmap across the world. The marching cubes algorithm is performed for each chunk, checking against the height/noise values provided by our Perlin-based height functions, and generating a mesh accordingly.
 
 ## Terrain Design Features
 
 In order to achieve a certain design aesthetic, the terrain generation requires the ability to be tuned and adhere to a set of rules when generating the world. The below screenshot demonstrates some terrain features we were interested in for the world:
 
 ![Non-smoothed terrain example](https://i.imgur.com/v9cVqxD.png)
-<label>This (pre-smoothed) terrain demonstrates a number of landmass features: lakes/ponds, wide hills, and steep stone pillars. These features are controlled all through code and can be adjusted by hand (i.e. hardcoded values) or could even fluctuate based on the current game seed.</label>
+<label>This (pre-smoothed) terrain demonstrates a number of landmass features: lakes/ponds, wide hills, and steep stone pillars. These features are controlled all through code and can be adjusted by hand (i.e. hard-coded values) or could even fluctuate based on the current game seed.</label>
 
 An important note is that since the terrain generation essentially treats the perlin noise values as a heightmap, there is no way to create "layered" terrain. That is, we could not create terrain featuring caves or overhangs. This did not affect the game design, and actually made programming a bit easier as the world could be regarded as a simple 2D plane - see [plots 'n' paths](/dev/serenity-forge/paths-n-plots/#plot-discovery) for an example.
 
@@ -57,7 +57,7 @@ In code, the final height for any given terrain is the combination of the above 
 
 ![Smoothing example](https://i.imgur.com/BQOJTY2.png)
 
-After the chunk has been marched, a pass is done across all of its vertices, setting the `y` position according to the generated height for that world point. This essentially smooths out the topography of the terrain mesh while utilizing the verticess created by marching cubes.
+After the chunk has been marched, a pass is done across all of its vertices, setting the `y` position according to the generated height for that world point. This essentially smooths out the topography of the terrain mesh while utilizing the vertices created by marching cubes.
 
 Note that this would not be possible if our terrain was not driven by Perlin values - smoothing chunk edges becomes a challenge on its own without the affordance of the 2D noise values. In earlier attempts at terrain smoothing, it was found that smoothing terrain cross chunks became quite an issue:
 

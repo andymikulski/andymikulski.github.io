@@ -56,7 +56,7 @@ The site consisted of a Node server serving a simple React SPA. An IRC chat is e
 
 To alleviate the issue of P1's game diverging from the audience, the audience members would be sent periodic savestates from P1's game. This allowed the game to "correct itself" for the audience, and the main player felt the game was perfectly fine and playable.
 
-After a few tries with friends over far distances (read: outside localhost), it was clear that this approach was not very fun, and therefor unaccepatble. The server needed more work.
+After a few tries with friends over far distances (read: outside localhost), it was clear that this approach was not very fun, and therefor unacceptable. The server needed more work.
 
 
 ### New Hotness
@@ -67,7 +67,7 @@ After the project had collected some dust, I brushed it off and implemented a ne
 
 #### Ensured Messages
 
-One feature in the new design was to ensure messages/packets had been properly emitted to, and received by, the client websocket connections. A simple connection manager handles sending/receiving "acknowledgement" packets, and resends messages after a period until the client has declared that it was received. This setup is essential for this scenario, as games would differ if actions are dropped.
+One feature in the new design was to ensure messages/packets had been properly emitted to, and received by, the client websocket connections. A simple connection manager handles sending/receiving "acknowledgement" packets, and re-sends messages after a period until the client has declared that it was received. This setup is essential for this scenario, as games would differ if actions are dropped.
 
 The server also assigns a tracking counter to each client, incrementing the counter when sending messages to the client. The client tracks the counter locally, and uses this to determine if they have gotten a message out of sync. Got message 83 when you were expecting 82? That's fine, the client will acknowledge 83 and hold onto it until the desired packet is sent. Once the proper packet is received, the client then processes each 'future' packet received while waiting.
 

@@ -24,7 +24,7 @@ If you search for [ray cast](https://www.google.com/search?q=ray+cast) you'll fi
 
 Say you're building an espionage game, and the goal is to get from point A to point B without alerting any guards. A key mechanic of the game is finding hiding places, and ensuring guards don't see you.
 
-A naïve approach would be to check a radius around each NPC and determine if the player is hidden from the NPC somehow (in a box, maybe). This approach would generally work, though after adding several new items or mechanics, maintaining how NPCs determine player visibility would become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. This is merely scratching the surface of problems with this approach. Consider:
+A naive approach would be to check a radius around each NPC and determine if the player is hidden from the NPC somehow (in a box, maybe). This approach would generally work, though after adding several new items or mechanics, maintaining how NPCs determine player visibility would become complex. Beyond that, using a simple radius-based approach eliminates the ability to work with mechanics like sneaking up behind NPCs. This is merely scratching the surface of problems with this approach. Consider:
 
 - What if there is an obstacle between the player and the NPC? Does the NPC open fire? What if the obstacle is another NPC?
 - What if you'd like to add reflective surfaces as a feature, which NPCs could use to spot the player?
@@ -52,7 +52,7 @@ Let's say NPCs can see about 10 meters ahead of them before their vision starts 
 
 The examples so far have been framed around vision and sight, but ray casting is useful far beyond determining visibility. Take projectiles, for instance. A bullet relates quite closely to a ray we would cast. Both travel in a straight line from an origin, both stop after hitting obstacles (maybe bouncing a little), and so on. The biggest difference is that bullets take some time to travel through space, where our casted rays move through space instantaneously.
 
-> You could use instant rays for high-velocity weapons like railguns or sniper rifles, whose projectiles require seemingly no time to travel through the air.
+> You could use instant rays for high-velocity weapons like rail guns or sniper rifles, whose projectiles require seemingly no time to travel through the air.
 
 The benefit of using rays in this context is, again, the ability to tap into the distance the ray has travelled. A low-hanging idea is to use the distance travelled to reduce how much damage the bullet does.
 
