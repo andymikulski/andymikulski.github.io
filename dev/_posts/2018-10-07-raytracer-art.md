@@ -9,7 +9,7 @@ thumbnail: https://i.imgur.com/jUeqh4Uh.png
 
 One of my favorite things about programming is the accidental and emergent behavior that shows up as you're working a problem. In video games, this usually amounts to a bug with gameplay mechanics and a funny post on Twitter. When working on visual code such as shaders, though, you stumble into a new territory: generative art.
 
-The term "generative art" typically reminds me of [Processing](https://processing.org/), a language and set of software used to programmatically create visual designs using primitive shapes, textures, etc. In this article, though, I'll be examining a broken/inaccurate ray tracer as the source of our art - no `for` loops with repeating geometric shapes here.
+The term "generative art" typically reminds me of [Processing](https://processing.org/), a language and set of software used to programmatically create visual designs using primitive shapes, textures, etc. In this article, though, I'll be briefly examining a broken/inaccurate ray tracer as the source of our art - no `for` loops with repeating geometric shapes here.
 
 First, let's take a quick look at how ray tracing actually works, and how it ties into our "art."
 
