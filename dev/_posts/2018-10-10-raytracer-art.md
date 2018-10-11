@@ -29,7 +29,7 @@ Consider a ray of light travelling from the sun: the sun emits the ray, it trave
 
 As rays are emitted and collect light, a rasterized image is created, producing a somewhat realistic-looking render. As more rays are pushed out into the scene, more color data is collected about the scene, with the rendered image appearing even more realistic. As mentioned earlier, though, with more rays comes more processing time, so a fine balance must be struck.
 
- >If you're interested in ray tracing or writing your own ray tracer (which I highly recommend), you should dig into Peter Shirley's [Ray Tracing in One Weekend](https://archive.fo/dQe61) book which go into deeper explanations with accompanying code.
+ >If you're interested in ray tracing or writing your own ray tracer (which I highly recommend), you should dig into Peter Shirley's [Ray Tracing in One Weekend](https://archive.fo/dQe61) book which goes into deeper explanations with accompanying code.
 
 
 ## Render Quality and Artifacts
