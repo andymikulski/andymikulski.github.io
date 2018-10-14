@@ -18,7 +18,7 @@ In this post, I'll examine a handful of renderings I produced while working on a
 ## About Ray Tracing
 
 <img src="https://imgur.com/bAsZMqe.png" />
-<label>A simple ray traced image demonstrating a two light sources and reflective materials. Ray traced images typically reflect a high degree of realism, at the cost of a long rendering time.</label>
+<label>A simple ray traced image demonstrating two light sources and reflective materials. Ray traced images typically reflect a high degree of realism, at the cost of a long rendering time.</label>
 
 Ray tracing - not to be confused with [casting](/dev/raycasting) - is a method for rendering 3D scenes with realistic lighting and shadows. Essentially, it is a simplified model of how light travels through space, and how our eyes see those rays.
 
