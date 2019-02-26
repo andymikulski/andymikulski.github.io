@@ -25,7 +25,7 @@ Below, you can find some more information regarding the projects I worked on dur
 
 ---
 
-# Catan, Playtable Edition (Unannounced)
+# Catan, Tablet Edition (Unannounced)
 
 [![Catan](https://i.imgur.com/beah5JIl.jpg)](/dev/serenity-forge/catan/)
 
