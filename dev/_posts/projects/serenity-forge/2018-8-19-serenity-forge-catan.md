@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: "Catan, Playtable Edition"
+title: "Catan, Tablet Edition"
 permalink: /dev/serenity-forge/catan/
 blog: dev
 project: serenity-forge
