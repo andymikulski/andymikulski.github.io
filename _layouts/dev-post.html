@@ -57,6 +57,11 @@ layout: dev-default
           <a href="{{ page.demo }}" target="_blank">Try the Demo</a>
         </li>
       {% endif %}
+      {% if page.live %}
+        <li>
+          <a href="{{ page.live }}" target="_blank">View the Live Project</a>
+        </li>
+      {% endif %}
       {% if page.inDev %}
         <li class="in-dev">
           This project is ongoing, check back for more updates soon! {% if hasRelatedPosts contains 'true' %}You can also visit the <a href="#devblog">dev blog</a> for the latest&nbsp;updates.{% endif %}

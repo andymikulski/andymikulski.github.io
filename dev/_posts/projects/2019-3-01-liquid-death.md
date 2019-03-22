@@ -10,9 +10,7 @@ tech:
   - typescript
   - node
 thumbnail: https://i.imgur.com/6FOFaFj.jpg
-# github: https://github.com/andymikulski/liquid-death
-demo: https://liquiddeath.com/
-# inDev: true
+live: https://liquiddeath.com/
 ---
 
 >**Development time (to date)** ~2 Months
@@ -66,3 +64,4 @@ An early idea was to have users actually "write" their name into the contract. A
 
 <video src="https://i.imgur.com/SIa6yt5.mp4" loop controls autoplay></video>
 <label>Here, you can see the example idea of 'writing' the name out, complete with a cursor trail to provide the feedback of actually marking the canvas with your cursor/finger.</label>
+
