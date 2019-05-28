@@ -8,7 +8,7 @@ project: profamity
 tech:
   - Javascript
   - Node
-thumbnail: http://i.imgur.com/vnHrBlQl.png
+thumbnail: https://i.imgur.com/vnHrBlQl.png
 github: https://github.com/andymikulski/profamity
 ---
 
@@ -16,7 +16,7 @@ github: https://github.com/andymikulski/profamity
 
 Node-based CLI tool which finds variations of profane words within a set of given files and throws errors accordingly. Useful for preventing debug statements and unprofessional comments from being committed to git!
 
-<img style="max-width: 600px;" src="http://i.imgur.com/vnHrBlQ.png" />
+<img style="max-width: 600px;" src="https://i.imgur.com/vnHrBlQ.png" />
 
 ---
 
@@ -26,7 +26,7 @@ Node-based CLI tool which finds variations of profane words within a set of give
 - Helps prevent committing those classic `console.log('wtffff');` debugging comments!
 - Can detect number/letter substitution (e.g. `H3110` is parsed as `hello`)
 - Several command line options are available:
-<img style="max-width: 600px;" src="http://i.imgur.com/kRAJTTG.png" />
+<img style="max-width: 600px;" src="https://i.imgur.com/kRAJTTG.png" />
 
 # Technical Details
 

@@ -8,7 +8,7 @@ isProject: true
 inDev: false
 tech:
   - TypeScript
-thumbnail: http://i.imgur.com/gL5lM7Jh.jpg
+thumbnail: https://i.imgur.com/gL5lM7Jh.jpg
 demo: /assets/peg/
 github: https://github.com/andymikulski/peg-solitaire
 ---
@@ -87,7 +87,7 @@ One unexpected technical challenge I encountered in the process of writing the g
   - no capability to detect mouseenter/mouseleave
   - ultimately the UI bits should have been passed off to the DOM/CSS, but needed click interactions for game pieces anyway
 
-<img src="http://i.imgur.com/gTya9Vb.jpg" />
+<img src="https://i.imgur.com/gTya9Vb.jpg" />
 <label>Here, button hitboxes are shown in dark grey. Notice the 'y' descender is outside of the hit area - one of the many problems with rolling my own UI system. I fixed this particular problem by simply shrinking the text to fit inside the bounding box!</label>
 -->
 
@@ -116,7 +116,7 @@ button.addEventListener('click', function(){
 
 <div class="screenshots">
 	<div>
-		<img style="height: 400px; width: auto; margin: 0 auto;" src="http://i.imgur.com/lcupcb5h.jpg" />
+		<img style="height: 400px; width: auto; margin: 0 auto;" src="https://i.imgur.com/lcupcb5h.jpg" />
 		<label>Sample gameplay screenshot, demonstrating a few twists such as explosive pegs and strong pegs.</label>
 	</div>
 	<div>

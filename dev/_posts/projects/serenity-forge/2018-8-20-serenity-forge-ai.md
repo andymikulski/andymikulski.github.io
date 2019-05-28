@@ -30,7 +30,7 @@ For the most part, flow fields offer a lot of utility for little overhead, and a
 Flow fields (or "vector fields") can be imagined as an array of arrows pointing towards a destination. When an AI agent is placed somewhere on that flow field, they simply follow the arrows until they reach their destination. Here is an example:
 
 ![Flow field example](https://i.imgur.com/G58gHS2l.png)
-<label>Image from Leif Erkenbrach's <a href="http://leifnode.com/2013/12/flow-field-pathfinding/" target="_blank">Flow Field Pathfinding</a> blog post.</label>
+<label>Image from Leif Erkenbrach's <a href="https://leifnode.com/2013/12/flow-field-pathfinding/" target="_blank">Flow Field Pathfinding</a> blog post.</label>
 
 This approach allows us to quickly calculate a handful of fields, and then simply reference them from the AI agents. Individual AI agents do not need to worry about finding a path; if they are on the flow field, they have a direction to travel. This approach starts to slow down when adding rigidbodies or any sort of 'group' interaction, discussed further below.
 

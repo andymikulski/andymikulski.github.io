@@ -9,7 +9,7 @@ tech:
   - node
   - websockets
   - nes6
-thumbnail: http://i.imgur.com/iMrsbeHh.png
+thumbnail: https://i.imgur.com/iMrsbeHh.png
 github: https://github.com/andymikulski/multines
 # demo: https://multines.neocities.org/
 inDev: true
@@ -49,7 +49,7 @@ After a handful of (local) multiplayer tests, I continued to build the MultiNES 
  - A chatroom for players and the audience to hang out while watching the game.
  - A queue for players to take turns 'sharing the controller.'
 
-<img src="http://i.imgur.com/iMrsbeHh.jpg" height="500" />
+<img src="https://i.imgur.com/iMrsbeHh.jpg" height="500" />
 <label>Users can enter the queue to play next, or chat from the audience.</label>
 
 The site consisted of a Node server serving a simple React SPA. An IRC chat is embedded in the page, and there are a handful of buttons for FAQs and getting in line to play. The glory is the playing the emulator; extra features weren't worth the MVP.

@@ -8,7 +8,7 @@ isProject: true
 tech:
   - Unity
   - C#
-thumbnail: http://i.imgur.com/UF9FHkbh.jpg
+thumbnail: https://i.imgur.com/UF9FHkbh.jpg
 demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 ---
 
@@ -62,7 +62,7 @@ In the future, if I ever revisit this game, I'd like to work towards a mobile ve
 
 <div class="screenshots">
 	<div>
-		<img src="http://i.imgur.com/UF9FHkb.jpg" />
+		<img src="https://i.imgur.com/UF9FHkb.jpg" />
 		<label>Initial version of the title screen. Not much ends up changing!</label>
 	</div>
 

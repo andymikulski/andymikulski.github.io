@@ -14,7 +14,7 @@ demo: /assets/splitscreen
 
 <video preload="none" poster="https://i.imgur.com/hNGE4hVh.png" src="https://i.imgur.com/hNGE4hV.mp4" loop controls></video>
 
-For the past several weekends, I've been working to recreate the "dynamic splitscreen" (or "voronoi splitscreen") effect demonstrated by [Squirrel Eiserloh](http://www.eiserloh.net/bio/)'s 2016 GDC talk [Juicing Your Cameras With Math](https://www.youtube.com/watch?v=tu-Qe66AvtY).
+For the past several weekends, I've been working to recreate the "dynamic splitscreen" (or "voronoi splitscreen") effect demonstrated by [Squirrel Eiserloh](https://www.eiserloh.net/bio/)'s 2016 GDC talk [Juicing Your Cameras With Math](https://www.youtube.com/watch?v=tu-Qe66AvtY).
 
 <!-- <iframe style="min-width: 0; min-height: 0; width: 560px; height:315px;" width="560" height="315" src="https://www.youtube.com/embed/tu-Qe66AvtY?rel=0" frameborder="0" allow="none; encrypted-media" allowfullscreen></iframe>
 <label>Math for Game Programmers: Juicing Your Cameras With Math, GDC 2016 talk by Squirrel&nbsp;Eiserloh</label> -->

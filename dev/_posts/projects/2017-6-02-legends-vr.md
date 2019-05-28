@@ -10,7 +10,7 @@ tech:
   - C#
   - VRTK
 inDev: true
-thumbnail: http://i.imgur.com/G9RjuA1h.jpg
+thumbnail: https://i.imgur.com/G9RjuA1h.jpg
 ---
 
 >**Development time (to date)** ~20 hours
@@ -36,7 +36,7 @@ As my first adventure into VR, I was interested in exploring an idea that, simpl
 In the Temple Run, two players must run through a series of rooms containing puzzles. As a player enters a room, they must then solve that room's puzzle to move on. If they make it to the prize and out in time, they win a bunch of stuff. There are some other factors, but that's the gist of what you need to know for this game adaptation.
 
 <video class="slow" src="https://i.imgur.com/T07jvut.mp4" loop controls></video>
-<label><a href="http://legends.wikia.com/wiki/The_Chamber_of_the_Sacred_Markers" target="_blank">Chamber of the Sacred markers</a>, using donuts as props. Here, players must arrange donuts on a wall to match a random sequence on the opposite wall.</label>
+<label><a href="https://legends.wikia.com/wiki/The_Chamber_of_the_Sacred_Markers" target="_blank">Chamber of the Sacred markers</a>, using donuts as props. Here, players must arrange donuts on a wall to match a random sequence on the opposite wall.</label>
 
 Room-scale VR is a perfect medium for this type of game; small rectangular rooms, lots of grabbing stuff and walking around, not much artifical locomotion is necessary. The prototype (shown below) managed to capture a sliver of the total game, but that sliver shows a huge amount of promise.
 
@@ -52,17 +52,17 @@ A key piece of this project is the desire to recreate the _game show experience_
 
 The prototype is built using Unity and the [Virtual Reality Toolkit](https://vrtoolkit.readme.io/). The neat thing is the ability to target multiple devices from Vives to Daydreams, and many of the VRTK components can build on each other quite well.
 
-For the temple layout, the [Legends Wikia](http://legends.wikia.com) offered an immense amount of material to research through. From temple layouts to individual rooms, it has been indispensable in finding "first hand" information while rebuilding the layout.
+For the temple layout, the [Legends Wikia](https://legends.wikia.com) offered an immense amount of material to research through. From temple layouts to individual rooms, it has been indispensable in finding "first hand" information while rebuilding the layout.
 
 <img src="https://i.imgur.com/mKw8sDf.png" />
-<label><a href="http://legends.wikia.com/wiki/Temple_Layout_XV" target="_blank">Temple Layout XV</a>, the (general) design used when laying out the prototype. This image helped generally guide the level layout and design.</label>
+<label><a href="https://legends.wikia.com/wiki/Temple_Layout_XV" target="_blank">Temple Layout XV</a>, the (general) design used when laying out the prototype. This image helped generally guide the level layout and design.</label>
 
 #### A Note on Obstacles
 
-Temple Layout XV features a handful of obstacles that simply don't work well in a VR context. For instance, in one case you're meant to grab a rope and swing across a gap. In VR, this experience would be weird at best and nauseating at worst. As a result, the temple layout has been adapted slightly for some challenges better suited for VR. For instance, the [Pit of the Pendulum](http://legends.wikia.com/wiki/The_Pit_of_the_Pendulum) was somewhat replaced with the [Wall&nbsp;Climb](http://legends.wikia.com/wiki/The_Wall_Climb).
+Temple Layout XV features a handful of obstacles that simply don't work well in a VR context. For instance, in one case you're meant to grab a rope and swing across a gap. In VR, this experience would be weird at best and nauseating at worst. As a result, the temple layout has been adapted slightly for some challenges better suited for VR. For instance, the [Pit of the Pendulum](https://legends.wikia.com/wiki/The_Pit_of_the_Pendulum) was somewhat replaced with the [Wall&nbsp;Climb](https://legends.wikia.com/wiki/The_Wall_Climb).
 
 
-<img src="http://i.imgur.com/faJHzER.jpg" />
+<img src="https://i.imgur.com/faJHzER.jpg" />
 <label>Originally, the player would need to swing across this gap while holding a rope. A rock-climbing wall is pretty simple in VR, and an acceptable room switch for the layout.</label>
 
 ---

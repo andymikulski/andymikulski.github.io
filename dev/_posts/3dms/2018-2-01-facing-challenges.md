@@ -6,7 +6,7 @@ blog: dev
 project: 3dms
 projectName: 3D Minesweeper
 description: "Exploring a core concept of 3D Minesweeper to prevent overwhelming players with information."
-thumbnail: http://i.imgur.com/4mj7E2Vl.png
+thumbnail: https://i.imgur.com/4mj7E2Vl.png
 ---
 
 # Facing Challenges: Tackling User Overload in 3DMS

@@ -9,7 +9,7 @@ tech:
   - Node
   - Socket.IO
   - WebTorrent
-thumbnail: http://i.imgur.com/uptpBRZ.gif
+thumbnail: https://i.imgur.com/uptpBRZ.gif
 ---
 
 # Automatic Commercials

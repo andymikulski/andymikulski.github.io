@@ -8,7 +8,7 @@ isProject: true
 tech:
   - TypeScript
 inDev: true
-thumbnail: http://i.imgur.com/G9RjuA1l.jpg
+thumbnail: https://i.imgur.com/G9RjuA1l.jpg
 ---
 
 # Value-based scheduling system
@@ -31,4 +31,4 @@ Searching the web, there are a few applications of the knapsack problem on sched
 # Technical Details
 
 - Priority is decided using a simple binary tree and asking the user if X is more valuable than Y.
-- The schedule is determined via a [bounded knapsack algorithm](http://rosettacode.org/wiki/Knapsack_problem/Bounded), based on number of hours to schedule for.
+- The schedule is determined via a [bounded knapsack algorithm](https://rosettacode.org/wiki/Knapsack_problem/Bounded), based on number of hours to schedule for.
