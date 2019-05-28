@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Gravity Assist
-permalink: /dev/gravity-assist/
+permalink: /gravity-assist/
 blog: dev
 project: gravity-assist
 isProject: true

@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Priority Trees
-permalink: /dev/knapsackular/:title
+permalink: /knapsackular/:title
 blog: dev
 project: knapsackular
 projectName: Knapsackular

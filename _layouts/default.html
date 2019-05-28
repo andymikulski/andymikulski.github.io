@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <div class="wrapper-masthead dev-mode">
       <div class="container">
         <header class="masthead clearfix">
           <div class="site-info">
@@ -24,9 +24,14 @@
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/" class="is-active">LifeBlog</a>
-            <a href="{{ site.baseurl }}/dev">DevBlog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/">DevBlog</a>
+            {% if page.url == '/about/' %}
+              <a href="{{ site.baseurl }}/life/">LifeBlog</a>
+              <a href="{{ site.baseurl }}/about" class="is-active">About</a>
+            {% else %}
+              <a href="{{ site.baseurl }}/life/" class="is-active">LifeBlog</a>
+              <a href="{{ site.baseurl }}/about">About</a>
+            {% endif %}
           </nav>
         </header>
       </div>

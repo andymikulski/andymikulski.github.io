@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Playtesting Peg Solitaire"
-permalink: /dev/peg-solitaire/playtesting
+permalink: /peg-solitaire/playtesting
 blog: dev
 project: peg-solitaire
 projectName: Peg Solitaire

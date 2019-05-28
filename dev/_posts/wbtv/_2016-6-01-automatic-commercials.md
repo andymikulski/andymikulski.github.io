@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Automatic Commercials
-permalink: /dev/wbtv/:title
+permalink: /wbtv/:title
 blog: dev
 project: wbtv
 projectName: WaybackTV

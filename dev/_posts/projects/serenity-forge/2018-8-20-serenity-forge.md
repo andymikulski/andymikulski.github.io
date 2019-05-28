@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Work from Serenity Forge
-permalink: /dev/serenity-forge/
+permalink: /serenity-forge/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -27,19 +27,19 @@ Below, you can find some more information regarding the projects I worked on dur
 
 # Catan, Tablet Edition (Unannounced)
 
-[![Catan](https://i.imgur.com/beah5JIl.jpg)](/dev/serenity-forge/catan/)
+[![Catan](https://i.imgur.com/beah5JIl.jpg)](/serenity-forge/catan/)
 
 A touchscreen adaptation of the hit board game [Catan](https://en.wikipedia.org/wiki/Catan) for up to four players. Features a virtual board, support for mobile phones as controllers, and AI opponents with varying strategies!
 
-I was responsible for implementing a designed UI, adding gameplay features and animations (e.g. rolling dice on the board, card UI animations), and general QA/polish. You can read more about my contributions [here.](/dev/serenity-forge/catan/)
+I was responsible for implementing a designed UI, adding gameplay features and animations (e.g. rolling dice on the board, card UI animations), and general QA/polish. You can read more about my contributions [here.](/serenity-forge/catan/)
 
 
 # Theme Park Sim (Cancelled)
 
-[![Catan](https://i.imgur.com/v9cVqxDl.jpg)](/dev/serenity-forge/terrain/)
+[![Catan](https://i.imgur.com/v9cVqxDl.jpg)](/serenity-forge/terrain/)
 
 
 In this theme park sim for kids, the player would be given procedurally-generated sections of land, complete with walkable paths and predefined areas for building roller coaster rides.
 
-I was responsible for creating the procedural systems for the game, such as [terrain mesh creation](/dev/serenity-forge/terrain/), [pathway planning](/dev/serenity-forge/paths-n-plots/) through the world, and the logic for the [AI agents](/dev/serenity-forge/ai/) which traverses those paths. See the "related posts" section below for more information on my contributions to the game.
+I was responsible for creating the procedural systems for the game, such as [terrain mesh creation](/serenity-forge/terrain/), [pathway planning](/serenity-forge/paths-n-plots/) through the world, and the logic for the [AI agents](/serenity-forge/ai/) which traverses those paths. See the "related posts" section below for more information on my contributions to the game.
 

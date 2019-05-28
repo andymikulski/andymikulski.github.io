@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Peg Solitaire
-permalink: /dev/peg-solitaire/
+permalink: /peg-solitaire/
 blog: dev
 project: peg-solitaire
 isProject: true

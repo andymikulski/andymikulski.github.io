@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "TPS: Paths and Plots"
-permalink: /dev/serenity-forge/paths-n-plots/
+permalink: /serenity-forge/paths-n-plots/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -92,7 +92,7 @@ In order to determine how "strange" the polygon shape was, I relied on using som
 ![Example distribution](https://i.imgur.com/DMxap8q.jpg)
 <label>Image by Daniel McGlone from his post [Measuring District Compactness in PostGIS](https://www.azavea.com/blog/2016/07/11/measuring-district-compactness-postgis/).</label>
 
-Using a handful of rules based on the polygon area, Polsby-Popper measure, and Schwartzberg score, we are able to quickly determine if a plot is able to be built on, or if it matches the general design aesthetic/compactness we were aiming for. Invalid plots can be filled using the [Foliage Manager](/dev/serenity-forge/foliage/) to produce areas that look a bit more 'environmentally interesting':
+Using a handful of rules based on the polygon area, Polsby-Popper measure, and Schwartzberg score, we are able to quickly determine if a plot is able to be built on, or if it matches the general design aesthetic/compactness we were aiming for. Invalid plots can be filled using the [Foliage Manager](/serenity-forge/foliage/) to produce areas that look a bit more 'environmentally interesting':
 
 ![Example scenery filling](https://i.imgur.com/W9wmpMX.jpg)
 
@@ -100,4 +100,4 @@ Using a handful of rules based on the polygon area, Polsby-Popper measure, and S
 
 ### Handoff to Foliage + AI systems
 
-From here, the [Foliage Manager](/dev/serenity-forge/foliage) and [AI Manager](/dev/serenity-forge/ai) begin working in tandem to wrap up the world generation and prepare it for the player to enter the game.
+From here, the [Foliage Manager](/serenity-forge/foliage) and [AI Manager](/serenity-forge/ai) begin working in tandem to wrap up the world generation and prepare it for the player to enter the game.

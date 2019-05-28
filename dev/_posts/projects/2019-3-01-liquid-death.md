@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: LiquidDeath.com
-permalink: /dev/liquid-death/
+permalink: /liquid-death/
 blog: dev
 project: liquid-death
 isProject: true

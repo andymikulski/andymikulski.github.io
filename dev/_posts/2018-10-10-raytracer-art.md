@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Ray Tracer Art"
-permalink: /dev/ray-tracer-art
+permalink: /ray-tracer-art
 blog: dev
 description: "Short examination of an inaccurate ray tracer as a source of generative art."
 thumbnail: https://i.imgur.com/jUeqh4Uh.png
@@ -20,7 +20,7 @@ In this post, I'll examine a handful of renderings I produced while working on a
 <img src="https://imgur.com/bAsZMqe.png" />
 <label>A simple ray traced image demonstrating two light sources and reflective materials. Ray traced images typically reflect a high degree of realism, at the cost of a long rendering time.</label>
 
-Ray tracing - not to be confused with [casting](/dev/raycasting) - is a method for rendering 3D scenes with realistic lighting and shadows. Essentially, it is a simplified model of how light travels through space, and how our eyes see those rays.
+Ray tracing - not to be confused with [casting](/raycasting) - is a method for rendering 3D scenes with realistic lighting and shadows. Essentially, it is a simplified model of how light travels through space, and how our eyes see those rays.
 
 Consider a ray of light travelling from the sun: the sun emits the ray, it travels through space to Earth, maybe it hits a few surfaces before eventually landing in your eyeball. That is essentially how we see - light bounces around and eventually lands in our eye. Ray tracing is a model of the same idea, but in reverse: instead of rays emitting from the sun, they emit from our eyes (or, our cameras, in this case).
 

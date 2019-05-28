@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: MultiNES
-permalink: /dev/multines/
+permalink: /multines/
 blog: dev
 project: multines
 isProject: true
@@ -17,7 +17,7 @@ inDev: true
 
 >**Development time (to date)** ~40 hours
 >
->**Technology** Node, WebSockets, [nES6](/dev/nes6)
+>**Technology** Node, WebSockets, [nES6](/nes6)
 >
 >**Concept** Multiplayer NES for the web.
 
@@ -30,7 +30,7 @@ Users take turns playing classic NES games with each other in real time. A Node 
 
 My first attempt at MultiNES was the realization of a simple idea I had: if each person ran their own emulator instance, one could simply communicate the input events and keep all emulators in sync! In terms of code, it's simple to capture inputs, fire them over a websocket, and sync gamestates every few seconds so all connected users stay in sync. It was an experiment that sounded like fun, so I dove into it.
 
-After [creating nES6](/dev/nes6), I put together a simple proof of concept. And while the _mildly adequate at best_ approach sounded fine on paper, the glaring design flaws were immediately apparent.
+After [creating nES6](/nes6), I put together a simple proof of concept. And while the _mildly adequate at best_ approach sounded fine on paper, the glaring design flaws were immediately apparent.
 
 ### Proof of Concept
 

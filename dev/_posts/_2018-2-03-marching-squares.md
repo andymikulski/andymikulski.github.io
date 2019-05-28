@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Marching Squares"
-permalink: /dev/marching-squares
+permalink: /marching-squares
 blog: dev
 # project: multines
 # projectName: MultiNES

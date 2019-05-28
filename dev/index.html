@@ -3,10 +3,10 @@ layout: dev-default
 ---
 
 <div class="posts latest">
-  <h1>Latest Posts</h1>
-  <ul class="post-list">
+  <h1>All Dev Posts</h1>
+  <ul>
     {% for post in site.posts %}
-      {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true and post.isNestedPost != true %}
+      {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
         <li>
             <a href="{{ site.baseurl }}{{ post.url }}">
           <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
@@ -17,32 +17,4 @@ layout: dev-default
       {% endif %}
     {% endfor %}
   </ul>
-  <small><a href="{{ site.baseurl }}/dev/list/">See all posts</a></small>
-</div>
-
-<hr />
-
-<h1>Projects</h1>
-<div class="posts dev">
-  {% for post in site.posts %}
-    {% if post.blog contains 'dev' and post.isProject and post.isPasswordProtected != true %}
-      <article class="post {{ post.slug }}">
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="date timestamp">
-          {{ post.date | date: "%Y" }}
-
-          {% for tech in post.tech %}<span>{{ tech }}</span>{% endfor %}
-        </div>
-
-        {% capture post_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
-        {% if post.redirect %}
-          {% assign post_url = post.redirect %}
-        {% endif %}
-
-        <a href="{{ post_url }}">
-          <img src="{{ post.thumbnail }}" class="thumbnail" />
-        </a>
-      </article>
-    {% endif %}
-  {% endfor %}
 </div>

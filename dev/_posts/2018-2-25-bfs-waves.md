@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Breadth-first Waves"
-permalink: /dev/waves
+permalink: /waves
 blog: dev
 description: "Using the breadth-first search algorithm to imitate travelling sound waves."
 tech:

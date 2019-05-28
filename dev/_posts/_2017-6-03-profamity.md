@@ -2,7 +2,7 @@
 layout: dev-post
 title: Profamity
 description: Command-line tool used to detect profanity in text files.
-permalink: /dev/profamity/
+permalink: /profamity/
 blog: dev
 project: profamity
 tech:

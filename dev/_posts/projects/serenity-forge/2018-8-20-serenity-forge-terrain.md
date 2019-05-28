@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "TPS: Terrain Generation"
-permalink: /dev/serenity-forge/terrain/
+permalink: /serenity-forge/terrain/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -29,7 +29,7 @@ In order to achieve a certain design aesthetic, the terrain generation requires 
 ![Non-smoothed terrain example](https://i.imgur.com/v9cVqxD.png)
 <label>This (pre-smoothed) terrain demonstrates a number of landmass features: lakes/ponds, wide hills, and steep stone pillars. These features are controlled all through code and can be adjusted by hand (i.e. hard-coded values) or could even fluctuate based on the current game seed.</label>
 
-An important note is that since the terrain generation essentially treats the perlin noise values as a heightmap, there is no way to create "layered" terrain. That is, we could not create terrain featuring caves or overhangs. This did not affect the game design, and actually made programming a bit easier as the world could be regarded as a simple 2D plane - see [plots 'n' paths](/dev/serenity-forge/paths-n-plots/#plot-discovery) for an example.
+An important note is that since the terrain generation essentially treats the perlin noise values as a heightmap, there is no way to create "layered" terrain. That is, we could not create terrain featuring caves or overhangs. This did not affect the game design, and actually made programming a bit easier as the world could be regarded as a simple 2D plane - see [plots 'n' paths](/serenity-forge/paths-n-plots/#plot-discovery) for an example.
 
 
 ##### Water, Ponds, and Lakes
@@ -70,7 +70,7 @@ Note that this would not be possible if our terrain was not driven by Perlin val
 
 ### Handoff to Path/Plot systems
 
-Once the initial terrain is generated, the [paths and plots systems](/dev/serenity-forge/paths-n-plots/) take over to handle creating paths through the world and plant trees/grass throughout the world.
+Once the initial terrain is generated, the [paths and plots systems](/serenity-forge/paths-n-plots/) take over to handle creating paths through the world and plant trees/grass throughout the world.
 
 ---
 

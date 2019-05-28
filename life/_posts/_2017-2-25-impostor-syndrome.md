@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Impostor Syndrome
-permalink: /:title/
-blog: main
+permalink: /life/:title/
+blog: life
 ---
 
 Every now and again, I have that dreadful realization that I'm maybe not super great at what I do. Sometimes I may feel I'm pretty bad at StarCraft. Usually it's about my job or programming.

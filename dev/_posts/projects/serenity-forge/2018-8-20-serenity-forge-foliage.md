@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "TPS: Foliage"
-permalink: /dev/serenity-forge/foliage/
+permalink: /serenity-forge/foliage/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -54,7 +54,7 @@ Perlin noise drives a majority of the 'real-world' grass placement, as well as g
 
 ##### "Manual" Placement
 
-In some instances (such as [invalid plots](/dev/serenity-forge/paths-n-plots/#plot-validation)), the Foliage Manager may be called upon to Poisson-Disc an area of land before planting some trees. This is a matter of handing over a `Polygon` to the Foliage Manager, at which point it handles the rest. Below is an example of 'manually' planted trees in plots that were too small for building:
+In some instances (such as [invalid plots](/serenity-forge/paths-n-plots/#plot-validation)), the Foliage Manager may be called upon to Poisson-Disc an area of land before planting some trees. This is a matter of handing over a `Polygon` to the Foliage Manager, at which point it handles the rest. Below is an example of 'manually' planted trees in plots that were too small for building:
 
 !["Manually" planted trees for an invalid plot](https://i.imgur.com/W9wmpMX.jpg)
-<label>Example screenshot showing some trees which were grouped and planted together over some invalid plots. Check out the devblog on the [plots](/dev/serenity-forge/paths-n-plots/#plot-validation) for more information.</label>
+<label>Example screenshot showing some trees which were grouped and planted together over some invalid plots. Check out the devblog on the [plots](/serenity-forge/paths-n-plots/#plot-validation) for more information.</label>

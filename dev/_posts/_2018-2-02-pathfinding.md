@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Pathfinding in the 24½th Century"
-permalink: /dev/pathfinding
+permalink: /pathfinding
 blog: dev
 # project: multines
 # projectName: MultiNES
@@ -23,4 +23,4 @@ thumbnail: https://user-images.githubusercontent.com/2767162/32898233-cf8b05ce-c
 
 - planning/scheduling
 - meal planning
-- 
+-

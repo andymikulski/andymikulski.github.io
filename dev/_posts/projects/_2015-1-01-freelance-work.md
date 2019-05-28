@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Freelance Work
-permalink: /dev/freelance/
+permalink: /freelance/
 blog: dev
 project: freelance
 isProject: true

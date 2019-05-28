@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "TPS: Park Guest AI"
-permalink: /dev/serenity-forge/ai/
+permalink: /serenity-forge/ai/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -18,7 +18,7 @@ description: "Utilizing flow fields as a means for pathfinding to support hundre
 
 # AI Agents for Park Guests
 
-After the park has generated the terrain, and determined the [paths](/dev/serenity-forge/paths-n-plots/), the next step is to produce AI agents which traverse that path and walk about the world. Using the same `flow field` technique used for finding paths, we calculate the flow fields for the individual paths, and create agents which simply reference those flow fields to know which direction to be travelling.
+After the park has generated the terrain, and determined the [paths](/serenity-forge/paths-n-plots/), the next step is to produce AI agents which traverse that path and walk about the world. Using the same `flow field` technique used for finding paths, we calculate the flow fields for the individual paths, and create agents which simply reference those flow fields to know which direction to be travelling.
 
 For the most part, flow fields offer a lot of utility for little overhead, and added a really neat enhancement to the game world. Below, I will discuss how we use flow fields in tandem with the world paths, and dip a little into adding a bit of 'intelligence' to crowds.
 

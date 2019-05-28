@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Facing Challenges: Overloaded Users"
-permalink: /dev/3dms/facing-challenges
+permalink: /3dms/facing-challenges
 blog: dev
 project: 3dms
 projectName: 3D Minesweeper
@@ -11,7 +11,7 @@ thumbnail: https://i.imgur.com/4mj7E2Vl.png
 
 # Facing Challenges: Tackling User Overload in 3DMS
 
-A major issue learned while playtesting [3DMS](/dev/3dms) was players had an issue mentally connecting all the attached nodes when examining a region. For instance, the a square node at the center of a 3x3x3 grid has **26** node connections. This is a _lot_ to expect the user to manage, especially when considering the amount of information the player must remember regarding the neighboring contexts, as well.
+A major issue learned while playtesting [3DMS](/3dms) was players had an issue mentally connecting all the attached nodes when examining a region. For instance, the a square node at the center of a 3x3x3 grid has **26** node connections. This is a _lot_ to expect the user to manage, especially when considering the amount of information the player must remember regarding the neighboring contexts, as well.
 
 <video src="https://i.imgur.com/Jls6jp7.mp4" height="500" loop controls></video>
 <label>This visually demonstrates the 'adjacent' nodes for the current selection.</label>

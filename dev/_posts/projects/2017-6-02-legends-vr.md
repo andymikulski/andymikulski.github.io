@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: LOTHT&#58; VR
-permalink: /dev/lotht/
+permalink: /lotht/
 blog: dev
 project: lotht
 isProject: true

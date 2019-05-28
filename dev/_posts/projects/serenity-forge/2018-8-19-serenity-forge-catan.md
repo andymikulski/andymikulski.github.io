@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Catan, Tablet Edition"
-permalink: /dev/serenity-forge/catan/
+permalink: /serenity-forge/catan/
 blog: dev
 project: serenity-forge
 projectName: Serenity Forge
@@ -23,7 +23,7 @@ thumbnail: https://i.imgur.com/oDrfHzZl.jpg
 ![Settlers of Catan](https://i.imgur.com/0t1epSBh.png)
 <label>The complete set of the Settlers of Catan board game. Image via [Catan.com](https://www.catan.com/).</label>
 
-At [Serenity Forge](/dev/serenity-forge/), we worked on an Android-based tablet edition of the game. Up to 4 players could share a device (or use their cell phones as controllers), play on a virtual board, and use on-device interactions to trade and play cards.
+At [Serenity Forge](/serenity-forge/), we worked on an Android-based tablet edition of the game. Up to 4 players could share a device (or use their cell phones as controllers), play on a virtual board, and use on-device interactions to trade and play cards.
 
 Joining the project near the end of its life, my particular role for the project was to essentially implement a designed user interface (replacing old programmer art), wire that UI up to the game internals, and then polish/QA/bugfix the rest. Below, you can see some examples of the user interactions I worked on.
 

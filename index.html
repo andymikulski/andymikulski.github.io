@@ -1,19 +1,47 @@
 ---
-layout: default
+layout: dev-default
 ---
 
-<div class="posts">
+<div class="posts latest">
+  <h1><a href="/dev">Latest Posts</a></h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true and post.isNestedPost != true %}
+        <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+          <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
+         {{ post.title }}</a>
+          <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+          <span class="description">{{ post.description }}</span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <small><a href="{{ site.baseurl }}/dev/">See all posts</a></small>
+</div>
+
+<hr />
+
+<h1>Projects</h1>
+<div class="posts dev">
   {% for post in site.posts %}
-    {% if post.categories contains 'main' %}
-      <article class="post">
+    {% if post.blog contains 'dev' and post.isProject and post.isPasswordProtected != true %}
+      <article class="post {{ post.slug }}">
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="date timestamp">
+          {{ post.date | date: "%Y" }}
 
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1><span class="date timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
-
-        <div class="entry">
-          {{ post.excerpt }}
+          {% for tech in post.tech %}<span>{{ tech }}</span>{% endfor %}
         </div>
 
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        {% capture post_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
+        {% if post.redirect %}
+          {% assign post_url = post.redirect %}
+        {% endif %}
+
+        <a href="{{ post_url }}">
+          <img src="{{ post.thumbnail }}" class="thumbnail" />
+        </a>
       </article>
     {% endif %}
   {% endfor %}

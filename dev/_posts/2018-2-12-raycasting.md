@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "Ray Casting"
-permalink: /dev/raycasting
+permalink: /raycasting
 blog: dev
 description: "Determining line of sight and messing with light beams in the process."
 tech:

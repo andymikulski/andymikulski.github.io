@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: "RecBoard Community Events"
-permalink: /dev/recboard
+permalink: /recboard
 blog: dev
 isProject: true
 tech:

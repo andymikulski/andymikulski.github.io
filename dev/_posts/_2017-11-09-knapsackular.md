@@ -1,7 +1,7 @@
 ---
 layout: dev-post
 title: Knapsackular
-permalink: /dev/knapsackular/
+permalink: /knapsackular/
 blog: dev
 project: knapsackular
 isProject: true
