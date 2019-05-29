@@ -16,7 +16,7 @@ thumbnail: https://i.imgur.com/oDrfHzZh.jpg
 ---
 
 
-[Serenity Forge](https://serenityforge.com/) is a small indie game studio based out of Boulder, CO, specializing in visually stunning aesthetics, such as [The King's Bird](https://store.steampowered.com/app/812550/The_Kings_Bird/) for example.
+[Mondo Robot](https://mondorobot.com/)
 
 
 In 2018, I spent a short time working for Serenity Forge as a Gameplay Engineer, primarily responsible for principal code design, implementing gameplay features, QA, and general bugfixing. Beyond the usual developer duties, I also served as an 'internal developer advocate,' working to streamline internal processes and ensuring engineers follow proper standards, perform code reviews, etc.
@@ -25,13 +25,13 @@ Below, you can find some more information regarding the projects I worked on dur
 
 ---
 
-# Catan, Tablet Edition (Unannounced)
+# WhistlerBlackcomb.com
 
-[![Catan](https://i.imgur.com/beah5JIl.jpg)](/serenity-forge/catan/)
+![Screenshot](https://i.imgur.com/ed7cS8x.jpg)
 
-A touchscreen adaptation of the hit board game [Catan](https://en.wikipedia.org/wiki/Catan) for up to four players. Features a virtual board, support for mobile phones as controllers, and AI opponents with varying strategies!
+Blah blah blah
 
-I was responsible for implementing a designed UI, adding gameplay features and animations (e.g. rolling dice on the board, card UI animations), and general QA/polish. You can read more about my contributions [here.](/serenity-forge/catan/)
+https://web.archive.org/web/20150723233339/http://www.whistlerblackcomb.com/
 
 
 # Theme Park Sim (Cancelled)

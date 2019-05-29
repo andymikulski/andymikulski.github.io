@@ -6,9 +6,9 @@ layout: dev-default
   <h1>All Dev Posts</h1>
   <ul>
     {% for post in site.posts %}
-      {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
+      {% if post.blog contains 'dev' and post.isPasswordProtected != true %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">
+          <a href="{{ site.baseurl }}{{ post.url }}">
           <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
          {{ post.title }}</a>
           <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>

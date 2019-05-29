@@ -24,10 +24,14 @@ layout: dev-default
 
 
     <div class="date">
-      {% if page.isProject %}
-        {{ page.date | date: "%Y" }}
+      {% if page.dateRange %}
+        {{ page.dateRange }}
       {% else %}
-        {{ page.date | date: "%B %e, %Y" }}
+        {% if page.isProject %}
+          {{ page.date | date: "%Y" }}
+        {% else %}
+          {{ page.date | date: "%B %e, %Y" }}
+        {% endif %}
       {% endif %}
     </div>
 

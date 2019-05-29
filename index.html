@@ -22,14 +22,18 @@ layout: dev-default
 
 <hr />
 
-<h1>Projects</h1>
+<h1>Featured Work</h1>
 <div class="posts dev">
   {% for post in site.posts %}
     {% if post.blog contains 'dev' and post.isProject and post.isPasswordProtected != true %}
       <article class="post {{ post.slug }}">
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="date timestamp">
-          {{ post.date | date: "%Y" }}
+          {% if post.dateRange == nil %}
+            {{ post.date | date: "%Y" }}
+          {% else %}
+            {{ post.dateRange }}
+          {% endif %}
 
           {% for tech in post.tech %}<span>{{ tech }}</span>{% endfor %}
         </div>
