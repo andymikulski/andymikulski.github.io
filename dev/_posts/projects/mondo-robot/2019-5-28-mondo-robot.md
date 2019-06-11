@@ -76,4 +76,4 @@ My first project with Mondo Robot! The M.A.X. Ski Pass offered customers a seaso
 <img src="https://i.imgur.com/AiI11nl.jpg" height="400" />
 
 <video src="https://i.imgur.com/QJVl6rZ.mp4" height="400" loop controls></video>
-<label>An example of an animations I was able to put into the site. This sort of 'fun' interaction would become a staple of my front-end development.</label>
+<label>An example of an animation I was able to put into the site. This sort of 'fun' interaction would become a staple of my front-end development.</label>
