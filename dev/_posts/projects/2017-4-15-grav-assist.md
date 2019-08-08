@@ -12,9 +12,10 @@ thumbnail: https://i.imgur.com/UF9FHkbh.jpg
 demo: https://developer.cloud.unity3d.com/share/WJPjJOJq4M/
 ---
 
-
+<!--
 >**Development time (to date)** ~35 hours
->
+> -->
+
 >**Technology** Unity
 >
 >**Concept** Pilot a spaceship via short bursts and the gravitational pull of nearby celestial bodies.

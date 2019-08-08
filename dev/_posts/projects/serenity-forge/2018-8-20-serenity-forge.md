@@ -1,6 +1,6 @@
 ---
 layout: dev-post
-title: Work from Serenity Forge
+title: Serenity Forge
 permalink: /serenity-forge/
 blog: dev
 project: serenity-forge

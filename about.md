@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: dev-default
 title: About Me
 permalink: /about/
 ---
 
 <img src="{{ site.avatar }}" height="300" style="float: left; margin: 0 1em 1em 0" />
 
-[Looking for my resume? (PDF)]({{ site.baseurl }}/assets/AMikulski-Resume.pdf)
+[Looking for my resumé? (PDF)]({{ site.baseurl }}/assets/AMikulski-Resume.pdf)
 
 I graduated from RIT in Rochester, NY in May of 2013 with a BFA in New Media Design & Imaging. Growing up as a developer my whole life, I had never really pursued art in any way. I decided to get a design degree (while in college for Game Design) in hopes to help balance my skills between design and development. A few art history classes later and I was a developer with design skills!
 
@@ -16,4 +16,4 @@ After getting hired by a small digital shop, I moved to Boulder, Colorado and wo
 
 Currently, I reside near Buffalo, NY where I offer contract development services for interactive websites, apps, and games. These days, I'm interested in exploring some more advanced programming languages and concepts - specifically Rust, Elixir, and concurrent programming in general. Interactive development is still a lot of fun, but I am always eager to learn something new.
 
-I'm actively searching for challenging opportunities that can really push me to my limits. Have a lead on something good? Get in touch with me via [email](mailto:andy.mikulski+work@gmail.com)! You can find my resume [here (PDF)]({{ site.baseurl }}/assets/AMikulski-Resume.pdf).
+I'm actively searching for challenging opportunities that can really push me to my limits. Have a lead on something good? Get in touch with me via [email](mailto:andy.mikulski+work@gmail.com)! You can find my resumé [here (PDF)]({{ site.baseurl }}/assets/AMikulski-Resume.pdf).

@@ -3,7 +3,10 @@ layout: dev-default
 ---
 
 <div class="posts latest">
-  <h1>All Life Posts</h1>
+  <div class="page-divider mini">
+    <h1>Life Posts</h1>
+  </div>
+
   <ul>
     {% for post in site.posts %}
       {% if post.blog contains 'life' and post.isProject == nil and post.isPasswordProtected != true %}

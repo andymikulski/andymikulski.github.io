@@ -2,15 +2,20 @@
 layout: dev-default
 ---
 
-<div class="posts latest">
-  <h1>All Dev Posts</h1>
+<div class="posts latest listing">
+  <div class="page-divider mini">
+    <h1>Dev Posts</h1>
+  </div>
+
   <ul>
     {% for post in site.posts %}
       {% if post.blog contains 'dev' and post.isPasswordProtected != true %}
         <li>
           <a href="{{ site.baseurl }}{{ post.url }}">
           <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
-         {{ post.title }}</a>
+          {{ post.title }}
+          {% if post.isProject %}<span title="Featured Project">★</span> {% endif %}
+          </a>
           <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
           <span class="description">{{ post.description }}</span>
         </li>

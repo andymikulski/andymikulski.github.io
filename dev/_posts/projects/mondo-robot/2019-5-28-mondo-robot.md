@@ -13,6 +13,7 @@ tech:
   - Backbone.js
 thumbnail: https://i.imgur.com/aYLMHVs.gif
 dateRange: 2015 &ndash; 2019
+description: WOOOOOOO
 ---
 
 
