@@ -90,7 +90,7 @@ Beyond unexpected shapes, occasionally a plot would not have enough area to actu
 In order to determine how "strange" the polygon shape was, I relied on using some formulas that are actually used to determine the [degree of gerrymandering in a given political district](https://en.wikipedia.org/wiki/Polsby-Popper_Test), which I thought was pretty neat. The following graphic gives a quick visual summary of how the Polsby-Popper formula can be used in our situation:
 
 ![Example distribution](https://i.imgur.com/DMxap8q.jpg)
-<label>Image by Daniel McGlone from his post [Measuring District Compactness in PostGIS](https://www.azavea.com/blog/2016/07/11/measuring-district-compactness-postgis/).</label>
+<label>Image by Daniel McGlone from his post [Measuring District Compactness in PostGIS](https://archive.is/7oddl).</label>
 
 Using a handful of rules based on the polygon area, Polsby-Popper measure, and Schwartzberg score, we are able to quickly determine if a plot is able to be built on, or if it matches the general design aesthetic/compactness we were aiming for. Invalid plots can be filled using the [Foliage Manager](/serenity-forge/foliage/) to produce areas that look a bit more 'environmentally interesting':
 
