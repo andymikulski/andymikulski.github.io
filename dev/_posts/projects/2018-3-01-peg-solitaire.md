@@ -13,8 +13,8 @@ demo: /assets/peg/
 github: https://github.com/andymikulski/peg-solitaire
 ---
 
->**Development time** ~30-35 hours over three days
->
+<!-- >**Development time** ~30-35 hours over three days
+> -->
 >**Engine** Written from scratch in TypeScript
 >
 >**Concept** [Peg Solitaire](https://en.wikipedia.org/wiki/Peg_solitaire)-style game which players must jump over pegs to clear the game board.

@@ -12,11 +12,11 @@
 
   <body>
     <div class="wrapper-masthead dev-mode">
-      <div class="container">
+      <!-- <div class="container"> -->
         <header class="masthead clearfix">
           <div class="site-info">
             <a href="{{ site.baseurl }}/">
-              <img src="{{ site.avatar }}" />
+              <!-- <img src="{{ site.avatar }}" /> -->
               <h1 class="site-name">{{ site.name }}
                 <span>Interaction Design + Development</span>
               </h1>
@@ -24,12 +24,22 @@
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/" class="is-active">DevBlog</a>
-            <a href="{{ site.baseurl }}/life/">LifeBlog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            {% if page.url contains '/about' %}
+            <a href="{{ site.baseurl }}/">DevBlog</a>
+              <a href="{{ site.baseurl }}/life">LifeBlog</a>
+              <a href="{{ site.baseurl }}/about" class="is-active">About</a>
+            {% elsif page.url contains '/life/' %}
+            <a href="{{ site.baseurl }}/">DevBlog</a>
+              <a href="{{ site.baseurl }}/life" class="is-active">LifeBlog</a>
+              <a href="{{ site.baseurl }}/about">About</a>
+            {% else %}
+              <a href="{{ site.baseurl }}/" class="is-active">DevBlog</a>
+              <a href="{{ site.baseurl }}/life">LifeBlog</a>
+              <a href="{{ site.baseurl }}/about">About</a>
+            {% endif %}
           </nav>
         </header>
-      </div>
+      <!-- </div> -->
     </div>
 
     <div id="main" role="main" class="container">

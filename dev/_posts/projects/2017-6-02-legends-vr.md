@@ -13,8 +13,8 @@ inDev: true
 thumbnail: https://i.imgur.com/G9RjuA1h.jpg
 ---
 
->**Development time (to date)** ~20 hours
->
+<!-- >**Development time (to date)** ~20 hours
+> -->
 >**Technology** Unity, VRTK, Blender
 >
 >**Concept** VR obstacle course on a classic Nickelodeon game show.

@@ -18,22 +18,22 @@ html {
 }
 
 body {
-	background: $white;
+	background: #f7f7f7; // $white;
   font: 16px/1.6 $helvetica;
   color: $darkGray;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 10px;
-  width: 95%;
+  max-width: 1440px;
+  padding: 0 2em;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $displayFont;
+  font-family: "Roboto Slab", sans-serif; // $displayFont;
   color: $darkerGray;
-  font-weight: bold;
+  font-weight: 700;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -46,9 +46,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 24px;
-  a {
-    color: inherit;
-  }
+  // a {
+  //   color: inherit;
+  // }
 }
 
 h2 {
@@ -60,8 +60,9 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
-  color: $gray;
+  font-size: 16px;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
 }
 
 p {
@@ -69,11 +70,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $red;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $darkRed;
   }
 }
 
@@ -116,9 +117,9 @@ img {
 }
 
 .date {
-  font-family: $displayFont;
+  font-family: "Roboto Condensed"; //$displayFont;
   font-style: italic;
-  color: #bbb;
+  color: $darkGray;
 }
 
 // Specify the color of the selection
@@ -131,17 +132,17 @@ img {
   background: $lightGray;
 }
 
-// Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+// // Nicolas Gallagher's micro clearfix hack
+// // http://nicolasgallagher.com/micro-clearfix-hack/
+// .clearfix:before,
+// .clearfix:after {
+//     content: " ";
+//     display: table;
+// }
 
-.clearfix:after {
-    clear: both;
-}
+// .clearfix:after {
+    // clear: both;
+// }
 
 /*********************/
 /* LAYOUT / SECTIONS */
@@ -152,18 +153,19 @@ img {
 //
 
 .wrapper-masthead {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 
-    background: url("/images/masthead2.png");
-    box-shadow: 0px 0px 2px hsla(60, 5%, 16%, 0.4);
+    // background: url("/images/masthead2.png");
+    background: $black;
+    // box-shadow: 0px 0px 2px hsla(60, 5%, 16%, 0.4);
 
     * {
       color: $darkerGray;
     }
 
     &.dev-mode {
-      background: url("/images/masthead.png");
-      box-shadow: 0px 0px 2px hsla(60, 5%, 16%, 0.4);
+      background: $red; // $purple; //  #ff5252; // #202020;
+      // box-shadow: 0px 2px 3px rgba(236, 56, 56, 0.5);
 
       * {
         color: $white;
@@ -172,7 +174,7 @@ img {
 }
 
 .masthead {
-  padding: 1.5em 0;
+  padding: 1em 2em;
 //  border-bottom: 1px solid $lightGray;
 
   overflow: hidden;
@@ -223,13 +225,14 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  //font-family: $helveticaNeue;
+  font-family: "Permanent Marker", sans-serif;
   font-size: 28px;
-  letter-spacing: 1px;
+  font-weight: 100;
+  letter-spacing: 0.1em;
   line-height: 1em;
 
-  font-family: $displayFont;
-  font-weight: 700;
+  // font-family: $displayFont;
+  // font-weight: 700;
 
   display: inline-block;
 
@@ -240,6 +243,12 @@ img {
     line-height: 1em;
     margin-top: 0.35em;
     letter-spacing: 0;
+
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    letter-spacing: 0.2em;
   }
 }
 
@@ -254,10 +263,12 @@ img {
 }
 
 nav {
+  font-family: "Roboto Condensed", sans-serif; //  "Source Sans Pro";
+  font-weight: 100;
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $displayFont;
-  font-size: 18px;
+  font-size: 16px;
+  position: relative;
+  top: 1px;
 
   @include mobile {
     float: none;
@@ -270,13 +281,17 @@ nav {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
-    font-weight: 300;
+    // font-weight: 300;
     letter-spacing: 1px;
 
     &:focus,
     &:hover,
     &.is-active {
-      border-bottom: 1px dashed;
+      border-bottom: 1px dotted;
+    }
+
+    &.is-active {
+      font-weight: bold;
     }
 
     @include mobile {
@@ -291,9 +306,10 @@ nav {
 //
 
 
-// .post-container {
+.post-container {
+  padding-top: 2em;
   // margin-bottom: 5em;
-// }
+}
 
 .in-dev {
   display: block;
@@ -331,9 +347,9 @@ nav {
 }
 
 .description {
-  font-size: 0.825em;
+  font-size: 1em; // 0.825em;
   display: block;
-  margin: 1em 0 0;
+  // margin: 1em 0 0;
   line-height: 1.5em;
 }
 
@@ -341,6 +357,12 @@ nav {
   display: block;
   font-size: 0.7em;
   opacity: 0.5;
+
+  & + a {
+    line-height: 1em;
+    display: inline-block;
+    padding-bottom: 0.5em;
+  }
 }
 
 .related-project {
@@ -358,7 +380,9 @@ nav {
 
   .thumbnail {
     object-fit: cover;
-    height: 250px;
+    min-height: 250px;
+    height: 20vw;
+    max-height: 27vh;
   }
 
   h1 {
@@ -369,14 +393,20 @@ nav {
     display: flex;
     align-items: center;
 
+    font-size: 1.25em;
+    color: $black;
+
     margin: -0.25em 0 0.35em 0;
     font-style: normal;
+    font-weight: 400;
 
     span {
+      font-weight: 400;
+      color: $black;
       font-size: 0.75em;
       text-transform: uppercase;
-      font-weight: 100;
-      padding-top: 0.1em;
+      // font-weight: 100;
+      padding-top: 0.25em;
 
       &:before {
         content: "•";
@@ -413,8 +443,12 @@ nav {
     display: inline-block;
   }
 
+  p {
+    font-size: 1.155em;
+  }
+
   .thumbnail {
-    max-width: 600px;
+    max-width: none;
     width: 100%;
     display: block;
     margin: 0 0 1em 0;
@@ -492,6 +526,9 @@ footer {
 
   h1 {
     line-height: 1em;
+    font-family: "Permanent Marker";
+    font-weight: 100;
+    letter-spacing: 0.05em;
   }
 
   small {
@@ -524,8 +561,8 @@ footer {
 }
 
 hr {
-  background: #eee;
-  box-shadow: 0px 0px 2px rgba(0,0,0,0.05);
+  background: $lightGray;
+  // box-shadow: 0px 0px 2px rgba(0,0,0,0.05);
   border: none;
   height: 1px;
 }
@@ -545,28 +582,31 @@ iframe {
     box-shadow: none;
   }
 
-
   & + label,
   & + p > label {
-    // text-align: center;
-    background: rgba(241, 241, 241, 0.4);
-    border: 1px solid rgba(241, 241, 241, 0.9);
-    margin: 0.5em 0;
+    background: #f1f1f1;
+    border: 1px solid rgba(182, 182, 182, 0.9);
+    border-radius: 2px;
+    margin: 1em 0 3em;
     display: inline-block;
     transform: translateX(-50%);
     left: 50%;
     position: relative;
-    padding: 0.3em 0.8em;
+    padding: 1em;
     border-radius: 2px;
-    font-size: 0.95em;
     width: 90%;
     max-width: 700px;
     line-height: 1.6em;
-    color: rgba(100,100,100,0.99);
+    color: rgba(100, 100, 100, 0.99);
     z-index: 0;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    // font-size: 1.155em;
+    font-size: 0.9em;
   }
 }
 
+blockquote,
 a + label,
 a + p + label,
 script + label,
@@ -589,6 +629,10 @@ script + p > label {
   z-index: 0;
 }
 
+blockquote {
+  display: block;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
@@ -602,6 +646,10 @@ code {
 }
 
 .posts.latest {
+  // padding: 0 2em;
+  // max-width: 1440px;
+  margin: 0 auto;
+
   ul, li {
     list-style: none;
     margin: 0;
@@ -611,21 +659,22 @@ code {
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     li {
       flex-shrink: 0;
       flex-grow: 1;
       margin-bottom: 1em;
       width: 33%;
-      max-width: 33%;
-      padding-right: 2em;
+      max-width: calc(32% - 0.1em);
     }
   }
 
   small {
     display: block;
-    margin-top: 0.5em;
-    font-size: 0.75em;
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: -2em;
   }
 }
 
@@ -635,6 +684,15 @@ label {
   img {
     display: block;
     margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .posts.latest ul li {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 3em;
   }
 }
 
@@ -691,6 +749,21 @@ label {
 }
 
 .post-list {
+
+  li > a {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .post-timestamp {
+    display: block;
+    font-size: 0.95em;
+    color: $gray;
+    padding: 0;
+    // margin-top: -0.33em;
+    // margin-bottom: 0.5em;
+  }
+
   li:nth-child(3) {
     & ~ * {
       display: none;
@@ -717,7 +790,7 @@ iframe {
       width: 25%;
     }
     .timestamp {
-      color: #bbb;
+      color: $black;
       display: block;
       margin-bottom: 1em;
       font-size: 0.8em;
@@ -731,14 +804,146 @@ iframe {
   margin: 0.5em 0 2em;
 }
 
-blockquote {
-  margin: 1.8em .8em;
-  // border-left: 2px solid $gray;
-  padding: 0.1em 1em;
-  color: $gray;
-  font-size: 0.9em;
-  font-style: italic;
+// blockquote {
+//   margin: 1.8em .8em;
+//   // border-left: 2px solid $gray;
+//   padding: 0.1em 1em;
+//   color: $gray;
+//   font-size: 0.9em;
+//   font-style: italic;
 
-  background: #fafafa;
-  border: 2px dotted #eee;
+//   background: #fafafa;
+//   border: 2px dotted #eee;
+// }
+
+.post-title {
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 1.75em;
+}
+
+.page-divider {
+  // min-height: 2em;
+  // background: rgba(33, 33, 33, 0.075);
+  margin: 2em 0;
+  font-family: "Permanent Marker";
+
+  text-align: center;
+
+  h1 {
+    font-family: "Permanent Marker";
+    line-height: 1em;
+    font-size: 2.25em;
+    text-align: center;
+    padding: 1em;
+    letter-spacing: 0.05em;
+
+    a {
+      color: $black;
+      &:hover, &:focus {
+        color: $red;
+      }
+    }
+    color: $black;
+    margin: 0;
+
+    text-transform: lowercase;
+    font-variant: small-caps;
+  }
+
+  &.mini {
+    margin: 0 0 2em;
+  }
+}
+
+.info-header {
+  background: #f9f9f9;
+
+  h1 {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+}
+
+.post-title {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#main {
+  padding-bottom: 5em;
+}
+
+#intro {
+  border: none;
+
+  margin: 5em 0 3em;
+
+  transform: translateX(-50%);
+
+  left: 50%;
+
+  position: relative;
+
+  padding: 0 1em;
+
+  border-radius: 3px;
+
+  width: 90%;
+
+  max-width: 48.6em;
+
+  line-height: 1.6em;
+
+  color: rgba(100, 100, 100, 0.99);
+
+  z-index: 0;
+
+  letter-spacing: 0.05em;
+
+  font-weight: 500;
+
+  font-size: 0.9em;
+
+  display: flex;
+
+  align-items: center;
+
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05), inset -1px -1px 0px rgba(182, 182, 182, 0.6), inset 1px 1px rgba(182, 182, 182, 0.2);
+
+  background: #fcfcfc;
+
+  & > div:first-child {
+    flex-basis: 70px;
+    width: 70px;
+  }
+  & > div:last-child {
+    width: calc(100% - 70px);
+    flex-basis: calc(100% - 70px);
+    padding-left: 1em;
+  }
+
+  h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #intro {
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0.25em 1em;
+
+    div {
+      padding: 0 !important;
+    }
+  }
 }

@@ -1,29 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
 // @import url('https://fonts.googleapis.com/css?family=Averia+Sans+Libre:400+700');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+// @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Eczar&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700|Permanent+Marker|Roboto+Condensed:300,300i,400,700&display=swap');
 
 //
 // VARIABLES
 //
 
 // Colors
-$blue: #64a6e0;
+$blue: #38ceec;
+$darkBlue: #64a6e0;
 
 // Grays
-$black: #352f22;
+$black: #232323; // #292e1e; // #352f22;
+$purple: #8338ec;
+$red: #ec3838;
+$darkRed: #f10000;
+
 $darkerGray: #0e121b;
 $darkGray: #0e121b;
-$gray: #666;
-$lightGray: #eee;
-$white: #fefefe;
+
+$gray: #626868; // #666;
+$lightGray: #939196; // #eee;
+$white: #eaeaea; // #f4f4f4; // #fcfcfc ; // #fefefe;
 
 // Font stacks
-$helvetica: "Noto Sans", Arial, sans-serif;
+$helvetica: "Roboto Condensed"; // "Noto Sans", Arial, sans-serif;
 $helveticaNeue: $helvetica;//"Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 // $displayFont: 'Averia Sans Libre', sans-serif;
-$displayFont: 'Roboto Slab', sans-serif;
+// $displayFont: 'Roboto Slab', sans-serif;
+$displayFont: "Roboto Slab"; // 'Abril Fatface';
 
 // Mobile breakpoints
 @mixin mobile {

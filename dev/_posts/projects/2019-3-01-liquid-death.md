@@ -13,11 +13,12 @@ thumbnail: https://i.imgur.com/6FOFaFj.jpg
 live: https://liquiddeath.com/
 ---
 
+<!--
 >**Development time (to date)** ~2 Months
+> -->
+>**Concept**<br />E-Commerce site for extreme water brand, with a promotional deal to sell your soul.
 >
->**Technology** TypeScript, Node, [Shopify](https://shopify.com/)
->
->**Concept** E-Commerce site for extreme water brand, with a promotional deal to sell your soul.
+>**Technology**<br />TypeScript, Node, [Shopify](https://shopify.com/)
 
 # About
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: dev-default
 title: About Me
 permalink: /about/
 ---
