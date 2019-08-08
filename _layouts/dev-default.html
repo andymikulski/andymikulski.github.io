@@ -13,7 +13,7 @@
   <body>
     <div class="wrapper-masthead dev-mode">
       <!-- <div class="container"> -->
-        <header class="masthead clearfix">
+        <header class="masthead clearfix container">
           <div class="site-info">
             <a href="{{ site.baseurl }}/">
               <!-- <img src="{{ site.avatar }}" /> -->
@@ -26,7 +26,7 @@
           <nav>
             {% if page.url contains '/about' %}
             <a href="{{ site.baseurl }}/">DevBlog</a>
-              <a href="{{ site.baseurl }}/life">LifeBlog</a>
+              <!-- <a href="{{ site.baseurl }}/life">LifeBlog</a> -->
               <a href="{{ site.baseurl }}/about" class="is-active">About</a>
             {% elsif page.url contains '/life/' %}
             <a href="{{ site.baseurl }}/">DevBlog</a>
@@ -34,7 +34,7 @@
               <a href="{{ site.baseurl }}/about">About</a>
             {% else %}
               <a href="{{ site.baseurl }}/" class="is-active">DevBlog</a>
-              <a href="{{ site.baseurl }}/life">LifeBlog</a>
+              <!-- <a href="{{ site.baseurl }}/life">LifeBlog</a> -->
               <a href="{{ site.baseurl }}/about">About</a>
             {% endif %}
           </nav>

@@ -3,7 +3,7 @@ layout: dev-default
 ---
 
 <div class="posts latest">
-  <h1>Latest Posts</h1>
+  <h1>&mdash; Latest Posts &mdash;</h1>
   <ul class="post-list">
     {% for post in site.posts %}
       {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true and post.isNestedPost != true %}

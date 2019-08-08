@@ -15,22 +15,24 @@ layout: dev-default
     <!-- <div class="site-avatar"></div> -->
   </div>
   <div>
-    <h2>Welcome!</h2>
-    <p>This is my personal site. Riddit dit didoo. This is my personal site. Riddit dit didoo. This is my personal site. Riddit dit didoo. This is my personal site. Riddit dit didoo. </p>
+    <h2>Hello!</h2>
+    <p>I'm Andy Mikulski, a creative full-stack engineer who specializes in designing and programming interactive experiences. Below, you'll find some of my professional and hobbyist projects consisting of front-end, back-end, and Unity development.</p>
+    <p>Looking for my <a href="{{ site.baseurl }}/assets/AMikulski-Resume.pdf" target="_blank">resumé</a>? Want to <a href="mailto:andy.mikulski+site@gmail.com" target="_blank">get in touch</a>?</p>
   </div>
 </div>
 
 
-<div class="posts latest">
+<div class="posts latest homepage">
   <div class="page-divider mini">
-    <h1><a href="{{ site.baseurl }}/dev/">Latest Posts</a></h1>
+    <h1><a href="{{ site.baseurl }}/dev/">&mdash; Latest Posts &mdash;</a></h1>
     <small><a href="{{ site.baseurl }}/dev/">View All ></a></small>
   </div>
   <!-- <h1><a href="/dev">Latest Posts</a></h1> -->
   <div class="container">
     <ul class="post-list">
+      <!-- {% increment display_count %} -->
       {% for post in site.posts %}
-        {% if post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true and post.isNestedPost != true %}
+        {% if display_count <= 6 and post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
           <li>
               <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -39,6 +41,7 @@ layout: dev-default
               </a>
               <span class="description">{{ post.description }}</span>
           </li>
+          <!-- {% increment display_count %} -->
         {% endif %}
       {% endfor %}
     </ul>
@@ -48,7 +51,7 @@ layout: dev-default
 <!-- <hr /> -->
 
 <div class="page-divider">
-  <h1>Featured Work</h1>
+  <h1>&mdash; Featured Work &mdash;</h1>
 </div>
 
 
