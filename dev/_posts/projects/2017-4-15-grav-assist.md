@@ -4,7 +4,7 @@ title: Gravity Assist
 permalink: /gravity-assist/
 blog: dev
 project: gravity-assist
-isProject: true
+# isProject: true
 tech:
   - Unity
   - C#

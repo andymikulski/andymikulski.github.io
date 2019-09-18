@@ -21,35 +21,6 @@ layout: dev-default
   </div>
 </div>
 
-
-<div class="posts latest homepage">
-  <div class="page-divider mini">
-    <h1><a href="{{ site.baseurl }}/dev/">&mdash; Latest Posts &mdash;</a></h1>
-    <small><a href="{{ site.baseurl }}/dev/">View All ></a></small>
-  </div>
-  <!-- <h1><a href="/dev">Latest Posts</a></h1> -->
-  <div class="container">
-    <ul class="post-list">
-      <!-- {% increment display_count %} -->
-      {% for post in site.posts %}
-        {% if display_count <= 6 and post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
-          <li>
-              <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
-              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
-              </a>
-              <span class="description">{{ post.description }}</span>
-          </li>
-          <!-- {% increment display_count %} -->
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-
-<!-- <hr /> -->
-
 <div class="page-divider">
   <h1>&mdash; Featured Work &mdash;</h1>
 </div>
@@ -84,3 +55,34 @@ layout: dev-default
     {% endfor %}
   </div>
 </div>
+
+
+
+<div class="posts latest homepage">
+  <div class="page-divider mini">
+    <h1><a href="{{ site.baseurl }}/dev/">&mdash; Latest Posts &mdash;</a></h1>
+    <small><a href="{{ site.baseurl }}/dev/">View All ></a></small>
+  </div>
+  <!-- <h1><a href="/dev">Latest Posts</a></h1> -->
+  <div class="container">
+    <ul class="post-list">
+      <!-- {% increment display_count %} -->
+      {% for post in site.posts %}
+        {% if display_count <= 6 and post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
+          <li>
+              <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
+              </a>
+              <span class="description">{{ post.description }}</span>
+          </li>
+          <!-- {% increment display_count %} -->
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<!-- <hr /> -->
+
