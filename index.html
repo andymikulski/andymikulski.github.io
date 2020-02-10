@@ -21,15 +21,44 @@ layout: dev-default
   </div>
 </div>
 
-<div class="page-divider">
+
+<div class="posts wip latest homepage">
+  <div class="page-divider mini">
+    <h1><a href="{{ site.baseurl }}/dev/">&mdash; Upcoming Posts &mdash;</a></h1>
+    <small class="subheader">Check out posts before they're written</small>
+  </div>
+  <!-- <h1><a href="/dev">Latest Posts</a></h1> -->
+  <div class="container">
+    <ul class="post-list">
+      {% assign wip_count = 0 %}
+      <!-- {% increment wip_count %} -->
+      {% for post in site.posts %}
+        {% if wip_count <= 6 and post.blog contains 'dev' and post.wip == true and post.isPasswordProtected != true %}
+          <li>
+              <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                <div style="background-image: url('{{ post.thumbnail }}');" class="post-thumbnail"></div>
+              </a>
+              <span class="description">{{ post.description }}</span>
+          </li>
+          <!-- {% increment wip_count %} -->
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="page-divider mini">
   <h1>&mdash; Featured Work &mdash;</h1>
+  <small class="subheader">A few of my favorites</small>
 </div>
 
 
 <div class="container">
   <div class="posts dev">
-    {% for post in site.posts %}
-      {% if post.blog contains 'dev' and post.isProject and post.isPasswordProtected != true %}
+      {% for post in site.posts %}
+      {% if post.blog contains 'dev' and post.isProject and post.wip != true and post.isPasswordProtected != true %}
         <article class="post {{ post.slug }}">
           <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
           <div class="date timestamp">
@@ -58,6 +87,9 @@ layout: dev-default
 
 
 
+
+
+
 <div class="posts latest homepage">
   <div class="page-divider mini">
     <h1><a href="{{ site.baseurl }}/dev/">&mdash; Latest Posts &mdash;</a></h1>
@@ -66,9 +98,9 @@ layout: dev-default
   <!-- <h1><a href="/dev">Latest Posts</a></h1> -->
   <div class="container">
     <ul class="post-list">
-      <!-- {% increment display_count %} -->
+      <!-- {% increment featured_count %} -->
       {% for post in site.posts %}
-        {% if display_count <= 6 and post.blog contains 'dev' and post.isProject == nil and post.isPasswordProtected != true %}
+        {% if featured_count <= 6 and post.blog contains 'dev' and post.isProject == nil and post.wip != true and post.isPasswordProtected != true %}
           <li>
               <span class="post-timestamp">{{ post.date | date: "%B %e, %Y" }}</span>
               <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
@@ -77,7 +109,7 @@ layout: dev-default
               </a>
               <span class="description">{{ post.description }}</span>
           </li>
-          <!-- {% increment display_count %} -->
+          <!-- {% increment featured_count %} -->
         {% endif %}
       {% endfor %}
     </ul>

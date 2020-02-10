@@ -976,3 +976,12 @@ iframe {
     }
   }
 }
+.subheader {
+	font: 16px/1.6 'Roboto Condensed';
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: 0.1em;
+	opacity: 0.7;
+	display: block;
+	margin-top: -2em;
+}
